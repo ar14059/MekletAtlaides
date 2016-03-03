@@ -7,6 +7,7 @@ button{
     border: none;
 }
 
+button:focus {outline:0;}
 
 a{
     text-decoration: none;
@@ -825,6 +826,14 @@ hr{
     overflow: hidden;
 }
 
+#popularakie-produkti div.desktop{
+    display: block;
+}
+
+#popularakie-produkti div.tablet{
+    display: none;
+}
+
 #popularakie-produkti .line{
     overflow: hidden;
     width: 100%;
@@ -833,6 +842,7 @@ hr{
 #popularakie-produkti .produkts{
     width: 20%;
     min-width: 150px;
+    min-height: 170px;
     display: inline-block;
 /*    background-color: yellow;*/
     margin: 0 auto;
@@ -1129,6 +1139,15 @@ footer button#en{
     #ka-tas-strada>section{
         width: 40%;
     }
+
+    #popularakie-produkti div.desktop{
+        display: none;
+    }
+    
+    #popularakie-produkti div.tablet{
+        display: block;
+    }
+
 }
 
 
@@ -1298,6 +1317,15 @@ footer button#en{
     #kategorijas .desktop {
         display: none;
     }
+
+    #popularakie-produkti div.desktop{
+        display: none;
+    }
+
+    #popularakie-produkti div.tablet{
+        display: block;
+    }
+
 
 .pilsetas-karte{
     width: 60%;
