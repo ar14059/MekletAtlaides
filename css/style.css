@@ -1,0 +1,1397 @@
+body{
+    margin: 0;
+    font-family: "Arial", Gadget, sans-serif;
+    min-width: 320px;
+}
+button{
+    border: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+/************************************************************************************************************/
+/* "Wlcome" content style */
+.body-welcome{
+    background-image: url('Pictures/Background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    width: 56%;
+    min-width: 530px;
+    height: 450px;
+    clear: both;
+    background-size: auto 100%;
+    font-weight: bold;
+}
+
+
+header.main-nav{
+    height: 55px;
+    width: 100%;
+}
+
+.header-right{
+    float: right;
+}
+
+
+/*#nav-right-button-login { 
+    display:inline-block;
+    float:right;
+    background: url("Pictures/login.png") no-repeat;
+    width: 160px;
+    height: 40px;
+    border:1px solid #899caa; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nav-right-button-login{
+    background: url("Pictures/login.png") no-repeat;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+    margin: 0;
+    padding: 0;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+.hidden_button{
+    display: none;
+    background: url("Pictures/login.png") no-repeat;
+    margin: 10px;
+    padding: 8px;
+}
+
+
+
+/*-------LOGIN STARTS HERE -------*/
+
+/* Login Container (default to float:right) */
+#loginContainer {
+    position:relative;
+/*    float:right;*/
+    font-size:12px;
+    margin: 10px;
+    padding: 0;
+}
+
+
+
+
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+
+/* Login Box */
+#loginBox {
+    position:absolute;
+    right:0;
+    display:none;
+    z-index:29;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+}
+
+#loginForm hr {
+    border: none;
+    border-bottom: 1px solid #FC6B6B;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Login Form */
+#loginForm {
+    width:100%; 
+    background:#FFFFFF;
+    padding:6px;
+    float: right;
+}
+
+#loginForm fieldset {
+    margin:0 0 5px 0;
+    display:block;
+    border:0;
+    padding:0;
+}
+
+
+
+fieldset#body {
+    background:#fff;
+/*    border-radius:3px;
+    -moz-border-radius:3px;*/
+    padding:10px 0 10px 13px;
+    margin:0;
+}
+
+#loginForm #checkbox {
+    width:auto;
+    margin:1px 9px 0 0;
+    float:left;
+    padding:0;
+    border:0;
+
+}
+
+#body label {
+    color:#3a454d;
+    margin:9px 0 0 0;
+    display:block;
+    float:left;
+}
+
+#loginForm #body fieldset label {
+    display:inline-block;
+    float:none;
+    margin:0 0 6px 0;
+    width: 30%;
+}
+
+/* Default Input */
+#loginForm input {
+    width:60%;
+    border:1px solid #FC6B6B;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    color:#3a454d;
+    font-weight:bold;
+    padding:0 8px;
+    font-size:14px;
+    float: right;
+}
+
+#loginForm input:focus {
+    box-shadow:inset 0px -1px 1px #FC6B6B;
+    -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
+    -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
+}
+
+/* Sign In Button */
+#loginForm #login {
+    width:auto;
+    float:left;
+    background: url("Pictures/ienakt.png") no-repeat;
+    width: 59px;
+    height: 22px;
+    margin:12px 12px 0 0;
+    cursor:pointer;
+    float: right;
+
+}
+
+#loginForm #login:hover {
+    background: url("Pictures/ienakt_active.png") no-repeat;
+}
+
+/*#loginForm #login {
+    width:auto;
+    float:left;
+    background:#339cdf url(../images/loginbuttonbg.png) repeat-x;
+    color:#fff;
+    padding:7px 10px 8px 10px;
+    text-shadow:0px -1px #278db8;
+    border:1px solid #339cdf;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    margin:0 12px 0 0;
+    cursor:pointer;
+    padding:7px 2px 8px 2px; 
+}*/
+
+/* Forgot your password */
+#loginForm span {
+    text-align:center;
+    display:block;
+    padding:7px 0 4px 0;
+}
+
+#loginForm span a {
+    color:#3a454d;
+    text-shadow:1px 1px #fff;
+    font-size:12px;
+}
+
+input:focus {
+    outline:none;
+}
+
+
+
+
+#nav-right-button-register{
+    margin: 10px;
+/*    padding: 8px;*/
+    padding: 0;
+    display: inline-block;
+    background: url("Pictures/register.png") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#nav-right-button-login, #nav-right-button-register{
+/*    margin: 10px;
+    padding: 8px;*/
+/*    display: inline-block;*/
+    width: 160px;
+    height: 40px;
+}
+
+.header-right div{
+    margin: 10px;
+    padding: 8px;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    
+}
+
+.header-right a{
+    font-size: 14px;
+    
+    color: #000000;
+
+}
+
+
+.header-right i{
+    font-size:18px;
+    color: #000000;
+    float: right;
+}
+
+
+.home-content{
+    text-align: center; 
+    width: 100%;
+    height: 315px;
+    padding: 80px 0 0;
+    margin-bottom: 0;
+}
+
+.home-content-center{
+    margin: auto;
+    width: 70%;
+    height: 295px;
+    text-align: center; 
+}
+
+p.home-content-header, p.home-content-subheader{
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+p.home-content-header{
+    font-size: 24px;
+    margin: 0;
+
+}
+
+p.home-content-subheader{
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+.home-search-wrapper{
+    float: left;
+    display:inline-block;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.center{
+    margin: auto;
+    text-align: left;
+    background-color: green;
+    width: 70%;
+    max-width: 440px;
+    height: 40px;
+}
+
+
+
+
+input.home-search-input,
+button.home-search {
+    background-color:transparent;
+    border:0;
+    padding: 0;
+    background-color: #FFFFFF;
+    height: 40px;
+}
+
+input.home-search-input{
+    background: url("Pictures/Icons_Buttons.png") no-repeat;
+    border-radius: 5px 0 0 5px;
+    padding: 0 20px;
+    font-size: 12px;
+    height: 40px;
+    width: 100%;
+}
+
+button.home-search{
+    background: url("Pictures/search_button.png")no-repeat;
+    border-radius: 0 5px 5px 0;
+    font-size: 8px;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+}
+
+
+
+.AppDownloadButtons{
+    display:inline-block;
+    height: 30px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+.AppDownloadButtons div{
+    height: 30px;
+    width: 50%;
+    float: left;
+    margin: 10px 0;
+}
+
+
+.google-play{
+    margin-left: 15px;
+    
+    background: url('Pictures/google-play-badge.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.app-store{
+    margin-right: 15px;
+    background: url('Pictures/app-store-badge.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.AppDownloadButtons button{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+/* Main content style */
+
+.body-content{
+/*    background-color: red;*/
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: 320px;
+    clear: both;
+    font-weight: bold;
+}
+h3{
+    margin: 0;
+}
+.bg, .bg-with{
+    width: 100%;
+    padding: 0;
+}
+.bg-with{
+    /*background-color: #ffe4fd ;*/
+    background-color: #FFF5F5;
+}
+.main-content-center{
+    width: 56%;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    min-width: 530px;
+}
+.main-content-center header{
+    padding:20px 0;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+
+
+
+/* Kā tas strādā */
+
+
+#ka-tas-strada>section.sub-content{
+    width: 28%;
+    min-width: 150px;
+    display: inline-block;
+/*    background-color: yellow;*/
+    margin: 15px;
+    vertical-align: text-top;
+}
+
+#ka-tas-strada>section p{
+    margin: 0;  
+    font-size: 12px; 
+
+}
+
+.sub-content section{
+    width: 100%;
+    display: block;
+}
+
+
+
+/* Kategorijas */
+
+#kategorijas>section{
+    width: 100%;
+    padding-bottom: 10px;
+}
+#kategorijas>section>article{
+    width: 100%;
+}
+#kategorijas>section>article button{
+    border: none;
+    width: 100px;
+    height: 50px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    margin: 0 auto;
+}
+.hidden{
+    display: none;
+}
+#kategorijas .desktop {
+    display: block;
+}
+#kategorijas>section>article button#mebeles{
+    background: url('Pictures/mebeles.png') no-repeat;
+}
+
+#kategorijas>section>article button#sporta-preces{
+    background: url('Pictures/sporta-preces.png') no-repeat;
+}
+
+#kategorijas>section>article button#rotallietas{
+    background: url('Pictures/rotallietas.png') no-repeat;
+}
+
+#kategorijas>section>article button#elektronika{
+    background: url('Pictures/elektronika.png') no-repeat;
+}
+
+#kategorijas>section>article button#darba-riki{
+    background: url('Pictures/darba-riki.png') no-repeat;
+}
+
+#kategorijas>section>article button#atlaizu-veikali{
+    background: url('Pictures/atlaizu-veikali.png') no-repeat;
+}
+
+
+
+
+#kategorijas>section>article button#automobiliem{
+    background: url('Pictures/automobiliem.png') no-repeat;
+}
+
+#kategorijas>section>article button#universalveikali{
+    background: url('Pictures/universalveikali.png') no-repeat;
+}
+
+#kategorijas>section>article button#kosmetika{
+    background: url('Pictures/kosmetika.png') no-repeat;
+}
+
+#kategorijas>section>article button#apgerbi{
+    background: url('Pictures/apgerbi.png') no-repeat;
+}
+
+#kategorijas>section>article button#majdzivnieki{
+    background: url('Pictures/majdzivnieki.png') no-repeat;
+}
+
+#kategorijas>section>article button#citi{
+    background: url('Pictures/citi.png') no-repeat;
+}
+
+.sub-content button{
+    border: none;
+    width: 93px;
+    height: 90px;
+    margin: 10px auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sub-content button.lokalize{
+    background: url('Pictures/lokalize.png') no-repeat;
+}
+.sub-content button.atrodi{
+    background: url('Pictures/atrodi.png') no-repeat;
+}
+.sub-content button.ietaupi{
+    background: url('Pictures/ietaupi.png') no-repeat;
+}
+#ka-tas-strada h5{
+    margin: 0;
+    padding: 10px 0;
+}
+#ka-tas-strada p{
+    font-weight: normal;
+    font-size: 12px;    
+}
+
+
+/******************************/
+
+
+/* pilsetu-parskats */
+
+.pamatinfo{
+    width: 100%;
+    float: left;
+    margin: 10px auto;
+/*    min-height: 250px;*/
+}
+
+
+.lielakas-pilsetas{
+    width: 45%;
+    float: left;
+    margin: 0 auto;
+}
+.pilsetas-karte{
+    width: 55%;
+    float: right;
+    margin: 0 auto;
+    min-width: 400px;
+    margin: 0 auto;
+
+}
+
+
+
+
+p.sub-content-title{
+    font-size: 12px; 
+    margin-left: 30px; 
+    text-align: left;
+    display: block;
+
+}
+
+button.karte{
+    width: 394px;
+    height: 237px;
+    background: url('Pictures/map.png') no-repeat;
+    border: none;
+    float: right;
+}
+
+.lielakas-pilsetas div{
+    width: 32%;
+    margin: 0 auto;
+    display: inline-block;
+    min-width: 50px;
+}
+
+
+#pilsetu-parskats ul{
+    list-style-image: url('Pictures/list-item-marker_star.png') ;
+    font-weight: normal;
+    font-size: 11px;  
+}
+#pilsetu-parskats ul li{
+    padding: 5px 0;
+    text-align: left;
+}
+
+p.letter-list{
+    text-align: left;
+    margin-left: 50px;
+}
+
+a.letter-list {
+    color: black;
+    
+    font-size: 11px;
+    font-weight: normal;
+}
+
+
+
+/******************************/
+
+
+/* Populārākie pārdevēji */
+
+#popularakie-pardeveji{
+
+}
+
+#popularakie-pardeveji .image-slider{
+    width: 100%;
+/*    background-color: red;*/
+    height: 74px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+#popularakie-pardeveji div{
+    height: 74px;
+    width: 16px;
+    text-align: left;
+    margin:auto;
+}
+
+#popularakie-pardeveji .vertical_align{
+    width: 16px;
+    height: 74px;
+    display: table-cell;
+    vertical-align: middle;
+/*    border: 1px solid #f00;*/
+    margin: 0 auto;
+}
+
+#popularakie-pardeveji .images{
+    width: 88%;
+    display: inline-block;
+    vertical-align: text-top;
+/*    background-color: yellow;*/
+    height: 74px;
+    overflow: hidden;
+}
+
+#popularakie-pardeveji .image{
+    content:url("Pictures/image-default.png");
+    width: 118px;
+    height: 72px;
+    margin: 1px 4px;
+    display: inline-block;
+}
+
+
+#popularakie-pardeveji .prevnext{
+    width: 4%;
+    display: inline-block;
+    vertical-align: text-top;
+/*    background-color: yellow;*/
+    height: 74px;
+    text-align: center;
+
+}
+
+
+
+#popularakie-pardeveji button{
+    width: 16px;
+    height: 26px;
+
+}
+
+#popularakie-pardeveji button.prev{
+    background: url('Pictures/prev.png') no-repeat;
+
+}
+
+#popularakie-pardeveji button.next{
+    background: url('Pictures/next.png') no-repeat;
+}
+
+
+
+
+
+/******************************/
+
+
+
+/* reklamas-un-piedavajumi */
+
+.rup-center{
+    margin:20px auto 50px auto;
+}
+
+.panel, .flip {
+    padding: 15px 0;
+    text-align: center;
+/*    background-color: #e5eecc;*/
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flip{
+    height: 15px;
+
+}
+.panel {
+    padding: 50px auto;
+    display: none;
+}
+
+hr{
+    margin: 0 auto;
+    width: 90%;
+}
+.title{
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+}
+
+.up{
+    background: url('Pictures/up.png') no-repeat;
+}
+
+.down{
+    background: url('Pictures/down.png') no-repeat;
+}
+
+.up, .down{
+    float: right;
+    width: 22px;
+    height: 14px;
+    margin-right: 15px;
+}
+
+/******************************/
+
+
+
+/* Populārākie produkti */
+
+#popularakie-produkti{
+    overflow: hidden;
+}
+
+#popularakie-produkti .line{
+    overflow: hidden;
+    width: 100%;
+}
+
+#popularakie-produkti .produkts{
+    width: 20%;
+    min-width: 150px;
+    display: inline-block;
+/*    background-color: yellow;*/
+    margin: 0 auto;
+    float: left;
+}
+
+#popularakie-produkti .title-img{
+    width: 34px;
+    height: 23px;
+    float: left;
+}
+
+#popularakie-produkti #mebeles-img{
+    background: url('Pictures/mebeles_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #sporta-preces-img{
+    background: url('Pictures/sporta-preces_mini.png') no-repeat;
+    
+}
+
+
+#popularakie-produkti #rotallietas-img{
+    background: url('Pictures/rotallietas_mini.png') no-repeat;
+    
+}
+
+
+#popularakie-produkti #elektronika-img{
+    background: url('Pictures/elektronika_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #darba-riki-img{
+    background: url('Pictures/darba-rik_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #atlaizu-veikali-img{
+    background: url('Pictures/atlaizu-veikali_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #automobiliem-img{
+    background: url('Pictures/automobiliem_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #universalveikali-img{
+    background: url('Pictures/universalveikali_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #kosmetika-img{
+    background: url('Pictures/kosmetika_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #apgerbi-img{
+    background: url('Pictures/apgerbi_mini.png') no-repeat;
+    
+}
+
+#popularakie-produkti #majdzivniekiem-img{
+    background: url('Pictures/majdzivniekiem_mini.png') no-repeat;
+}
+
+#popularakie-produkti div.title-container{
+    width: 100%;
+    overflow: hidden;
+    height: 20px;
+
+}
+
+p.product-title{
+    height: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+div.product-list{
+    width: 90%;
+}
+
+#popularakie-produkti ul{
+    list-style-image: url('Pictures/list-item-marker_next.png') ;
+    font-weight: normal;
+    font-size: 11px; 
+    padding: 10px 15px 0 15px; 
+    margin-left: 10px;
+}
+#popularakie-produkti ul li{
+    text-align: left;
+    margin-bottom: 5px;
+    padding-left: 5px;
+
+}
+
+/******************************/
+
+
+
+
+
+/************************************************************************************************************/
+/* Footer style */
+
+footer{
+    background-color:#404040 ;
+    margin: 0;
+    width: 100%;
+    clear: both;
+    font-weight: bold;
+    /*overflow: hidden;*/
+}
+
+#footer{
+    overflow: hidden;
+}
+
+footer div.buttons{
+    margin: 10px;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+footer div.v_indekss{
+    margin: 0;
+    overflow: hidden;
+    width: 16px;
+    font-size: 10px;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 0 0;
+    color: #A0A0A0 ;
+}
+
+footer section.sub-content{
+    width: 29%;
+    min-width: 150px;
+    display: inline-block;
+/*    background-color: red;*/
+    vertical-align: text-top;
+    margin: 15px auto;
+}
+
+.sub-content.one{
+    float: left;
+/*    margin: 16px;*/
+
+}
+
+.sub-content.three{
+    float: right;
+/*    margin: 16px;*/
+
+}
+
+
+footer .title{
+/*    width: 100%;*/
+    float: left;
+    color: #FFF5F5;
+    font-size: 12px;
+    font-weight: normal;
+
+}
+
+footer hr{
+    border: 1px solid #FFF5F5;
+    float: left;
+    display: table-cell;
+    width: 100%;
+}
+
+footer hr.under-title{
+    width: 150px;
+}
+
+
+footer .footer-info{
+    float: left;
+    margin: 5px 0;
+    width: 100%;
+}
+
+footer .footer-info a{
+    color: #A0A0A0 ;
+    font-size: 10px;
+    float: left;
+}
+
+
+footer .soc_tikli{
+    width: 17px;
+    height: 17px;
+    border-radius: 2px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+footer .valodas{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+footer button#draugiemlv{
+    background: url('Pictures/draugiemlv_white.png') no-repeat;
+}
+
+footer button#facebook{
+    background: url('Pictures/facebook_white.png') no-repeat;
+}
+
+footer button#twitter{
+    background: url('Pictures/twitter_white.png') no-repeat;
+}
+
+footer button#lv{
+    background: url('Pictures/lv.png') no-repeat;
+}
+
+footer button#ru{
+    background: url('Pictures/ru.png') no-repeat;
+}
+
+footer button#en{
+    background: url('Pictures/en.png') no-repeat;
+}
+
+
+/************************************************************************************************************/
+
+@media screen and (min-width: 481px) and (max-width: 1324px){
+/*    .lielakas-pilsetas{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .pilsetas-karte{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    */
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1324px){
+    .pilsetas-karte{
+        width: 35%;
+/*        float: right;
+        margin: 0 auto;
+        min-width: 400px;
+        margin: 0 auto;*/
+        min-width: 261px;
+    }
+
+    .lielakas-pilsetas{
+        width: 45%;
+        float: left;
+/*        margin: 0 auto;*/
+/*        min-width: 100px;*/
+    }
+
+
+    button.karte{
+        min-width: 261px;
+/*        width: 350px;
+        height: 210px;*/
+        width: 261px;
+        height: 157px;
+        background: url('Pictures/map_smallest.png') no-repeat;
+/*        border: none*/;
+/*        float: right;*/
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1130px){
+    #kategorijas .tablet {
+        display: block;
+    }
+    #kategorijas .desktop {
+        display: none;
+    }
+    #ka-tas-strada>section{
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 600px)  {
+
+    .body-welcome {
+        width: 100%;
+    }
+
+    #loginContainer{
+        display: none;
+    }
+
+    .hidden_button{
+        width: 195px;
+        height: 49px;
+        background: url("Pictures/login_m.png") no-repeat;
+    }
+
+    .main-content-center{
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .AppDownloadButtons button{
+        width: 135px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .home-search-wrapper {
+        height: 50px;
+    }
+
+    input.home-search-input{
+        font-size: 14px;
+    }
+    .header-right a{
+        font-size: 20px;
+    }
+
+    .header-right i{
+        font-size:24px;
+    }
+
+    #nav-right-button-register{
+
+        width: 195px;
+        height: 49px;
+    }
+
+    .main-content-center{
+        width: 100%;
+    }
+
+    .lielakas-pilsetas{
+        width: 80%;
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .pilsetas-karte{
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+
+/*    footer section.sub-content .one{
+        display: block;
+        float: none;
+        margin: 15px auto;
+    }*/
+
+    .sub-content.one{
+        float: none;
+        display: block;
+/*        margin: 15px auto;*/
+        margin-bottom: 70px;
+    }
+
+    .sub-content.two{
+        float: none;
+        display: block;
+        /*margin: 15px auto;*/
+        margin-bottom: 90px;
+    }
+
+    .sub-content.three{
+        float: none;
+        display: block;
+        /*margin: 15px auto;*/
+        margin-bottom: 20px;
+    }
+
+/*
+
+
+
+#pilsetu-parskats ul{
+    list-style-image: url('Pictures/list-item-marker_star.png') ;
+    font-weight: normal;
+    font-size: 11px;  
+}
+#pilsetu-parskats ul li{
+    padding: 5px 0;
+    text-align: left;
+}
+
+*/
+
+
+
+
+
+
+
+}
+
+
+
+@media screen and (min-width: 481px)  and (max-width: 600px)  {
+    .body-welcome {
+        min-width: 481px;
+    }
+    .home-content-center{
+        width: 90%;
+    }
+    header.main-nav{
+        margin: 0 auto;
+
+    }
+
+    .header-right{
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+    #nav-right-button-login{
+        background: url("Pictures/login_m.png") no-repeat;
+        /*float: left;*/
+    }
+
+    .hidden_button{
+        display: inline-block;
+    }
+
+    #loginContainer{
+        float: left; 
+    }
+
+    #nav-right-button-register{
+        background: url("Pictures/register_m.png") no-repeat;
+        float: right;
+    }
+
+
+    #ka-tas-strada>section{
+        width: 40%;
+    }
+
+    #kategorijas .tablet {
+        display: block;
+    }
+
+    #kategorijas .desktop {
+        display: none;
+    }
+
+.pilsetas-karte{
+    width: 60%;
+}
+/*    #pilsetu-parskats ul{
+        list-style-image: url('Pictures/list-item-marker_star.png') ;
+        font-weight: normal;
+        font-size: 11px;  
+    }*/
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+
+    .body-welcome {
+        min-width: 320px;
+    }
+
+    .home-content-center{
+        width: 98%;
+    }
+
+    .header-right{
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-right-button-register{
+        display: block;
+/*        width: 90%;*/
+    }
+    .hidden_button{
+        display: block;
+    }
+
+    .AppDownloadButtons div{
+        display: block;
+        width: 100%;
+    }
+    .AppDownloadButtons button{
+        margin: 0;
+    }
+
+
+    #nav-right-button-login{
+        background: url("Pictures/login_m.png") no-repeat;
+    }
+
+    #nav-right-button-register{
+        background: url("Pictures/register_m.png") no-repeat;
+    }
+
+    #nav-right-button-register, .hidden_button{
+        margin: 15 auto;
+    } 
+
+    #ka-tas-strada>section{
+        width: 70%;
+    }
+
+    #kategorijas .phone {
+        display: block;
+    }
+
+    #kategorijas .desktop {
+        display: none;
+    }
+
+    button.karte{
+        min-width: 261px;
+/*        width: 350px;
+        height: 210px;*/
+        width: 261px;
+        height: 157px;
+        background: url('Pictures/map_smallest.png') no-repeat;
+        float: none;
+/*        border: none*/;
+/*        float: right;*/
+    }   
+
+    .pilsetas-karte{
+        width: 100%;
+        min-width: 261px;
+    }
+
+    .title{
+        font-size: 14px;
+    }
+
+
+
+}
+
+
