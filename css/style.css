@@ -834,6 +834,10 @@ hr{
     display: none;
 }
 
+#popularakie-produkti div.phone{
+    display: none;
+}
+
 #popularakie-produkti .line{
     overflow: hidden;
     width: 100%;
@@ -1131,12 +1135,20 @@ footer button#en{
         width: 40%;
     }
 
+}
+
+@media screen and (min-width: 466px) and (max-width: 1130px){
+
     #popularakie-produkti div.desktop{
         display: none;
     }
     
     #popularakie-produkti div.tablet{
         display: block;
+    }
+
+    #popularakie-produkti div.phone{
+        display: none;
     }
 
 }
@@ -1303,6 +1315,10 @@ footer button#en{
         background: url('Pictures/en.png') no-repeat;
     }*/
 
+    #popularakie-produkti .produkts{
+        float: inherit;
+        vertical-align: text-top;
+    }
 
 }
 
@@ -1369,6 +1385,8 @@ footer button#en{
     footer .soc_tikli{
         margin: 0 10px;
     }
+
+
 }
 
 
@@ -1456,6 +1474,18 @@ footer button#en{
         margin: 15px auto;
     }
 
+
+    #popularakie-produkti div.desktop{
+        display: none;
+    }
+    
+    #popularakie-produkti div.tablet{
+        display: none;
+    }
+
+    #popularakie-produkti div.phone{
+        display: block;
+    }
 
 }
 
