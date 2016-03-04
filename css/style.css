@@ -948,11 +948,7 @@ div.product-list{
 /******************************/
 
 
-
-
-
-/************************************************************************************************************/
-/* Footer style */
+/* Footer */
 
 footer{
     background-color:#404040 ;
@@ -974,17 +970,6 @@ footer div.buttons{
 
 }
 
-footer div.v_indekss{
-    margin: 0;
-    overflow: hidden;
-    width: 16px;
-    font-size: 10px;
-    display: inline-block;
-    float: left;
-    margin: 0 10px 0 0;
-    color: #A0A0A0 ;
-}
-
 footer section.sub-content{
     width: 29%;
     min-width: 150px;
@@ -997,23 +982,18 @@ footer section.sub-content{
 .sub-content.one{
     float: left;
 /*    margin: 16px;*/
-
 }
 
 .sub-content.three{
     float: right;
 /*    margin: 16px;*/
-
 }
-
-
 footer .title{
 /*    width: 100%;*/
     float: left;
     color: #FFF5F5;
     font-size: 12px;
     font-weight: normal;
-
 }
 
 footer hr{
@@ -1049,12 +1029,23 @@ footer .soc_tikli{
     margin: 0 10px 0 0;
 }
 
+
 footer .valodas{
     width: 16px;
     height: 16px;
     border-radius: 2px;
     float: left;
     margin: 0 10px 0 0;
+}
+
+footer div.v_indekss{
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    width: 16px;
+    font-size: 10px;
+    display: inline-block;
+    float: left;
+
 }
 
 footer button#draugiemlv{
@@ -1216,54 +1207,101 @@ footer button#en{
         display: block;
     }
 
-
-/*    footer section.sub-content .one{
-        display: block;
-        float: none;
-        margin: 15px auto;
-    }*/
-
     .sub-content.one{
         float: none;
         display: block;
-/*        margin: 15px auto;*/
         margin-bottom: 70px;
     }
 
     .sub-content.two{
         float: none;
         display: block;
-        /*margin: 15px auto;*/
         margin-bottom: 90px;
     }
 
     .sub-content.three{
         float: none;
         display: block;
-        /*margin: 15px auto;*/
         margin-bottom: 20px;
     }
 
-/*
+    footer section.sub-content{
+        width: 90%;
+        min-width: 250px;
+        display: block;
+        vertical-align: text-top;
+        margin: 15px auto;
+    }
+
+    footer section.sub-content.one, footer section.sub-content.two{
+        display: none;
+    }
+
+    footer hr{
+        display: none;
+    }
+
+    footer .title{
+        text-align: center;
+        float: none;
+        color: #FFF5F5;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    footer div.buttons{
+        margin: 0 auto;
+        overflow: hidden;
+        width: 90%;
+    }
+    footer .footer-info{
+        text-align: center;
+        float: none;
+    }
 
 
+    footer .soc_tikli{
+        width: 82px;
+        height: 82px;
+        border-radius: 2px;
+        float: none;
+    }
 
-#pilsetu-parskats ul{
-    list-style-image: url('Pictures/list-item-marker_star.png') ;
-    font-weight: normal;
-    font-size: 11px;  
-}
-#pilsetu-parskats ul li{
-    padding: 5px 0;
-    text-align: left;
-}
+    footer .valodas{
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        float: none;
+        margin: 0 10px 0 0;
+    }
 
-*/
+    footer div.v_indekss{
+        display: none;
+    }
 
+    footer button#draugiemlv{
+        background: url('Pictures/draugiemlv_white_tablet.png') no-repeat;
+    }
 
+    footer button#facebook{
+        background: url('Pictures/facebook_white_tablet.png') no-repeat;
+    }
 
+    footer button#twitter{
+        background: url('Pictures/twitter_white_tablet.png') no-repeat;
+    }
 
+/*    footer button#lv{
+        background: url('Pictures/lv.png') no-repeat;
+    }
 
+    footer button#ru{
+        background: url('Pictures/ru.png') no-repeat;
+    }
+
+    footer button#en{
+        background: url('Pictures/en.png') no-repeat;
+    }*/
 
 
 }
@@ -1325,17 +1363,12 @@ footer button#en{
     #popularakie-produkti div.tablet{
         display: block;
     }
-
-
-.pilsetas-karte{
-    width: 60%;
-}
-/*    #pilsetu-parskats ul{
-        list-style-image: url('Pictures/list-item-marker_star.png') ;
-        font-weight: normal;
-        font-size: 11px;  
-    }*/
-
+    .pilsetas-karte{
+        width: 60%;
+    }
+    footer .soc_tikli{
+        margin: 0 10px;
+    }
 }
 
 
@@ -1418,6 +1451,10 @@ footer button#en{
         font-size: 14px;
     }
 
+    footer .soc_tikli{
+        display: block;
+        margin: 15px auto;
+    }
 
 
 }
