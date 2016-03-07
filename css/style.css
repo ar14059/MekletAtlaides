@@ -1,3 +1,5 @@
+/*Globālie CSS parametri*/
+/************************************************************************************************************/
 body{
     margin: 0;
     font-family: "Arial", Gadget, sans-serif;
@@ -11,71 +13,69 @@ button:focus {outline:0;}
 
 a{
     text-decoration: none;
+    margin: 0;
 }
 
+.hidden{
+    display: none;
+}
+
+/*CSS parametri specifiski katram elementam*/
 /************************************************************************************************************/
-/* "Wlcome" content style */
+
+
+/* "Wlcome" content */
 .body-welcome{
     background-image: url('Pictures/Background.png');
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
+    padding: 0;
     width: 56%;
     min-width: 530px;
-    height: 450px;
     clear: both;
     background-size: auto 100%;
     font-weight: bold;
+   /* overflow: auto;*/
+/*    overflow: hidden;*/
 }
 
+#body-content{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: 320px;
+    clear: both;
+}
 
 header.main-nav{
     height: 55px;
     width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+    /*overflow: hidden;*/
 }
 
 .header-right{
     float: right;
 }
 
-
-/*#nav-right-button-login { 
-    display:inline-block;
-    float:right;
+.hidden_button_login{
+    display: none;
     background: url("Pictures/login.png") no-repeat;
-    width: 160px;
-    height: 40px;
-    border:1px solid #899caa; 
-    border-radius:3px;
-    -moz-border-radius:3px;
-    position:relative;
-    z-index:30;
-    cursor:pointer;
-}*/
+    margin: 10px;
+    padding: 8px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*******************/
+/* Login button starts  */
 
 #nav-right-button-login{
     background: url("Pictures/login.png") no-repeat;
     position:relative;
-    z-index:30;
+    z-index:2;
     cursor:pointer;
     margin: 0;
     padding: 0;
@@ -85,39 +85,23 @@ header.main-nav{
       background-size: cover;
 }
 
-.hidden_button{
-    display: none;
-    background: url("Pictures/login.png") no-repeat;
-    margin: 10px;
-    padding: 8px;
+#nav-right-button-login:hover{
+    background: url("Pictures/login_r.png") no-repeat;
 }
 
 
-
-/*-------LOGIN STARTS HERE -------*/
-
-/* Login Container (default to float:right) */
 #loginContainer {
     position:relative;
-/*    float:right;*/
     font-size:12px;
     margin: 10px;
     padding: 0;
 }
 
-
-
-
-/*********************************************************************************************************************/
-/*********************************************************************************************************************/
-/*********************************************************************************************************************/
-
-/* Login Box */
 #loginBox {
     position:absolute;
     right:0;
     display:none;
-    z-index:29;
+    z-index:1;
     width: 220px;
     margin: 0;
     padding: 0;
@@ -130,7 +114,6 @@ header.main-nav{
     margin-bottom: 10px;
 }
 
-/* Login Form */
 #loginForm {
     width:100%; 
     background:#FFFFFF;
@@ -145,12 +128,8 @@ header.main-nav{
     padding:0;
 }
 
-
-
 fieldset#body {
     background:#fff;
-/*    border-radius:3px;
-    -moz-border-radius:3px;*/
     padding:10px 0 10px 13px;
     margin:0;
 }
@@ -178,7 +157,6 @@ fieldset#body {
     width: 30%;
 }
 
-/* Default Input */
 #loginForm input {
     width:60%;
     border:1px solid #FC6B6B;
@@ -197,7 +175,6 @@ fieldset#body {
     -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
 }
 
-/* Sign In Button */
 #loginForm #login {
     width:auto;
     float:left;
@@ -214,23 +191,6 @@ fieldset#body {
     background: url("Pictures/ienakt_active.png") no-repeat;
 }
 
-/*#loginForm #login {
-    width:auto;
-    float:left;
-    background:#339cdf url(../images/loginbuttonbg.png) repeat-x;
-    color:#fff;
-    padding:7px 10px 8px 10px;
-    text-shadow:0px -1px #278db8;
-    border:1px solid #339cdf;
-    box-shadow:none;
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
-    margin:0 12px 0 0;
-    cursor:pointer;
-    padding:7px 2px 8px 2px; 
-}*/
-
-/* Forgot your password */
 #loginForm span {
     text-align:center;
     display:block;
@@ -246,16 +206,14 @@ fieldset#body {
 input:focus {
     outline:none;
 }
-
-
-
+/* Login button ends */
+/*******************/
 
 #nav-right-button-register{
+    background: url("Pictures/register.png") no-repeat;
     margin: 10px;
-/*    padding: 8px;*/
     padding: 0;
     display: inline-block;
-    background: url("Pictures/register.png") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -263,35 +221,17 @@ input:focus {
 
 }
 
+#nav-right-button-register:hover{
+    background: url("Pictures/register_r.png") no-repeat;
+}
+
 #nav-right-button-login, #nav-right-button-register{
-/*    margin: 10px;
-    padding: 8px;*/
-/*    display: inline-block;*/
     width: 160px;
     height: 40px;
 }
 
 .header-right div{
-    margin: 10px;
-    padding: 8px;
     display: inline-block;
-    width: 160px;
-    height: 40px;
-    
-}
-
-.header-right a{
-    font-size: 14px;
-    
-    color: #000000;
-
-}
-
-
-.header-right i{
-    font-size:18px;
-    color: #000000;
-    float: right;
 }
 
 
@@ -306,7 +246,6 @@ input:focus {
 .home-content-center{
     margin: auto;
     width: 70%;
-    height: 295px;
     text-align: center; 
 }
 
@@ -326,34 +265,22 @@ p.home-content-subheader{
     margin: 10px 0;
 }
 
-
-
-
-
-
 .home-search-wrapper{
-    float: left;
+    /*float: left;*/
     display:inline-block;
     height: 40px;
-    width: 100%;
-    text-align: center;
+    width: 85%;
+    margin: 0 auto;
 }
 
 .center{
     margin: auto;
-    text-align: left;
-    background-color: green;
     width: 70%;
-    max-width: 440px;
     height: 40px;
 }
 
-
-
-
 input.home-search-input,
 button.home-search {
-    background-color:transparent;
     border:0;
     padding: 0;
     background-color: #FFFFFF;
@@ -365,21 +292,21 @@ input.home-search-input{
     border-radius: 5px 0 0 5px;
     padding: 0 20px;
     font-size: 12px;
-    height: 40px;
     width: 100%;
 }
 
 button.home-search{
     background: url("Pictures/search_button.png")no-repeat;
     border-radius: 0 5px 5px 0;
-    font-size: 8px;
-    color: #FFFFFF;
     width: 40px;
-    height: 40px;
     float: right;
 }
 
-span {
+button.home-search:hover{
+    background: url("Pictures/search_button_active.png")no-repeat;
+}
+
+.home-search-wrapper span {
     display: block;
     overflow: hidden;
 }
@@ -390,7 +317,8 @@ span {
     display:inline-block;
     height: 30px;
     width: 100%;
-    margin: 20px 0;
+    padding: 30px 0;
+/*    margin: 0 auto;*/
 }
 
 
@@ -398,13 +326,12 @@ span {
     height: 30px;
     width: 50%;
     float: left;
-    margin: 10px 0;
+    padding: 0;
 }
 
 
 .google-play{
-    margin-left: 15px;
-    
+    margin-left: 15px; 
     background: url('Pictures/google-play-badge.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -429,62 +356,59 @@ span {
     border-radius: 5px;
 
 }
+/**************************************************************/
 
-/* Main content style */
 
-.body-content{
-/*    background-color: red;*/
+/* Main content */
+/**************************************************************/
+
+#body-content{
     margin: 0 auto;
     padding: 0;
     width: 100%;
     min-width: 320px;
     clear: both;
-    font-weight: bold;
+/*    font-weight: bold;*/
 }
-h3{
+#body-content p.main-subject-title{
     margin: 0;
+    font-size: 19px;
+    font-weight: bold;
 }
 .bg, .bg-with{
     width: 100%;
-    padding: 0;
+/*    padding: 0;*/
 }
 .bg-with{
-    /*background-color: #ffe4fd ;*/
     background-color: #FFF5F5;
 }
 .main-content-center{
     width: 56%;
     text-align: center;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+/*    position: relative;*/
+    margin: 0 auto;
     min-width: 530px;
 }
 .main-content-center header{
     padding:20px 0;
-    text-align: center;
     margin: 0 auto;
 
 }
-
 
 
 
 /* Kā tas strādā */
 
 
-#ka-tas-strada>section.sub-content{
+#ka-tas-strada section.sub-content{
     width: 28%;
     min-width: 150px;
     display: inline-block;
-/*    background-color: yellow;*/
     margin: 15px;
     vertical-align: text-top;
 }
 
-#ka-tas-strada>section p{
+#ka-tas-strada section p{
     margin: 0;  
     font-size: 12px; 
 
@@ -492,33 +416,29 @@ h3{
 
 .sub-content section{
     width: 100%;
-    display: block;
+/*    display: block;*/
 }
-
+/****************************/
 
 
 /* Kategorijas */
 
-#kategorijas>section{
+#kategorijas section{
     width: 100%;
     padding-bottom: 10px;
 }
-#kategorijas>section>article{
+#kategorijas section article{
     width: 100%;
 }
-#kategorijas>section>article button{
-    border: none;
+#kategorijas section article button{
     width: 100px;
     height: 50px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-    margin: 0 auto;
 }
-.hidden{
-    display: none;
-}
+
 #kategorijas .desktop {
     display: block;
 }
@@ -601,18 +521,15 @@ h3{
     font-weight: normal;
     font-size: 12px;    
 }
-
-
-/******************************/
+/****************************/
 
 
 /* pilsetu-parskats */
 
-.pamatinfo{
+.pilsetas{
     width: 100%;
     float: left;
     margin: 10px auto;
-/*    min-height: 250px;*/
 }
 
 
@@ -626,19 +543,13 @@ h3{
     float: right;
     margin: 0 auto;
     min-width: 400px;
-    margin: 0 auto;
 
 }
-
-
-
 
 p.sub-content-title{
     font-size: 12px; 
     margin-left: 30px; 
     text-align: left;
-    display: block;
-
 }
 
 button.karte{
@@ -656,6 +567,10 @@ button.karte{
     min-width: 50px;
 }
 
+/*.parejas-pilsetas{
+    height: 100px;
+display: block;
+}*/
 
 #pilsetu-parskats ul{
     list-style-image: url('Pictures/list-item-marker_star.png') ;
@@ -667,32 +582,28 @@ button.karte{
     text-align: left;
 }
 
+#pilsetu-parskats ul li a{
+    color: #000000;
+}
+
 p.letter-list{
     text-align: left;
     margin-left: 50px;
 }
 
 a.letter-list {
-    color: black;
-    
+    color: #000000;
     font-size: 11px;
     font-weight: normal;
 }
 
-
-
-/******************************/
+/****************************/
 
 
 /* Populārākie pārdevēji */
 
-#popularakie-pardeveji{
-
-}
-
 #popularakie-pardeveji .image-slider{
     width: 100%;
-/*    background-color: red;*/
     height: 74px;
     margin: auto;
     padding-bottom: 60px;
@@ -710,7 +621,6 @@ a.letter-list {
     height: 74px;
     display: table-cell;
     vertical-align: middle;
-/*    border: 1px solid #f00;*/
     margin: 0 auto;
 }
 
@@ -718,7 +628,6 @@ a.letter-list {
     width: 88%;
     display: inline-block;
     vertical-align: text-top;
-/*    background-color: yellow;*/
     height: 74px;
     overflow: hidden;
 }
@@ -736,34 +645,22 @@ a.letter-list {
     width: 4%;
     display: inline-block;
     vertical-align: text-top;
-/*    background-color: yellow;*/
     height: 74px;
     text-align: center;
 
 }
 
-
-
 #popularakie-pardeveji button{
     width: 16px;
     height: 26px;
-
 }
-
 #popularakie-pardeveji button.prev{
     background: url('Pictures/prev.png') no-repeat;
-
 }
-
 #popularakie-pardeveji button.next{
     background: url('Pictures/next.png') no-repeat;
 }
-
-
-
-
-
-/******************************/
+/****************************/
 
 
 
@@ -773,50 +670,48 @@ a.letter-list {
     margin:20px auto 50px auto;
 }
 
-.panel, .flip {
+#reklamas-un-piedavajumi .panel, #reklamas-un-piedavajumi .flip {
     padding: 15px 0;
     text-align: center;
-/*    background-color: #e5eecc;*/
     width: 90%;
     margin: 0 auto;
 }
 
-.flip{
+#reklamas-un-piedavajumi .flip{
     height: 15px;
 
 }
-.panel {
+#reklamas-un-piedavajumi .panel {
     padding: 50px auto;
     display: none;
 }
 
-hr{
+#reklamas-un-piedavajumi hr{
     margin: 0 auto;
     width: 90%;
 }
-.title{
+#reklamas-un-piedavajumi .title{
     margin: 0 auto;
     font-size: 16px;
     font-weight: bold;
     float: left;
 }
 
-.up{
+#reklamas-un-piedavajumi .up{
     background: url('Pictures/up.png') no-repeat;
 }
 
-.down{
+#reklamas-un-piedavajumi .down{
     background: url('Pictures/down.png') no-repeat;
 }
 
-.up, .down{
+#reklamas-un-piedavajumi .up, #reklamas-un-piedavajumi .down{
     float: right;
     width: 22px;
     height: 14px;
     margin-right: 15px;
 }
-
-/******************************/
+/****************************/
 
 
 
@@ -848,7 +743,6 @@ hr{
     min-width: 150px;
     min-height: 170px;
     display: inline-block;
-/*    background-color: yellow;*/
     margin: 0 auto;
     float: left;
 }
@@ -860,21 +754,16 @@ hr{
 }
 
 #popularakie-produkti #mebeles-img{
-    background: url('Pictures/mebeles_mini.png') no-repeat;
-    
+    background: url('Pictures/mebeles_mini.png') no-repeat;  
 }
 
 #popularakie-produkti #sporta-preces-img{
-    background: url('Pictures/sporta-preces_mini.png') no-repeat;
-    
+    background: url('Pictures/sporta-preces_mini.png') no-repeat;  
 }
-
 
 #popularakie-produkti #rotallietas-img{
-    background: url('Pictures/rotallietas_mini.png') no-repeat;
-    
+    background: url('Pictures/rotallietas_mini.png') no-repeat; 
 }
-
 
 #popularakie-produkti #elektronika-img{
     background: url('Pictures/elektronika_mini.png') no-repeat;
@@ -908,7 +797,6 @@ hr{
 
 #popularakie-produkti #apgerbi-img{
     background: url('Pictures/apgerbi_mini.png') no-repeat;
-    
 }
 
 #popularakie-produkti #majdzivniekiem-img{
@@ -919,7 +807,6 @@ hr{
     width: 100%;
     overflow: hidden;
     height: 20px;
-
 }
 
 p.product-title{
@@ -928,11 +815,10 @@ p.product-title{
     margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
-
 }
 
 div.product-list{
-    width: 90%;
+    width: 100%;
 }
 
 #popularakie-produkti ul{
@@ -946,54 +832,46 @@ div.product-list{
     text-align: left;
     margin-bottom: 5px;
     padding-left: 5px;
-
 }
 
-/******************************/
+#popularakie-produkti ul li a{
+    color: #000000;
+}
+/****************************/
+
+/**************************************************************/
 
 
 /* Footer */
-
+/**************************************************************/
 footer{
     background-color:#404040 ;
     margin: 0;
     width: 100%;
     clear: both;
     font-weight: bold;
-    /*overflow: hidden;*/
 }
 
 #footer{
     overflow: hidden;
 }
 
-footer div.buttons{
-    margin: 10px;
-    overflow: hidden;
-    width: 100%;
-
-}
 
 footer section.sub-content{
     width: 29%;
     min-width: 150px;
     display: inline-block;
-/*    background-color: red;*/
-    vertical-align: text-top;
     margin: 15px auto;
 }
 
 .sub-content.one{
     float: left;
-/*    margin: 16px;*/
 }
 
 .sub-content.three{
     float: right;
-/*    margin: 16px;*/
 }
 footer .title{
-/*    width: 100%;*/
     float: left;
     color: #FFF5F5;
     font-size: 12px;
@@ -1005,12 +883,12 @@ footer hr{
     float: left;
     display: table-cell;
     width: 100%;
+    min-width: 150px;
 }
 
 footer hr.under-title{
     width: 150px;
 }
-
 
 footer .footer-info{
     float: left;
@@ -1025,30 +903,37 @@ footer .footer-info a{
 }
 
 
-footer .soc_tikli{
-    width: 17px;
-    height: 17px;
+footer div.buttons{
+    margin: 10px;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+footer .soc_tikli, footer .valodas{
     border-radius: 2px;
     float: left;
     margin: 0 10px 0 0;
+}
+
+footer .soc_tikli{
+    width: 17px;
+    height: 17px;
 }
 
 
 footer .valodas{
     width: 16px;
     height: 16px;
-    border-radius: 2px;
-    float: left;
-    margin: 0 10px 0 0;
 }
 
 footer div.v_indekss{
     margin: 0 10px 0 0;
-    overflow: hidden;
     width: 16px;
     font-size: 10px;
     display: inline-block;
     float: left;
+    color: #FFF5F5;
 
 }
 
@@ -1075,56 +960,78 @@ footer button#ru{
 footer button#en{
     background: url('Pictures/en.png') no-repeat;
 }
-
+/**************************************************************/
 
 /************************************************************************************************************/
 
-@media screen and (min-width: 481px) and (max-width: 1324px){
-/*    .lielakas-pilsetas{
-        width: 100%;
-        float: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS stils balstoties uz ierīce ekrāna izmēra*/
+/************************************************************************************************************/
+
+
+@media screen and (min-width: 601px) and (max-width: 800px){
+    .home-search-wrapper{
+        min-width: 520px;
+        width: 85%;
+    }
+    .AppDownloadButtons{
+        width: 70%;
         margin: 0 auto;
     }
-    .pilsetas-karte{
-        width: 100%;
-        float: none;
-        margin: 0 auto;
-    }
-    */
+
+
 }
 
+@media screen and (min-width: 801px) and (max-width: 1324px){
+    .home-search-wrapper{
+        width: 100%;
+    }
 
-@media screen and (min-width: 601px) and (max-width: 1324px){
+/* pilsetu-parskats */
     .pilsetas-karte{
         width: 35%;
-/*        float: right;
-        margin: 0 auto;
-        min-width: 400px;
-        margin: 0 auto;*/
         min-width: 261px;
     }
 
     .lielakas-pilsetas{
         width: 45%;
         float: left;
-/*        margin: 0 auto;*/
-/*        min-width: 100px;*/
     }
 
 
     button.karte{
         min-width: 261px;
-/*        width: 350px;
-        height: 210px;*/
         width: 261px;
         height: 157px;
         background: url('Pictures/map_smallest.png') no-repeat;
-/*        border: none*/;
-/*        float: right;*/
     }
+/****************************/
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 1130px){
+/* Kategorijas */
     #kategorijas .tablet {
         display: block;
     }
@@ -1134,11 +1041,13 @@ footer button#en{
     #ka-tas-strada>section{
         width: 40%;
     }
+/****************************/
 
 }
 
 @media screen and (min-width: 466px) and (max-width: 1130px){
 
+/* Populārākie produkti */
     #popularakie-produkti div.desktop{
         display: none;
     }
@@ -1150,29 +1059,62 @@ footer button#en{
     #popularakie-produkti div.phone{
         display: none;
     }
+/****************************/
+
 
 }
 
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 800px)  {
 
+    .main-content-center{
+        width: 100%;
+        min-width: 320px;
+    }
+
+/* "Wlcome" content */
+/**************************************************************/
     .body-welcome {
         width: 100%;
     }
-
+/*******************/
+/* Login button starts  */
     #loginContainer{
         display: none;
     }
-
-    .hidden_button{
+    .hidden_button_login{
         width: 195px;
         height: 49px;
         background: url("Pictures/login_m.png") no-repeat;
     }
 
-    .main-content-center{
-        width: 100%;
-        min-width: 320px;
+    .hidden_button_login:hover{
+        background: url("Pictures/login_m_r.png") no-repeat;
+    }
+
+    #nav-right-button-register{
+        background: url("Pictures/register_m.png") no-repeat;
+        width: 195px;
+        height: 49px;
+    }
+/* Login button ends */
+/*******************/
+
+
+    #nav-right-button-register:hover{
+        background: url("Pictures/register_m_r.png") no-repeat;
+    }
+
+
+    .home-search-wrapper {
+        height: 50px;
+    }
+    input.home-search-input{
+        font-size: 14px;
+    }
+
+    .AppDownloadButtons, .AppDownloadButtons div{
+        height: 40px;
     }
 
     .AppDownloadButtons button{
@@ -1182,31 +1124,9 @@ footer button#en{
         border-radius: 5px;
     }
 
-    .home-search-wrapper {
-        height: 50px;
-    }
+/**************************************************************/
 
-    input.home-search-input{
-        font-size: 14px;
-    }
-    .header-right a{
-        font-size: 20px;
-    }
-
-    .header-right i{
-        font-size:24px;
-    }
-
-    #nav-right-button-register{
-
-        width: 195px;
-        height: 49px;
-    }
-
-    .main-content-center{
-        width: 100%;
-    }
-
+/* pilsetu-parskats */
     .lielakas-pilsetas{
         width: 80%;
         display: block;
@@ -1218,6 +1138,20 @@ footer button#en{
         margin: 0 auto;
         display: block;
     }
+/****************************/
+
+/* Populārākie produkti */
+/****************************/
+    #popularakie-produkti .produkts{
+        float: inherit;
+        vertical-align: text-top;
+    }
+/****************************/
+/**************************************************************/
+
+
+/* Footer */
+/**************************************************************/
 
     .sub-content.one{
         float: none;
@@ -1315,55 +1249,63 @@ footer button#en{
         background: url('Pictures/en.png') no-repeat;
     }*/
 
-    #popularakie-produkti .produkts{
-        float: inherit;
-        vertical-align: text-top;
-    }
+/**************************************************************/
 
 }
 
+@media screen and (min-width: 481px)  and (max-width: 600px) {
+    .home-search-wrapper{
+        width: 100%;
+        min-width: 430px;
+    } 
+}
 
-
-@media screen and (min-width: 481px)  and (max-width: 600px)  {
+@media screen and (min-width: 481px)  and (max-width: 800px)  {
+/* "Wlcome" content */
+/**************************************************************/
+    .home-search-wrapper{
+        width: 85%;
+    } 
     .body-welcome {
-        min-width: 481px;
+        min-width: 460px;
     }
     .home-content-center{
         width: 90%;
     }
-    header.main-nav{
-        margin: 0 auto;
-
-    }
 
     .header-right{
-        width: 90%;
+        width: 60%;
+        min-width: 450px;
         margin: 0 auto;
-        float: none;
+        float: right;
     }
+/*******************/
+/* Login button starts  */
     #nav-right-button-login{
         background: url("Pictures/login_m.png") no-repeat;
-        /*float: left;*/
     }
 
-    .hidden_button{
+    .hidden_button_login{
         display: inline-block;
     }
 
     #loginContainer{
-        float: left; 
+        float: right; 
     }
-
+/* Login button ends */
+/*******************/
     #nav-right-button-register{
-        background: url("Pictures/register_m.png") no-repeat;
         float: right;
     }
+/**************************************************************/
 
-
+/* Kā tas strādā */
     #ka-tas-strada>section{
         width: 40%;
     }
+/****************************/
 
+/* Kategorijas */
     #kategorijas .tablet {
         display: block;
     }
@@ -1371,7 +1313,17 @@ footer button#en{
     #kategorijas .desktop {
         display: none;
     }
+/****************************/
 
+
+/* pilsetu-parskats */
+    .pilsetas-karte{
+        width: 40%;
+    }
+/****************************/
+
+
+/* Populārākie produkti */
     #popularakie-produkti div.desktop{
         display: none;
     }
@@ -1379,67 +1331,85 @@ footer button#en{
     #popularakie-produkti div.tablet{
         display: block;
     }
-    .pilsetas-karte{
-        width: 60%;
-    }
+/****************************/
+/**************************************************************/
+
+
+/* Footer */
+/**************************************************************/
     footer .soc_tikli{
         margin: 0 10px;
     }
-
-
+/**************************************************************/
 }
+
+
+
+
 
 
 
 @media screen and (max-width: 480px) {
 
-
-    .body-welcome {
-        min-width: 320px;
-    }
-
     .home-content-center{
         width: 98%;
     }
 
+/* "Wlcome" content */
+/**************************************************************/
+    .body-welcome {
+        min-width: 320px;
+    }
     .header-right{
         width: 100%;
         text-align: center;
     }
 
+
+/*******************/
+/* Login button starts  */
+    .hidden_button_login{
+        display: block;
+    }
+/* Login button ends */
+/*******************/
     #nav-right-button-register{
         display: block;
-/*        width: 90%;*/
     }
-    .hidden_button{
-        display: block;
-    }
-
-    .AppDownloadButtons div{
-        display: block;
-        width: 100%;
-    }
-    .AppDownloadButtons button{
-        margin: 0;
-    }
-
-
-    #nav-right-button-login{
-        background: url("Pictures/login_m.png") no-repeat;
-    }
-
-    #nav-right-button-register{
-        background: url("Pictures/register_m.png") no-repeat;
-    }
-
-    #nav-right-button-register, .hidden_button{
+    #nav-right-button-register, .hidden_button_login{
         margin: 15 auto;
     } 
 
+    .home-search-wrapper{
+        width: 100%;
+    } 
+
+    .AppDownloadButtons{
+        padding: 0;
+        height: 140px;
+    }
+    .AppDownloadButtons div{
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        height: 40px;
+    }
+    .AppDownloadButtons button{
+        margin: 0;
+        padding: 0;
+    }
+/**************************************************************/
+
+
+/* Kā tas strādā */
     #ka-tas-strada>section{
         width: 70%;
     }
 
+/****************************/
+
+
+/* Kategorijas */
     #kategorijas .phone {
         display: block;
     }
@@ -1448,32 +1418,33 @@ footer button#en{
         display: none;
     }
 
+/****************************/
+
+
+/* pilsetu-parskats */
     button.karte{
         min-width: 261px;
-/*        width: 350px;
-        height: 210px;*/
         width: 261px;
         height: 157px;
         background: url('Pictures/map_smallest.png') no-repeat;
         float: none;
-/*        border: none*/;
-/*        float: right;*/
     }   
 
     .pilsetas-karte{
         width: 100%;
         min-width: 261px;
     }
+/****************************/
 
-    .title{
+
+
+/* reklamas-un-piedavajumi */
+    #reklamas-un-piedavajumi .title{
         font-size: 14px;
     }
+/****************************/
 
-    footer .soc_tikli{
-        display: block;
-        margin: 15px auto;
-    }
-
+/* Populārākie produkti */
 
     #popularakie-produkti div.desktop{
         display: none;
@@ -1486,7 +1457,110 @@ footer button#en{
     #popularakie-produkti div.phone{
         display: block;
     }
+/****************************/
+/**************************************************************/
+
+
+/* Footer */
+/**************************************************************/
+    footer .soc_tikli{
+        display: block;
+        margin: 15px auto;
+    }
+/**************************************************************/
 
 }
+
+
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

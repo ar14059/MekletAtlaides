@@ -1,7 +1,8 @@
-
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -17,10 +18,9 @@
     <section class="body-welcome">
         <header class="main-nav">
             <div class="header-right">
-                <button class="hidden_button"></button>
+                <button class="hidden_button_login"></button>
                 <div id="loginContainer">
                     <button id="nav-right-button-login"></button>
-                    <!-- <div style="clear:both"></div> -->
                     <div id="loginBox">   
                         <form id="loginForm">
                         <hr>  
@@ -33,10 +33,8 @@
                                     <label for="password">Parole:</label>
                                     <input type="password" name="password" id="password" />
                                 </fieldset>
-                                <!-- <input type="submit" id="login"/> -->
                                 <button id="login"></button>
                             </fieldset>
-                            <!-- <span><a href="#">Forgot your password?</a></span> -->
                         </form>
                     </div>            
                 </div>
@@ -62,10 +60,13 @@
         </div>
     </section>
     
-    <section class="body-content">
+
+
+
+    <section id="body-content">
         <section class="bg">
             <section id="ka-tas-strada" class="main-content-center">
-                <header><h3>Kā tas strādā?</h3></header>            
+                <header><p class="main-subject-title">Kā tas strādā?</p></header>             
                 <section class="sub-content">
 
                     <section class="image">
@@ -96,9 +97,11 @@
                 </section>
             </section>     
         </section>
+
+
         <section class="bg-with">
             <section id="kategorijas" class="main-content-center">
-                <header><h3>Kategorijas</h3></header>
+                <header><p class="main-subject-title">Kategorijas</p></header>
                 <section class="desktop hidden">
                     <article>
                         <button id="mebeles"></button>
@@ -162,56 +165,57 @@
             </section>     
         </section>
 
+
         <section class="bg">
             <section id="pilsetu-parskats" class="main-content-center">
-                <header><h3>Pilsētu pārskats</h3></header>  
-                <section class="pamatinfo">
-
+                <header><p class="main-subject-title">Pilsētu pārskats</p></header>  
+                <section class="pilsetas">
                     <article class="lielakas-pilsetas">
-
-                            <p class="sub-content-title">Lielākās pilsētas</p>
-                            <div>
-                                <ul>
-                                    <li>Rīga</li>
-                                    <li>Liepāja</li>
-                                    <li>Ventspils</li>
-                                    <li>Talsi</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Sigulda</li>
-                                    <li>Balvi</li>
-                                    <li>Ogre</li>
-                                    <li>Daugavpils</li>
-                                </ul>                        
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Jelgava</li>
-                                    <li>Cēsis</li>
-                                    <li>Jūrmala</li>
-                                    <li>Rēzekne</li>
-                                </ul>                       
-                            </div>
+                        <p class="sub-content-title">Lielākās pilsētas</p>
+                        <div>
+                            <ul>
+                                <li><a href="#">Rīga</a></li>
+                                <li><a href="#">Liepāja</a></li>
+                                <li><a href="#">Ventspils</a></li>
+                                <li><a href="#">Talsi</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="#">Sigulda</a></li>
+                                <li><a href="#">Balvi</a></li>
+                                <li><a href="#">Ogre</a></li>
+                                <li><a href="#">Daugavpils</a></li>
+                            </ul>                        
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="#">Jelgava</a></li>
+                                <li><a href="#">Cēsis</a></li>
+                                <li><a href="#">Jūrmala</a></li>
+                                <li><a href="#">Rēzekne</a></li>
+                            </ul>                       
+                        </div>
                     </article>   
                     <article class="pilsetas-karte">
                         <button class="karte"></button>
                     </article>
                 </section> 
-                <section>
+                <section class="parejas-pilsetas">
                     <p  class="sub-content-title">Visas pilsētas</p>
                     <p  class="letter-list">
-                        <a class="letter-list" href="#">
+                        <a href="#" class="letter-list">
                             AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOPRSŠTUŪVZŽ
                         </a>
                     </p>
                 </section>
             </section>     
         </section>
+
+
         <section class="bg-with">
             <section id="popularakie-pardeveji" class="main-content-center">
-                <header><h3>Populārākie pārdevēji</h3></header>
+                <header><p class="main-subject-title">Populārākie pārdevēji</p></header>
                 <section class="image-slider">
                     <section class="prevnext"><div><p class="vertical_align"><button class="prev"></button></p></div></section>
                     <section class="images">
@@ -225,24 +229,26 @@
                 </section>
             </section>
         </section>
+
+
         <section class="bg">
             <section id="reklamas-un-piedavajumi" class="main-content-center">
                 <section class="rup-center">
-                    <div class="flip 1" flip-id="1"><!-- <div class="flip 1"> -->
+                    <div class="flip 1" flip-id="1">
                         <p class="title">Iknedēļas preces un piedāvājumi</p>
                         <button class="up hidden"></button>
                         <button class="down"></button>
                     </div>
                     <div class="panel 1" panel-id="1">111111111</div>
                     <hr>
-                    <div class="flip 2" flip-id="2"><!-- <div class="flip 2"> -->
+                    <div class="flip 2" flip-id="2">
                         <p class="title">Nekad nenokavē labu piedāvājumu</p>
                         <button class="up hidden"></button>
                         <button class="down"></button>
                     </div>
                     <div class="panel 2" panel-id="2">222222222</div>
                     <hr>
-                    <div class="flip 3" flip-id="3"><!-- <div class="flip 3"> -->
+                    <div class="flip 3" flip-id="3">
                         <p class="title">Vietējie veikali</p>
                         <button class="up hidden"></button>
                         <button class="down"></button>
@@ -252,16 +258,17 @@
                 </section>
             </section>
         </section>
+
+
         <section class="bg-with" >
             <section id="popularakie-produkti" class="main-content-center">
-                <header><h3>Populārākie produkti</h3></header>
+                <header><p class="main-subject-title">Populārākie produkti</p></header>
                 <div id="popularakie-produkti_include"></div>
                 <script> 
                 $(function(){
                   $("#popularakie-produkti_include").load("popularakie_produkti.html"); 
                 });
                 </script> 
-
             </section>
         </section>
     </section>
@@ -312,44 +319,5 @@
 
 
 
-
-
 </html>
 
-
-
-<!--  POP UP login form
-<style type="text/css">
-.hide_img3 {
-    display: none;
-}
-.hide_img3 {
-    background: none repeat scroll 0 0 #333;
-    border: 1px solid #000000;
-    border-radius: 4px 4px 4px 4px;
-    color: #78C102;
-    height: 85px;
-                display: none;
-                position: relative;
-    margin-left: 12px;
-    margin-top: 0px;
-    width: 145px;
-}
-.myClass:hover  .hide_img3
-{
-    display:block
-}
-</style>
-<div class="myClass">
-    <div>
-                <a class="show_img3" href="#"><span>Login</span></a><div class="hide_img3">
-                <form action="" method="post" name="login">
-                <input style="border-radius: 4px 4px 4px 4px;" type="text" placeholder="Username" />
-                <br />
-                <input style="border-radius: 4px 4px 4px 4px;" type="password" name="password" placeholder="Password" />
-                <br />
-                <input style="float:right" type="submit" value="Login" name="login" />
-                </form>
-    </div>
-</div
--->
