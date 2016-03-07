@@ -1,0 +1,651 @@
+/*Globālie CSS parametri*/
+/************************************************************************************************************/
+body{
+    margin: 0;
+    font-family: "Arial", Gadget, sans-serif;
+    min-width: 320px;
+}
+button{
+    border: none;
+}
+
+button:focus {outline:0;}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.hidden{
+    display: none;
+}
+
+/*CSS parametri specifiski katram elementam*/
+/************************************************************************************************************/
+
+#body-content{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: 320px;
+    clear: both;
+/*    font-weight: bold;*/
+}
+#body-content p.main-subject-title{
+    margin: 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+.bg, .bg-with{
+    width: 100%;
+/*    padding: 0;*/
+}
+.bg-with{
+    background-color: #FFF5F5;
+}
+.main-content-center{
+    width: 100%;
+    text-align: center;
+/*    position: relative;*/
+    margin: 0 auto;
+    min-width: 530px;
+}
+.main-content-center header{
+    padding:20px 0;
+    margin: 0 auto;
+
+}
+
+
+/* "Wlcome" content */
+.body-welcome{
+    background-image: url('Pictures/background_biggest.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFF5F5;
+    width: 56%;
+    margin: 0 auto;
+}
+
+#body-content{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: 320px;
+    clear: both;
+}
+
+header.main-nav{
+    height: 55px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+    /*overflow: hidden;*/
+}
+
+.header-right{
+    float: right;
+}
+
+.hidden_button_login{
+    display: none;
+    background: url("Pictures/login.png") no-repeat;
+    margin: 10px;
+    padding: 8px;
+}
+/*******************/
+/* Login button starts  */
+
+#nav-right-button-login{
+    background: url("Pictures/login.png") no-repeat;
+    position:relative;
+    z-index:2;
+    cursor:pointer;
+    margin: 0;
+    padding: 0;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+#nav-right-button-login:hover{
+    background: url("Pictures/login_r.png") no-repeat;
+}
+#loginContainer {
+    position:relative;
+    font-size:12px;
+    margin: 10px;
+    padding: 0;
+}
+#loginBox {
+    position:absolute;
+    right:0;
+    display:none;
+    z-index:1;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+}
+#loginForm hr {
+    border: none;
+    border-bottom: 1px solid #FC6B6B;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#loginForm {
+    width:100%; 
+    background:#FFFFFF;
+    padding:6px;
+    float: right;
+}
+#loginForm fieldset {
+    margin:0 0 5px 0;
+    display:block;
+    border:0;
+    padding:0;
+}
+fieldset#body {
+    background:#fff;
+    padding:10px 0 10px 13px;
+    margin:0;
+}
+#loginForm #checkbox {
+    width:auto;
+    margin:1px 9px 0 0;
+    float:left;
+    padding:0;
+    border:0;
+}
+#body label {
+    color:#3a454d;
+    margin:9px 0 0 0;
+    display:block;
+    float:left;
+}
+#loginForm #body fieldset label {
+    display:inline-block;
+    float:none;
+    margin:0 0 6px 0;
+    width: 30%;
+}
+#loginForm input {
+    width:60%;
+    border:1px solid #FC6B6B;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    color:#3a454d;
+    font-weight:bold;
+    padding:0 8px;
+    font-size:14px;
+    float: right;
+}
+#loginForm input:focus {
+    box-shadow:inset 0px -1px 1px #FC6B6B;
+    -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
+    -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
+}
+#loginForm #login {
+    width:auto;
+    float:left;
+    background: url("Pictures/ienakt.png") no-repeat;
+    width: 59px;
+    height: 22px;
+    margin:12px 12px 0 0;
+    cursor:pointer;
+    float: right;
+
+}
+#loginForm #login:hover {
+    background: url("Pictures/ienakt_active.png") no-repeat;
+}
+#loginForm span {
+    text-align:center;
+    display:block;
+    padding:7px 0 4px 0;
+}
+
+#loginForm span a {
+    color:#3a454d;
+    text-shadow:1px 1px #fff;
+    font-size:12px;
+}
+
+input:focus {
+    outline:none;
+}
+/* Login button ends */
+/*******************/
+
+#nav-right-button-register{
+    background: url("Pictures/register.png") no-repeat;
+    margin: 10px;
+    padding: 0;
+    display: inline-block;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#nav-right-button-register:hover{
+    background: url("Pictures/register_r.png") no-repeat;
+}
+
+#nav-right-button-login, #nav-right-button-register{
+    width: 160px;
+    height: 40px;
+}
+
+.header-right div{
+    display: inline-block;
+}
+
+
+/**************************************************************/
+
+/* Footer */
+/**************************************************************/
+footer{
+    background-color:#404040 ;
+    margin: 0;
+    width: 100%;
+    clear: both;
+    font-weight: bold;
+}
+
+#footer{
+    overflow: hidden;
+}
+
+
+footer section.sub-content{
+    width: 29%;
+    min-width: 150px;
+    display: inline-block;
+    margin: 15px auto;
+}
+
+.sub-content.one{
+    float: left;
+}
+
+.sub-content.three{
+    float: right;
+}
+footer .title{
+    float: left;
+    color: #FFF5F5;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+footer hr{
+    border: 1px solid #FFF5F5;
+    float: left;
+    display: table-cell;
+    width: 100%;
+    min-width: 150px;
+}
+
+
+footer .footer-info{
+    float: left;
+    margin: 5px 0;
+    width: 100%;
+}
+
+footer .footer-info a{
+    color: #A0A0A0 ;
+    font-size: 10px;
+    float: left;
+}
+
+
+footer div.buttons{
+    margin: 10px;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+footer .soc_tikli, footer .valodas{
+    border-radius: 2px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+footer .soc_tikli{
+    width: 17px;
+    height: 17px;
+}
+
+
+footer .valodas{
+    width: 16px;
+    height: 16px;
+}
+
+footer div.v_indekss{
+    margin: 0 10px 0 0;
+    width: 16px;
+    font-size: 10px;
+    display: inline-block;
+    float: left;
+    color: #FFF5F5;
+
+}
+
+footer button#draugiemlv{
+    background: url('Pictures/draugiemlv_white.png') no-repeat;
+}
+
+footer button#facebook{
+    background: url('Pictures/facebook_white.png') no-repeat;
+}
+
+footer button#twitter{
+    background: url('Pictures/twitter_white.png') no-repeat;
+}
+
+footer button#lv{
+    background: url('Pictures/lv.png') no-repeat;
+}
+
+footer button#ru{
+    background: url('Pictures/ru.png') no-repeat;
+}
+
+footer button#en{
+    background: url('Pictures/en.png') no-repeat;
+}
+/**************************************************************/
+
+/************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS stils balstoties uz ierīce ekrāna izmēra*/
+/************************************************************************************************************/
+
+
+@media screen and (min-width: 601px) and (max-width: 800px){
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1324px){
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1130px){
+
+}
+
+@media screen and (min-width: 466px) and (max-width: 1130px){
+
+
+}
+
+
+@media screen and (max-width: 800px)  {
+
+    .main-content-center{
+        width: 100%;
+        min-width: 320px;
+    }
+
+/* "Wlcome" content */
+/**************************************************************/
+    .body-welcome {
+        width: 100%;
+    }
+/*******************/
+/* Login button starts  */
+    #loginContainer{
+        display: none;
+    }
+    .hidden_button_login{
+        width: 195px;
+        height: 49px;
+        background: url("Pictures/login_m.png") no-repeat;
+    }
+
+    .hidden_button_login:hover{
+        background: url("Pictures/login_m_r.png") no-repeat;
+    }
+
+    #nav-right-button-register{
+        background: url("Pictures/register_m.png") no-repeat;
+        width: 195px;
+        height: 49px;
+    }
+/* Login button ends */
+/*******************/
+    #nav-right-button-register:hover{
+        background: url("Pictures/register_m_r.png") no-repeat;
+    }
+/**************************************************************/
+
+/* Footer */
+/**************************************************************/
+
+    .sub-content.one{
+        float: none;
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .sub-content.two{
+        float: none;
+        display: block;
+        margin-bottom: 90px;
+    }
+
+    .sub-content.three{
+        float: none;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    footer section.sub-content{
+        width: 90%;
+        min-width: 250px;
+        display: block;
+        vertical-align: text-top;
+        margin: 15px auto;
+    }
+
+    footer section.sub-content.one, footer section.sub-content.two{
+        display: none;
+    }
+
+    footer hr{
+        display: none;
+    }
+
+    footer .title{
+        text-align: center;
+        float: none;
+        color: #FFF5F5;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    footer div.buttons{
+        margin: 0 auto;
+        overflow: hidden;
+        width: 90%;
+    }
+    footer .footer-info{
+        text-align: center;
+        float: none;
+    }
+
+
+    footer .soc_tikli{
+        width: 82px;
+        height: 82px;
+        border-radius: 2px;
+        float: none;
+    }
+
+    footer .valodas{
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        float: none;
+        margin: 0 10px 0 0;
+    }
+
+    footer div.v_indekss{
+        display: none;
+    }
+
+    footer button#draugiemlv{
+        background: url('Pictures/draugiemlv_white_tablet.png') no-repeat;
+    }
+
+    footer button#facebook{
+        background: url('Pictures/facebook_white_tablet.png') no-repeat;
+    }
+
+    footer button#twitter{
+        background: url('Pictures/twitter_white_tablet.png') no-repeat;
+    }
+
+/*    footer button#lv{
+        background: url('Pictures/lv.png') no-repeat;
+    }
+
+    footer button#ru{
+        background: url('Pictures/ru.png') no-repeat;
+    }
+
+    footer button#en{
+        background: url('Pictures/en.png') no-repeat;
+    }*/
+
+/**************************************************************/
+
+}
+
+@media screen and (min-width: 481px)  and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 481px)  and (max-width: 800px)  {
+/* "Wlcome" content */
+/**************************************************************/
+    .body-welcome {
+        min-width: 460px;
+    }
+
+    .header-right{
+        width: 60%;
+        min-width: 450px;
+        margin: 0 auto;
+        float: right;
+    }
+/*******************/
+/* Login button starts  */
+    #nav-right-button-login{
+        background: url("Pictures/login_m.png") no-repeat;
+    }
+
+    .hidden_button_login{
+        display: inline-block;
+    }
+
+    #loginContainer{
+        float: right; 
+    }
+/* Login button ends */
+/*******************/
+    #nav-right-button-register{
+        float: right;
+    }
+/**************************************************************/
+
+/* Footer */
+/**************************************************************/
+    footer .soc_tikli{
+        margin: 0 10px;
+    }
+/**************************************************************/
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+
+/* "Wlcome" content */
+/**************************************************************/
+    .body-welcome {
+        min-width: 320px;
+    }
+    .header-right{
+        width: 100%;
+        text-align: center;
+    }
+
+
+/*******************/
+/* Login button starts  */
+    .hidden_button_login{
+        display: block;
+    }
+/* Login button ends */
+/*******************/
+    #nav-right-button-register{
+        display: block;
+    }
+    #nav-right-button-register, .hidden_button_login{
+        margin: 15 auto;
+    } 
+
+/**************************************************************/
+
+/* Footer */
+/**************************************************************/
+    footer .soc_tikli{
+        display: block;
+        margin: 15px auto;
+    }
+/**************************************************************/
+
+}
+
+
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/

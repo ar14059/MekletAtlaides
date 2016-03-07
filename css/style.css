@@ -9,11 +9,12 @@ button{
     border: none;
 }
 
-button:focus {outline:0;}
+/*button:focus {outline:0;}*/
 
 a{
     text-decoration: none;
     margin: 0;
+    color: #FFFFFF;
 }
 
 .hidden{
@@ -26,8 +27,19 @@ a{
 
 /* "Wlcome" content */
 .body-welcome{
-    background-image: url('Pictures/Background.png');
+
+    background-image: url('Pictures/background.png');
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFF5F5;
+    width: 56%;
+    min-width: 530px;
+    margin: 0 auto;
+    font-weight: bold;
+/*    background-image: url('Pictures/Background.png');*/
+/*    background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
     padding: 0;
@@ -35,7 +47,7 @@ a{
     min-width: 530px;
     clear: both;
     background-size: auto 100%;
-    font-weight: bold;
+    font-weight: bold;*/
    /* overflow: auto;*/
 /*    overflow: hidden;*/
 }
@@ -431,8 +443,10 @@ button.home-search:hover{
     width: 100%;
 }
 #kategorijas section article button{
-    width: 100px;
-    height: 50px;
+/*    width: 100px;
+    height: 50px;*/
+    width: 114px;
+    height: 57px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -445,26 +459,50 @@ button.home-search:hover{
 #kategorijas>section>article button#mebeles{
     background: url('Pictures/mebeles.png') no-repeat;
 }
+#kategorijas>section>article button#mebeles:hover{
+    background: url('Pictures/mebeles_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#sporta-preces{
     background: url('Pictures/sporta-preces.png') no-repeat;
 }
+#kategorijas>section>article button#sporta-preces:hover{
+    background: url('Pictures/sporta-preces_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#rotallietas{
     background: url('Pictures/rotallietas.png') no-repeat;
 }
+#kategorijas>section>article button#rotallietas:hover{
+    background: url('Pictures/rotallietas_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#elektronika{
     background: url('Pictures/elektronika.png') no-repeat;
 }
+#kategorijas>section>article button#elektronika:hover{
+    background: url('Pictures/elektronika_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#darba-riki{
     background: url('Pictures/darba-riki.png') no-repeat;
 }
+#kategorijas>section>article button#darba-riki:hover{
+    background: url('Pictures/darba-riki_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#atlaizu-veikali{
     background: url('Pictures/atlaizu-veikali.png') no-repeat;
 }
+#kategorijas>section>article button#atlaizu-veikali:hover{
+    background: url('Pictures/atlaizu-veikali_active.png') no-repeat;
+}
+
 
 
 
@@ -472,26 +510,50 @@ button.home-search:hover{
 #kategorijas>section>article button#automobiliem{
     background: url('Pictures/automobiliem.png') no-repeat;
 }
+#kategorijas>section>article button#automobiliem:hover{
+    background: url('Pictures/automobiliem_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#universalveikali{
     background: url('Pictures/universalveikali.png') no-repeat;
 }
+#kategorijas>section>article button#universalveikali:hover{
+    background: url('Pictures/universalveikali_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#kosmetika{
     background: url('Pictures/kosmetika.png') no-repeat;
 }
+#kategorijas>section>article button#kosmetika:hover{
+    background: url('Pictures/kosmetika_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#apgerbi{
     background: url('Pictures/apgerbi.png') no-repeat;
 }
+#kategorijas>section>article button#apgerbi:hover{
+    background: url('Pictures/apgerbi_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#majdzivnieki{
     background: url('Pictures/majdzivnieki.png') no-repeat;
 }
+#kategorijas>section>article button#majdzivnieki:hover{
+    background: url('Pictures/majdzivnieki_active.png') no-repeat;
+}
+
 
 #kategorijas>section>article button#citi{
     background: url('Pictures/citi.png') no-repeat;
 }
+#kategorijas>section>article button#citi:hover{
+    background: url('Pictures/citi_active.png') no-repeat;
+}
+
 
 .sub-content button{
     border: none;
@@ -886,9 +948,6 @@ footer hr{
     min-width: 150px;
 }
 
-footer hr.under-title{
-    width: 150px;
-}
 
 footer .footer-info{
     float: left;
@@ -1305,16 +1364,6 @@ footer button#en{
     }
 /****************************/
 
-/* Kategorijas */
-    #kategorijas .tablet {
-        display: block;
-    }
-
-    #kategorijas .desktop {
-        display: none;
-    }
-/****************************/
-
 
 /* pilsetu-parskats */
     .pilsetas-karte{
@@ -1343,8 +1392,32 @@ footer button#en{
 /**************************************************************/
 }
 
+@media screen and (min-width: 491px)  and (max-width: 800px)  {
+    /* Kategorijas */
+        #kategorijas .tablet {
+            display: block;
+        }
 
+        #kategorijas .desktop {
+            display: none;
+        }
+    /****************************/
+}
 
+@media screen and (min-width: 480px) and (max-width: 490px) {
+
+/* Kategorijas */
+    #kategorijas .tabletphone {
+        display: block;
+    }
+
+    #kategorijas .desktop {
+        display: none;
+    }
+
+/****************************/
+
+}
 
 
 
@@ -1475,92 +1548,3 @@ footer button#en{
 /************************************************************************************************************/
 /************************************************************************************************************/
 /************************************************************************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
