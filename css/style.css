@@ -9,7 +9,7 @@ button{
     border: none;
 }
 
-/*button:focus {outline:0;}*/
+button:focus {outline:0;}
 
 a{
     text-decoration: none;
@@ -77,13 +77,16 @@ header.main-nav{
     float: right;
 }
 
-.hidden_button_login{
+#hidden_button_login{
     display: none;
     background: url("Pictures/login.png") no-repeat;
     margin: 10px;
     padding: 8px;
 }
 
+.header-right .button_nav{
+    box-shadow: 2px 2px 8px 2px #545454;
+}
 
 /*******************/
 /* Login button starts  */
@@ -944,6 +947,10 @@ footer .title{
     font-weight: normal;
 }
 
+footer .title a{
+    color: #FFF5F5;
+}
+
 footer hr{
     border: 1px solid #FFF5F5;
     float: left;
@@ -960,7 +967,7 @@ footer .footer-info{
 }
 
 footer .footer-info a{
-    color: #A0A0A0 ;
+    color: #A0A0A0;
     font-size: 10px;
     float: left;
 }
@@ -1145,13 +1152,13 @@ footer button#en{
     #loginContainer{
         display: none;
     }
-    .hidden_button_login{
+    #hidden_button_login{
         width: 195px;
         height: 49px;
         background: url("Pictures/login_m.png") no-repeat;
     }
 
-    .hidden_button_login:hover{
+    #hidden_button_login:hover{
         background: url("Pictures/login_m_r.png") no-repeat;
     }
 
@@ -1258,6 +1265,7 @@ footer button#en{
         font-weight: normal;
     }
 
+
     footer div.buttons{
         margin: 0 auto;
         overflow: hidden;
@@ -1348,7 +1356,7 @@ footer button#en{
         background: url("Pictures/login_m.png") no-repeat;
     }
 
-    .hidden_button_login{
+    #hidden_button_login{
         display: inline-block;
     }
 
@@ -1445,7 +1453,7 @@ footer button#en{
 
 /*******************/
 /* Login button starts  */
-    .hidden_button_login{
+    #hidden_button_login{
         display: block;
     }
 /* Login button ends */
@@ -1453,7 +1461,7 @@ footer button#en{
     #nav-right-button-register{
         display: block;
     }
-    #nav-right-button-register, .hidden_button_login{
+    #nav-right-button-register, #hidden_button_login{
         margin: 15 auto;
     } 
 

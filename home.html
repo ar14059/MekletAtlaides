@@ -13,13 +13,15 @@
 
     <title>Webpage</title>
 </head>
+
+
 <body>
 
     <section class="body-welcome">
         <header class="main-nav">
             <div class="header-right">
-                <button class="hidden_button_login"></button>
-                <div id="loginContainer">
+                <button id="hidden_button_login" class="button_nav"></button>
+                <div id="loginContainer" class="button_nav">
                     <button id="nav-right-button-login"></button>
                     <div id="loginBox">   
                         <form id="loginForm">
@@ -38,7 +40,7 @@
                         </form>
                     </div>            
                 </div>
-                <button id="nav-right-button-register"></button>
+                <a href="registracija.html"><button id="nav-right-button-register" class="button_nav"></button></a>
             </div>
         </header>
         <div class="home-content">
@@ -302,49 +304,12 @@
             </section>
         </section>
     </section>
-
-    <footer>
-        <section id="footer" class="main-content-center">
-            <section class="sub-content one">
-                <p class="title"><a href="par_mums.html">Par mums</a></p><br>
-                <hr class="under-title">
-                <div>
-                    <p class="footer-info"><a href="par_mums.html">Kas ir ...?</a></p>
-                    <p class="footer-info"><a href="par_mums.html">Kā mēs strādājam?</a></p>
-                </div>
-            </section>
-            <section class="sub-content two">
-                <p class="title">Sazinies ar mums</p><br>
-                <hr class="under-title">
-                <div>
-                    <p class="footer-info"><a href="#">Epasts - tirgus@tirgus.lv</a></p>
-                    <p class="footer-info"><a href="#">Tālrunis - 22334455</a></p>
-                    <p class="footer-info"><a href="#">Skype - TirgusLv</a></p>
-                </div>
-            </section>
-            <section class="sub-content three">
-                <p class="title">Seko mums</p><br>
-                <hr class="under-title">
-                <div class="buttons">
-                    <p class="footer-info">
-                        <button id="draugiemlv" class="soc_tikli"></button>
-                        <button id="facebook" class="soc_tikli"></button>
-                        <button id="twitter" class="soc_tikli"></button>
-                    </p>
-                </div>
-                <hr>
-                <div class="buttons">
-                    <p class="footer-info">
-                        <div class="v_indekss"><button id="lv" class="valodas"></button>LV</div>
-                        <div class="v_indekss"><button id="ru" class="valodas"></button>RU</div>
-                        <div class="v_indekss"><button id="en" class="valodas"></button>EN</div>
-                    </p>
-                </div>
-            </section>
-        </section>
-    </footer>
-
-
+    <div id="footer_include"></div>
+    <script> 
+    $(function(){
+      $("#footer_include").load("footer.html"); 
+    });
+    </script> 
 </body>
 
 
