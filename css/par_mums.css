@@ -14,7 +14,11 @@ button:focus {outline:0;}
 a{
     text-decoration: none;
     margin: 0;
-    color: #FFFFFF;
+    color: #545454;
+}
+
+p{
+    color: #545454;
 }
 
 .hidden{
@@ -37,21 +41,15 @@ a{
     font-size: 19px;
     font-weight: bold;
 }
-.bg, .bg-with{
-    width: 100%;
-/*    padding: 0;*/
-}
-.bg-with{
-    background-color: #FFF5F5;
-}
+
 .main-content-center{
-    width: 100%;
+    width: 90%;
     text-align: center;
 /*    position: relative;*/
     margin: 0 auto;
     min-width: 530px;
-}
-.main-content-center header{
+
+}.main-content-center header{
     padding:20px 0;
     margin: 0 auto;
 
@@ -66,16 +64,19 @@ a{
     background-attachment: fixed;
     background-size: cover;
     background-color: #FFF5F5;
-    width: 56%;
+    width: 100%;
     margin: 0 auto;
+    min-height: 100%;
 }
 
 #body-content{
     margin: 0 auto;
-    padding: 0;
     width: 100%;
+    /*padding: 50px;*/
     min-width: 320px;
     clear: both;
+    /*min-height: 419px;*/
+    min-height: 344px;
 }
 
 header.main-nav{
@@ -89,6 +90,7 @@ header.main-nav{
 
 .header-right{
     float: right;
+    margin-right: 3%;
 }
 
 .hidden_button_login{
@@ -249,6 +251,57 @@ input:focus {
 
 /**************************************************************/
 
+
+
+
+/* Body-content */
+/**************************************************************/
+.par-mums{
+    width: 90%;
+    margin: 40px auto;
+    clear: both;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px 2px #545454;
+}
+#par-mums_content{
+    background-color: #FFFFFF;
+    width: 100%;
+    float: left;
+}
+#par-mums_content fieldset.content{
+    margin: 15px;
+    float: left;
+    padding: 0;
+    border: none;
+    text-align: justify;
+}
+
+#par-mums_content p.subject-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 15px;
+}
+
+#par-mums_content p.paragraph{
+    margin: 0;
+    padding: 15px;
+    text-indent: 30px;
+    line-height: 20px;
+}
+
+#par-mums_content hr{
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #F89494;
+}
+
+/**************************************************************/
+
+
+
+
+
 /* Footer */
 /**************************************************************/
 footer{
@@ -257,6 +310,9 @@ footer{
     width: 100%;
     clear: both;
     font-weight: bold;
+/*    position:fixed;
+    left:0px;
+    bottom:0px;*/
 }
 
 #footer{
