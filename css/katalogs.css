@@ -62,26 +62,86 @@ p{
     width: 100%;
     min-width: 320px;
     clear: both;
+    background-color: #FFF5F5;
 }
 
 header.main-nav{
-    /*height: 55px;*/
     height: auto;
-    width: 100%;
+    width: 65%;
     margin: 0 auto;
     padding: 0;
     clear: both;
-    overflow: hidden;
+    
 }
 
-header.main-nav a{
-    display: inline-block;
-    float: right;
+section.main-nav-header{
+    width: 96%;
+    background-color: #FFFFFF;
+    height: auto;
+    overflow: hidden;
+    padding: 0 3%;
 }
 
 .header-right{
     float: right;
+    height: 60px;
+    padding: 5px;
+/*    width: 100%;*/
 }
+
+.header-left{
+    float: left;
+    height: 60px;
+    padding: 5px;
+    width: 40%;
+    min-width: 280px;
+}
+
+.header-left-map, .header-left-content{
+    display: inline-block;
+    margin: 5px auto;
+    height: 50px;
+}
+.header-left-map{
+    width: 20%;
+}
+
+.header-left-map button{
+    width: 50px;
+    height: 50px;
+    background: url("Pictures/lokalize_small.png") no-repeat;
+    /*background-color: red;*/
+}
+
+.header-left-content{
+    width: 70%;
+    height: auto;
+}
+
+
+
+.header-left-content p{
+    margin: 0;
+}
+
+.header-left-content p.address{
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-left-content p.address a{
+    color: #FF4D4D;
+}
+
+.header-left-content p.change_address{
+    line-height: 15px;
+    font-size: 12px;
+}  
+
+.header-left-content p.change_address a{
+
+}   
 
 #hidden_button_login{
     display: none;
@@ -89,7 +149,6 @@ header.main-nav a{
     margin: 10px;
     padding: 8px;
 }
-
 
 /*******************/
 /* Login button starts  */
@@ -231,6 +290,8 @@ input:focus {
 /* Login button ends */
 /*******************/
 
+
+
 #nav-right-button-register{
     background: url("Pictures/register.png") no-repeat;
     margin: 10px;
@@ -247,13 +308,31 @@ input:focus {
     background: url("Pictures/register_rr.png") no-repeat;
 }
 
+#nav-right-button-back{
+    background: url("Pictures/back.png") no-repeat;
+    margin: 10px;
+    padding: 0;
+    display: inline-block;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#nav-right-button-back:hover{
+    background: url("Pictures/back_r.png") no-repeat;
+}
+
+
 .button_nav{
     width: 137px;
     height: 35px;
     box-shadow: 2px 2px 8px 2px #545454;
 }
 
-.header-right div{
+
+.header-right div, .header-left div{
     display: inline-block;
 }
 
@@ -406,7 +485,7 @@ button.home-search:hover{
     background-color: #FFF5F5;
 }
 .main-content-center{
-    width: 56%;
+    width: 70%;
     text-align: center;
 /*    position: relative;*/
     margin: 0 auto;
@@ -1151,6 +1230,26 @@ footer button#en{
     .body-welcome {
         width: 100%;
     }
+    header.main-nav{
+        width: 100%;
+    }
+
+    .header-right, .header-left{
+/*        display: block;*/
+/*        float: none;
+        margin: 0 auto;*/
+    }
+    .header-right{
+        display: block;  
+        float: none;
+        margin: 0 auto;  
+    }
+
+    .header-left{
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
 /*******************/
 /* Login button starts  */
     #loginContainer{
@@ -1364,9 +1463,9 @@ footer button#en{
         display: inline-block;
     }
 
-/*    #loginContainer{
+    #loginContainer{
         float: right; 
-    }*/
+    }
 /* Login button ends */
 /*******************/
     #nav-right-button-register{
@@ -1465,10 +1564,6 @@ footer button#en{
     #nav-right-button-register{
         display: block;
     }
-    header.main-nav a{
-        display: block;
-        float: none;
-}
     #nav-right-button-register, #hidden_button_login{
         margin: 15 auto;
     } 
