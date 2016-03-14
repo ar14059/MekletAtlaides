@@ -1,5 +1,13 @@
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
+/**{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
 body{
     margin: 0;
     font-family: "Arial", Gadget, sans-serif;

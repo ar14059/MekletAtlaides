@@ -1,9 +1,19 @@
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     font-family: "Arial", Gadget, sans-serif;
-    min-width: 320px;
+    min-width: 300px;
+    background-color: #FFF5F5;
+    position: relative;
 }
 button{
     border: none;
@@ -25,766 +35,639 @@ p{
     display: none;
 }
 
+hr{
+    border: none;
+    border-bottom: 1px solid #545454;
+}
+
+
 /*CSS parametri specifiski katram elementam*/
 /************************************************************************************************************/
 
-
-/* "Wlcome" content */
-.body-welcome{
-
-    background-image: url('Pictures/background.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #FFF5F5;
-    width: 56%;
-    min-width: 530px;
+.wrapper{
+    width: 60%;
+    /*background-color: red;*/
     margin: 0 auto;
-    font-weight: bold;
-/*    background-image: url('Pictures/Background.png');*/
-/*    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
-    padding: 0;
-    width: 56%;
-    min-width: 530px;
-    clear: both;
-    background-size: auto 100%;
-    font-weight: bold;*/
-   /* overflow: auto;*/
-/*    overflow: hidden;*/
+
 }
 
-#body-content{
-    margin: 0 auto;
-    padding: 0;
+.wrapper-email{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    min-width: 320px;
-    clear: both;
-    background-color: #FFF5F5;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
 }
+
+    .wrapper-email div.email-div{
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+    }
+        .wrapper-email div.email-div-center{
+            width: 300px;
+            height: 100%;
+            background-color: #292929;
+            margin: 0 auto;
+            position: relative;
+        }
+            .email-div-center button.star_fill{
+                background: url("Pictures/star-btn-min_fill.png") no-repeat;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+            }
+            .email-div-center button.close{
+                background: url("Pictures/close-btn.png") no-repeat;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            section#email-form{
+                width: 252px;
+                position: absolute;
+                top: 55px;
+                left:24px; 
+            }
+                #email-form p{
+                    color: #B0AEAE;
+                    text-align: left;
+                    font-size: 11px;
+                    margin-bottom: 25px;
+                }
+
+                #email-form input.email-input{
+                    width: 100%; 
+                    height: 22px;
+                    margin-bottom: 10px;
+                    padding: 2px 10px;
+                    font-size: 10px;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+                #email-form button.email-submit{
+                    background: url("Pictures/labi-btn.png") no-repeat;
+                    width: 100%;
+                    height: 25px;
+                }
+                #email-form button.email-submit:hover{
+                    background: url("Pictures/labi-btn_active.png") no-repeat;
+                }
+
+
 
 header.main-nav{
-    height: auto;
-    width: 65%;
-    margin: 0 auto;
-    padding: 0;
-    clear: both;
-    
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
 }
 
-section.main-nav-header{
-    width: 96%;
-    background-color: #FFFFFF;
-    height: auto;
-    overflow: hidden;
-    padding: 0 3%;
-}
-
-.header-right{
-    float: right;
+.nav-subject{
     height: 60px;
-    padding: 5px;
-/*    width: 100%;*/
-}
-
-.header-left{
-    float: left;
-    height: 60px;
-    padding: 5px;
-    width: 40%;
-    min-width: 280px;
-}
-
-.header-left-map, .header-left-content{
+    margin: 5px;
     display: inline-block;
-    margin: 5px auto;
-    height: 50px;
-}
-.header-left-map{
-    width: 20%;
 }
 
-.header-left-map button{
-    width: 50px;
-    height: 50px;
-    background: url("Pictures/lokalize_small.png") no-repeat;
-    /*background-color: red;*/
+.nav-subject.left{
+    /*width: 300px;*/
+    width: auto;
+    max-width: 320px;
+    /*background-color: green;*/
+    float: left;
 }
 
-.header-left-content{
-    width: 70%;
-    height: auto;
+    .nav-subject.left img{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        float: left;
+    }
+
+    .nav-subject.left div.vieta-content{
+        margin: 10px 0;
+        display: inline-block;
+        width: 220px;
+    }
+
+    .nav-subject.left p{
+        display: inline-block;
+        width: 200px;
+        /*background-color: yellow;*/
+    }
+
+    .nav-subject.left p.vieta{
+        font-size: 21px;
+        color: red;
+        line-height: 25px;
+        font-weight: bold;
+    }
+
+    .nav-subject.left p.vieta-mainit{
+        line-height: 15px;
+        font-size: 12px;
+    }
+
+.nav-subject.right{
+    width: 410px;
+    /*background-color: blue;*/
+    float: right;
+    width: auto;
 }
 
+    #hidden_button_login{
+        display: none;
+        background: url("Pictures/login.png") no-repeat;
+        margin: 10px;
+        padding: 8px;
+    }
+
+    /*******************/
+    /* Login button starts  */
+
+    #nav-right-button-login{
+        background: url("Pictures/login.png") no-repeat;
+        position:relative;
+        z-index:1;
+        cursor:pointer;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    }
+
+    #nav-right-button-login:hover{
+        background: url("Pictures/login_r.png") no-repeat;
+    }
 
 
-.header-left-content p{
-    margin: 0;
-}
+    #loginContainer {
+        position:relative;
+        font-size:12px;
+        margin: 10px;
+        padding: 0;
+        display: inline-block;
+    }
 
-.header-left-content p.address{
-    line-height: 35px;
-    font-size: 20px;
-    font-weight: bold;
-}
+    #loginBox {
+        position:absolute;
+        right:0;
+        display:none;
+        z-index:2;
+        width: 220px;
+        margin: 0;
+        padding: 0;
+    }
 
-.header-left-content p.address a{
-    color: #FF4D4D;
-}
+    #loginForm hr {
+        border: none;
+        border-bottom: 1px solid #FC6B6B;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-.header-left-content p.change_address{
-    line-height: 15px;
-    font-size: 12px;
-}  
+    #loginForm {
+        width:100%; 
+        background:#FFFFFF;
+        padding:6px;
+        float: right;
+    }
 
-.header-left-content p.change_address a{
+    #loginForm fieldset {
+        margin:0 0 5px 0;
+        display:block;
+        border:0;
+        padding:0;
+    }
 
-}   
+    fieldset#body {
+        background:#fff;
+        padding:10px 0 10px 13px;
+        margin:0;
+    }
 
-#hidden_button_login{
-    display: none;
-    background: url("Pictures/login.png") no-repeat;
-    margin: 10px;
-    padding: 8px;
-}
+    #loginForm #checkbox {
+        width:auto;
+        margin:1px 9px 0 0;
+        float:left;
+        padding:0;
+        border:0;
 
-/*******************/
-/* Login button starts  */
+    }
 
-#nav-right-button-login{
-    background: url("Pictures/login.png") no-repeat;
-    position:relative;
-    z-index:2;
-    cursor:pointer;
-    margin: 0;
-    padding: 0;
+    #body label {
+        color:#3a454d;
+        margin:9px 0 0 0;
+        display:block;
+        float:left;
+    }
+
+    #loginForm #body fieldset label {
+        display:inline-block;
+        float:none;
+        margin:0 0 6px 0;
+        width: 30%;
+    }
+
+    #loginForm input {
+        width:60%;
+        border:1px solid #FC6B6B;
+        border-radius:3px;
+        -moz-border-radius:3px;
+        color:#3a454d;
+        font-weight:bold;
+        padding:0 8px;
+        font-size:14px;
+        float: right;
+    }
+
+    #loginForm input:focus {
+        box-shadow:inset 0px -1px 1px #FC6B6B;
+        -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
+        -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
+    }
+
+    #loginForm #login {
+        width:auto;
+        float:left;
+        background: url("Pictures/ienakt.png") no-repeat;
+        width: 59px;
+        height: 22px;
+        margin:12px 12px 0 0;
+        cursor:pointer;
+        float: right;
+
+    }
+
+    #loginForm #login:hover {
+        background: url("Pictures/ienakt_active.png") no-repeat;
+    }
+
+    #loginForm span {
+        text-align:center;
+        display:block;
+        padding:7px 0 4px 0;
+    }
+
+    #loginForm span a {
+        color:#3a454d;
+        text-shadow:1px 1px #fff;
+        font-size:12px;
+    }
+
+    input:focus {
+        outline:none;
+    }
+    /* Login button ends */
+    /*******************/
+
+
+    #nav-right-button-register{
+        background: url("Pictures/register.png") no-repeat;
+        margin: 10px;
+        display: inline-block;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-}
 
-#nav-right-button-login:hover{
-    background: url("Pictures/login_r.png") no-repeat;
-}
+    }
+
+    #nav-right-button-register:hover{
+        background: url("Pictures/register_rr.png") no-repeat;
+    }
+
+    #nav-right-button-back{
+        background: url("Pictures/back.png") no-repeat;
+        margin: 10px;
+        display: inline-block;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+    }
+
+    #nav-right-button-back:hover{
+        background: url("Pictures/back_r.png") no-repeat;
+    }
+
+    .button_nav{
+        width: 137px;
+        height: 35px;
+        box-shadow: 2px 2px 8px 2px #545454;
+    }
 
 
-#loginContainer {
-    position:relative;
-    font-size:12px;
-    margin: 10px;
-    padding: 0;
-}
 
-#loginBox {
-    position:absolute;
-    right:0;
-    display:none;
-    z-index:1;
-    width: 220px;
-    margin: 0;
-    padding: 0;
-}
-
-#loginForm hr {
-    border: none;
-    border-bottom: 1px solid #FC6B6B;
+.reklamas-meklesana{
     width: 100%;
-    margin-bottom: 10px;
-}
-
-#loginForm {
-    width:100%; 
-    background:#FFFFFF;
-    padding:6px;
-    float: right;
-}
-
-#loginForm fieldset {
-    margin:0 0 5px 0;
-    display:block;
-    border:0;
-    padding:0;
-}
-
-fieldset#body {
-    background:#fff;
-    padding:10px 0 10px 13px;
-    margin:0;
-}
-
-#loginForm #checkbox {
-    width:auto;
-    margin:1px 9px 0 0;
-    float:left;
-    padding:0;
-    border:0;
-
-}
-
-#body label {
-    color:#3a454d;
-    margin:9px 0 0 0;
-    display:block;
-    float:left;
-}
-
-#loginForm #body fieldset label {
-    display:inline-block;
-    float:none;
-    margin:0 0 6px 0;
-    width: 30%;
-}
-
-#loginForm input {
-    width:60%;
-    border:1px solid #FC6B6B;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    color:#3a454d;
-    font-weight:bold;
-    padding:0 8px;
-    font-size:14px;
-    float: right;
-}
-
-#loginForm input:focus {
-    box-shadow:inset 0px -1px 1px #FC6B6B;
-    -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
-    -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
-}
-
-#loginForm #login {
-    width:auto;
-    float:left;
-    background: url("Pictures/ienakt.png") no-repeat;
-    width: 59px;
-    height: 22px;
-    margin:12px 12px 0 0;
-    cursor:pointer;
-    float: right;
-
-}
-
-#loginForm #login:hover {
-    background: url("Pictures/ienakt_active.png") no-repeat;
-}
-
-#loginForm span {
-    text-align:center;
-    display:block;
-    padding:7px 0 4px 0;
-}
-
-#loginForm span a {
-    color:#3a454d;
-    text-shadow:1px 1px #fff;
-    font-size:12px;
-}
-
-input:focus {
-    outline:none;
-}
-/* Login button ends */
-/*******************/
-
-
-
-#nav-right-button-register{
-    background: url("Pictures/register.png") no-repeat;
-    margin: 10px;
-    padding: 0;
-    display: inline-block;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-#nav-right-button-register:hover{
-    background: url("Pictures/register_rr.png") no-repeat;
-}
-
-#nav-right-button-back{
-    background: url("Pictures/back.png") no-repeat;
-    margin: 10px;
-    padding: 0;
-    display: inline-block;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-#nav-right-button-back:hover{
-    background: url("Pictures/back_r.png") no-repeat;
+    height: 50px;
+    /*background-color: gray;*/
+    padding-top: 22px;
 }
 
 
-.button_nav{
-    width: 137px;
-    height: 35px;
-    box-shadow: 2px 2px 8px 2px #545454;
-}
+    div.margin-auto.title{
+
+        float: left;
+        height: 28px;
+        /*background-color: brown;*/
+        width: 35%;
+        display: inline-block;
+    }
+    p.nedelas-reklamas-title{
+        width: 200px;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: 12px;
+    }
+
+    div.margin-auto.hsw{
+        width: 40%;
+        min-width: 300px;
+        /*background-color: red;*/
+        display: inline-block;
+        float: right;
+        margin-bottom: 5px;
+    }
+        .home-search-wrapper{
+            height: 28px;
+            width: 90%;
+            margin: 0 auto;
+        }
 
 
-.header-right div, .header-left div{
-    display: inline-block;
-}
+            input.home-search-input,
+            button.home-search {
+                border:0;
+                background-color: #FFFFFF;
+                height: 28px;
+            }
 
+            input.home-search-input{
+                background: url("Pictures/search_input_min.png") no-repeat;
+                border-radius: 2px 0 0 2px;
+                padding: 0 10px;
+                font-size: 10px;
+                width: 100%;
+            }
 
-.home-content{
-    text-align: center; 
+            button.home-search{
+                background: url("Pictures/search_button_min.png")no-repeat;
+                border-radius: 0 2px 2px 0;
+                width: 40px;
+                float: right;
+            }
+
+            button.home-search:hover{
+                background: url("Pictures/search_button_active_min.png")no-repeat;
+            }
+
+            .home-search-wrapper span {
+                display: block;
+                overflow: hidden;
+            }
+
+        .reklamas-meklesana hr{
+            width: 95%;
+            margin: 0 auto;
+        }
+
+/* Galvenais kataloga saraksts */
+#main-item-list{
     width: 100%;
-    height: 315px;
-    padding: 80px 0 0;
-    margin-bottom: 0;
-}
-
-.home-content-center{
-    margin: auto;
-    width: 70%;
-    text-align: center; 
-}
-
-p.home-content-header, p.home-content-subheader{
-    color: #FFFFFF;
-    letter-spacing: 2px;
-}
-
-p.home-content-header{
-    font-size: 24px;
-    margin: 0;
-
-}
-
-p.home-content-subheader{
-    font-size: 13px;
-    margin: 10px 0;
-}
-
-.home-search-wrapper{
-    /*float: left;*/
-    display:inline-block;
-    height: 40px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.center{
-    margin: auto;
-    width: 70%;
-    height: 40px;
-}
-
-input.home-search-input,
-button.home-search {
-    border:0;
-    padding: 0;
-    background-color: #FFFFFF;
-    height: 40px;
-}
-
-input.home-search-input{
-    background: url("Pictures/Icons_Buttons.png") no-repeat;
-    border-radius: 5px 0 0 5px;
-    padding: 0 20px;
-    font-size: 12px;
-    width: 100%;
-}
-
-button.home-search{
-    background: url("Pictures/search_button.png")no-repeat;
-    border-radius: 0 5px 5px 0;
-    width: 40px;
-    float: right;
-}
-
-button.home-search:hover{
-    background: url("Pictures/search_button_active.png")no-repeat;
-}
-
-.home-search-wrapper span {
-    display: block;
-    overflow: hidden;
-}
-
-
-
-.AppDownloadButtons{
-    display:inline-block;
-    height: 30px;
-    width: 100%;
+    height: 680px;
+    /*background-color: red;*/
     padding: 30px 0;
-/*    margin: 0 auto;*/
+    /*overflow-y:hidden;*/
 }
 
+    .m-i-li-center{
+        width: 604px;
+        margin: 0 auto;
+        height: 650px;
+        /*background-color: yellow;*/
+        padding: 10px;
+    }
+        .reklamas{
+            display: inline-block;
+            width: 140px;
+            height: 190px;
+            background-color: #A8A8A8;
+            margin:10px 3px;
+            float: left;
+            position: relative;
+        }
+            .reklamas p{
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
 
-.AppDownloadButtons div{
-    height: 30px;
-    width: 50%;
-    float: left;
-    padding: 0;
-}
+            .reklamas p span{
+                color: #000;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .reklamas p.add-placeholder{
 
+                color: #FFF;
+                font-size: 22px;
+/*                margin: 50px 0 45px 0;*/
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+            .reklamas p.veikals{
+                font-size: 12px;
+                color: #000;
+                font-weight: bold;
+                position: absolute;
+                bottom: 25px;
+            }
+            .reklamas p.der-termins{
+                font-size: 10px;
+                color: #000;
+                position: absolute;
+                bottom: 10px;
+            }
+        .reklamas-hover{
+            
+            display: none;
+            /*display: inline-block;*/
+            width: 140px;
+            height: 190px;
+            background-color: #000;
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.9;
+        }
+        .reklamas:hover .reklamas-hover{
+            display: inline-block;
+        }    
+            .reklamas-hover button.google-map{
+                background: url("Pictures/g-map-btn.png")no-repeat;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                width: 25px;
+                height: 35px;
+/*                border: 1px solid red;*/
+            }
+            .reklamas-hover button.google-map:hover{
+                background: url("Pictures/g-map-btn_active.png")no-repeat;
+            }
+            .reklamas-hover button.star{
+                background: url("Pictures/star-btn.png")no-repeat;
+                position: absolute;
+                top: 10px;
+                right: 5px;
+                width: 30px;
+                height: 30px;
+                /*border: 1px solid red;*/
+            }
+            .reklamas-hover button.star:hover{
+                background: url("Pictures/star-btn_active.png")no-repeat;
+            }
 
-.google-play{
-    margin-left: 15px; 
-    background: url('Pictures/google-play-badge.png') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+            div.radit-div{
+                width: 100%;
+                position: absolute;
+                top:55px;
+                height: 22px;
+            }
+                div.radit-div-center{
+                    width: 59px;
+                    margin: 0 auto;
+                    height: 100%;
+                }
+                    button.radit{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #FB6B6B;
+                        background: url("Pictures/radit.png")no-repeat;
+                    }
 
-.app-store{
-    margin-right: 15px;
-    background: url('Pictures/app-store-badge.png') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+                    button.radit:hover{
+                        background: url("Pictures/radit_active.png")no-repeat;
+                    }
+            .reklamas-hover p{
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
 
-}
+            .reklamas-hover p span{
+                color: #FFF;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .reklamas-hover p.add-placeholder{
 
-.AppDownloadButtons button{
-    height: 30px;
-    width: 100px;
-    border: none;
-    border-radius: 5px;
+                color: #FFF;
+                font-size: 22px;
+/*                margin: 50px 0 45px 0;*/
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+            .reklamas-hover p.veikals{
+                font-size: 12px;
+                color: #FFF;
+                font-weight: bold;
+                position: absolute;
+                bottom: 25px;
+            }
+            .reklamas-hover p.der-termins{
+                font-size: 10px;
+                color: #FFF;
+                position: absolute;
+                bottom: 10px;
+            }
 
-}
-/**************************************************************/
-
-
-/* Main content */
-/**************************************************************/
-
-#body-content{
-    margin: 0 auto;
-    padding: 0;
+div.radit-vel-div{
     width: 100%;
-    min-width: 320px;
-    clear: both;
-/*    font-weight: bold;*/
+    height: 42px;
+    /*background-color: red;*/
+    margin: 60px 0;
 }
-#body-content p.main-subject-title{
-    margin: 0;
-    font-size: 19px;
-    font-weight: bold;
-}
-.bg, .bg-with{
-    width: 100%;
-/*    padding: 0;*/
-}
-.bg-with{
-    background-color: #FFF5F5;
-}
-.main-content-center{
-    width: 70%;
-    text-align: center;
-/*    position: relative;*/
-    margin: 0 auto;
-    min-width: 530px;
-}
-.main-content-center header{
-    padding:20px 0;
-    margin: 0 auto;
+        div.radit-vel-div-center{
+            width: 100px;
+            margin: 0 auto;
+            height: 100%;
+        }
+            button.radit-vel{
+                width: 100%;
+                height: 100%;
+                background-color: #FB6B6B;
+                background: url("Pictures/radit-vel.png")no-repeat;
+            }
 
-}
-
-
-
-/* Kā tas strādā */
-
-
-#ka-tas-strada section.sub-content{
-    width: 28%;
-    min-width: 150px;
-    display: inline-block;
-    margin: 15px;
-    vertical-align: text-top;
-}
-
-#ka-tas-strada section p{
-    margin: 0;  
-    font-size: 12px; 
-
-}
-
-.sub-content section{
-    width: 100%;
-/*    display: block;*/
-}
-/****************************/
-
-
-/* Kategorijas */
-
-#kategorijas section{
-    width: 100%;
-    padding-bottom: 10px;
-}
-#kategorijas section article{
-    width: 100%;
-}
-#kategorijas section article button{
-/*    width: 100px;
-    height: 50px;*/
-    width: 114px;
-    height: 57px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#kategorijas .desktop {
-    display: block;
-}
-#kategorijas>section>article button#mebeles{
-    background: url('Pictures/mebeles.png') no-repeat;
-}
-#kategorijas>section>article button#mebeles:hover{
-    background: url('Pictures/mebeles_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#sporta-preces{
-    background: url('Pictures/sporta-preces.png') no-repeat;
-}
-#kategorijas>section>article button#sporta-preces:hover{
-    background: url('Pictures/sporta-preces_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#rotallietas{
-    background: url('Pictures/rotallietas.png') no-repeat;
-}
-#kategorijas>section>article button#rotallietas:hover{
-    background: url('Pictures/rotallietas_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#elektronika{
-    background: url('Pictures/elektronika.png') no-repeat;
-}
-#kategorijas>section>article button#elektronika:hover{
-    background: url('Pictures/elektronika_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#darba-riki{
-    background: url('Pictures/darba-riki.png') no-repeat;
-}
-#kategorijas>section>article button#darba-riki:hover{
-    background: url('Pictures/darba-riki_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#atlaizu-veikali{
-    background: url('Pictures/atlaizu-veikali.png') no-repeat;
-}
-#kategorijas>section>article button#atlaizu-veikali:hover{
-    background: url('Pictures/atlaizu-veikali_active.png') no-repeat;
-}
-
-
-
-
-
-#kategorijas>section>article button#automobiliem{
-    background: url('Pictures/automobiliem.png') no-repeat;
-}
-#kategorijas>section>article button#automobiliem:hover{
-    background: url('Pictures/automobiliem_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#universalveikali{
-    background: url('Pictures/universalveikali.png') no-repeat;
-}
-#kategorijas>section>article button#universalveikali:hover{
-    background: url('Pictures/universalveikali_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#kosmetika{
-    background: url('Pictures/kosmetika.png') no-repeat;
-}
-#kategorijas>section>article button#kosmetika:hover{
-    background: url('Pictures/kosmetika_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#apgerbi{
-    background: url('Pictures/apgerbi.png') no-repeat;
-}
-#kategorijas>section>article button#apgerbi:hover{
-    background: url('Pictures/apgerbi_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#majdzivnieki{
-    background: url('Pictures/majdzivnieki.png') no-repeat;
-}
-#kategorijas>section>article button#majdzivnieki:hover{
-    background: url('Pictures/majdzivnieki_active.png') no-repeat;
-}
-
-
-#kategorijas>section>article button#citi{
-    background: url('Pictures/citi.png') no-repeat;
-}
-#kategorijas>section>article button#citi:hover{
-    background: url('Pictures/citi_active.png') no-repeat;
-}
-
-
-.sub-content button{
-    border: none;
-    width: 93px;
-    height: 90px;
-    margin: 10px auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.sub-content button.lokalize{
-    background: url('Pictures/lokalize.png') no-repeat;
-}
-.sub-content button.atrodi{
-    background: url('Pictures/atrodi.png') no-repeat;
-}
-.sub-content button.ietaupi{
-    background: url('Pictures/ietaupi.png') no-repeat;
-}
-#ka-tas-strada h5{
-    margin: 0;
-    padding: 10px 0;
-}
-#ka-tas-strada p{
-    font-weight: normal;
-    font-size: 12px;    
-}
-/****************************/
-
-
-/* pilsetu-parskats */
-
-.pilsetas{
-    width: 100%;
-    float: left;
-    margin: 10px auto;
-}
-
-
-.lielakas-pilsetas{
-    width: 45%;
-    float: left;
-    margin: 0 auto;
-}
-.pilsetas-karte{
-    width: 55%;
-    float: right;
-    margin: 0 auto;
-    min-width: 400px;
-
-}
-
-p.sub-content-title{
-    font-size: 12px; 
-    margin-left: 30px; 
-    text-align: left;
-}
-
-button.karte{
-    width: 394px;
-    height: 237px;
-    background: url('Pictures/map.png') no-repeat;
-    border: none;
-    float: right;
-}
-
-.lielakas-pilsetas div{
-    width: 32%;
-    margin: 0 auto;
-    display: inline-block;
-    min-width: 50px;
-}
-
-/*.parejas-pilsetas{
-    height: 100px;
-display: block;
-}*/
-
-#pilsetu-parskats ul{
-    list-style-image: url('Pictures/list-item-marker_star.png') ;
-    font-weight: normal;
-    font-size: 11px;  
-}
-#pilsetu-parskats ul li{
-    padding: 5px 0;
-    text-align: left;
-}
-
-#pilsetu-parskats ul li a{
-    color: #000000;
-}
-
-p.letter-list{
-    text-align: left;
-    margin-left: 50px;
-}
-
-a.letter-list {
-    color: #000000;
-    font-size: 11px;
-    font-weight: normal;
-}
-
-/****************************/
-
+            button.radit-vel:hover{
+                background: url("Pictures/radit-vel_active.png")no-repeat;
+            }
 
 /* Populārākie pārdevēji */
-
-#popularakie-pardeveji .image-slider{
-    width: 100%;
-    height: 74px;
-    margin: auto;
-    padding-bottom: 60px;
+header.main-subject-header{
+    padding:20px 0;
+}
+p.main-subject-title{
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
 }
 
-#popularakie-pardeveji div{
+.image-slider{
+    width: 80%;
+    height: 74px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.image-slider div{
     height: 74px;
     width: 16px;
     text-align: left;
     margin:auto;
 }
 
-#popularakie-pardeveji .vertical_align{
-    width: 16px;
+.image-slider .vertical_align{
+    width: 100%;
     height: 74px;
     display: table-cell;
     vertical-align: middle;
     margin: 0 auto;
 }
 
-#popularakie-pardeveji .images{
+.image-slider .images{
     width: 88%;
     display: inline-block;
     vertical-align: text-top;
     height: 74px;
-    overflow: hidden;
+    overflow:hidden;
 }
 
-#popularakie-pardeveji .image{
+.image-slider .images div.images-center{
+    width: 90%;
+/*    display: inline-block;*/
+    height: 74px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.image-slider .image{
     content:url("Pictures/image-default.png");
     width: 118px;
     height: 72px;
@@ -793,7 +676,7 @@ a.letter-list {
 }
 
 
-#popularakie-pardeveji .prevnext{
+.image-slider .prevnext{
     width: 4%;
     display: inline-block;
     vertical-align: text-top;
@@ -802,202 +685,24 @@ a.letter-list {
 
 }
 
-#popularakie-pardeveji button{
+.image-slider button{
     width: 16px;
     height: 26px;
 }
-#popularakie-pardeveji button.prev{
+.image-slider button.prev{
     background: url('Pictures/prev.png') no-repeat;
 }
-#popularakie-pardeveji button.next{
+.image-slider button.next{
     background: url('Pictures/next.png') no-repeat;
 }
 /****************************/
 
 
 
-/* reklamas-un-piedavajumi */
-
-.rup-center{
-    margin:20px auto 50px auto;
-}
-
-#reklamas-un-piedavajumi .panel, #reklamas-un-piedavajumi .flip {
-    padding: 15px 0;
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-#reklamas-un-piedavajumi .flip{
-    height: 15px;
-
-}
-#reklamas-un-piedavajumi .panel {
-    padding: 50px auto;
-    display: none;
-}
-
-#reklamas-un-piedavajumi hr{
-    margin: 0 auto;
-    width: 90%;
-}
-#reklamas-un-piedavajumi .title{
-    margin: 0 auto;
-    font-size: 16px;
-    font-weight: bold;
-    float: left;
-}
-
-#reklamas-un-piedavajumi .up{
-    background: url('Pictures/up.png') no-repeat;
-}
-
-#reklamas-un-piedavajumi .down{
-    background: url('Pictures/down.png') no-repeat;
-}
-
-#reklamas-un-piedavajumi .up, #reklamas-un-piedavajumi .down{
-    float: right;
-    width: 22px;
-    height: 14px;
-    margin-right: 15px;
-}
-/****************************/
-
-
-
-/* Populārākie produkti */
-
-#popularakie-produkti{
-    overflow: hidden;
-}
-
-#popularakie-produkti div.desktop{
-    display: block;
-}
-
-#popularakie-produkti div.tablet{
-    display: none;
-}
-
-#popularakie-produkti div.phone{
-    display: none;
-}
-
-#popularakie-produkti .line{
-    overflow: hidden;
-    width: 100%;
-}
-
-#popularakie-produkti .produkts{
-    width: 20%;
-    min-width: 150px;
-    min-height: 170px;
-    display: inline-block;
-    margin: 0 auto;
-    float: left;
-}
-
-#popularakie-produkti .title-img{
-    width: 34px;
-    height: 23px;
-    float: left;
-}
-
-#popularakie-produkti #mebeles-img{
-    background: url('Pictures/mebeles_mini.png') no-repeat;  
-}
-
-#popularakie-produkti #sporta-preces-img{
-    background: url('Pictures/sporta-preces_mini.png') no-repeat;  
-}
-
-#popularakie-produkti #rotallietas-img{
-    background: url('Pictures/rotallietas_mini.png') no-repeat; 
-}
-
-#popularakie-produkti #elektronika-img{
-    background: url('Pictures/elektronika_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #darba-riki-img{
-    background: url('Pictures/darba-rik_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #atlaizu-veikali-img{
-    background: url('Pictures/atlaizu-veikali_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #automobiliem-img{
-    background: url('Pictures/automobiliem_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #universalveikali-img{
-    background: url('Pictures/universalveikali_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #kosmetika-img{
-    background: url('Pictures/kosmetika_mini.png') no-repeat;
-    
-}
-
-#popularakie-produkti #apgerbi-img{
-    background: url('Pictures/apgerbi_mini.png') no-repeat;
-}
-
-#popularakie-produkti #majdzivniekiem-img{
-    background: url('Pictures/majdzivniekiem_mini.png') no-repeat;
-}
-
-#popularakie-produkti div.title-container{
-    width: 100%;
-    overflow: hidden;
-    height: 20px;
-}
-
-p.product-title{
-    height: 20px;
-    font-size: 14px;
-    margin: 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-div.product-list{
-    width: 100%;
-}
-
-#popularakie-produkti ul{
-    list-style-image: url('Pictures/list-item-marker_next.png') ;
-    font-weight: normal;
-    font-size: 11px; 
-    padding: 10px 15px 0 15px; 
-    margin-left: 10px;
-}
-#popularakie-produkti ul li{
-    text-align: left;
-    margin-bottom: 5px;
-    padding-left: 5px;
-}
-
-#popularakie-produkti ul li a{
-    color: #000000;
-}
-/****************************/
-
-/**************************************************************/
-
-
 /* Footer */
 /**************************************************************/
 footer{
-    background-color:#404040 ;
+    background-color:#404040;
     margin: 0;
     width: 100%;
     clear: both;
@@ -1014,6 +719,7 @@ footer section.sub-content{
     min-width: 150px;
     display: inline-block;
     margin: 15px auto;
+    padding: 0 15px;
 }
 
 .sub-content.one{
@@ -1038,7 +744,7 @@ footer hr{
     border: 1px solid #FFF5F5;
     float: left;
     display: table-cell;
-    width: 100%;
+    width: 90%;
     min-width: 150px;
 }
 
