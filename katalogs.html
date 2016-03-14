@@ -18,90 +18,291 @@
 <body>
 
 
-    
 
-
-
-    <section id="body-content">
-                <header class="main-nav">
-                    <section class="main-nav-header">
-                        <div class="header-right">
-                            <button id="nav-right-button-back" class="button_nav"></button>
-                            <button id="hidden_button_login" class="button_nav"></button>
-                            <div id="loginContainer">
-                                <button id="nav-right-button-login" class="button_nav"></button>
-                                <div id="loginBox">   
-                                    <form id="loginForm">
-                                    <hr>  
-                                        <fieldset id="body">
-                                            <fieldset>
-                                                <label for="email">E-pasts:</label>
-                                                <input type="text" name="email" id="email" />
-                                            </fieldset>
-                                            <fieldset>
-                                                <label for="password">Parole:</label>
-                                                <input type="password" name="password" id="password" />
-                                            </fieldset>
-                                            <button id="login"></button>
-                                        </fieldset>
-                                    </form>
-                                </div>            
+    <div class="wrapper">
+        <header class="main-nav">
+            <div class="nav-subject left">
+                <img src="css/Pictures/lokalize_small.png">
+                <div class="vieta-content">
+                    <p class="vieta">Saules iela 5a, Rīga</p>
+                    <p class="vieta-mainit">Mainīt atrašanās vietu</p>
+                </div>
+            </div>
+            <div class="nav-subject right">
+                <button id="nav-right-button-back" class="button_nav">
+                <button id="hidden_button_login" class="button_nav"></button>
+                <div id="loginContainer">
+                    <button id="nav-right-button-login" class="button_nav"></button>
+                    <div id="loginBox">   
+                        <form id="loginForm">
+                        <hr>  
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="email">E-pasts:</label>
+                                    <input type="text" name="email" id="email" />
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">Parole:</label>
+                                    <input type="password" name="password" id="password" />
+                                </fieldset>
+                                <button id="login"></button>
+                            </fieldset>
+                        </form>
+                    </div>            
+                </div>
+                <a href="registracija.html"><button id="nav-right-button-register" class="button_nav"></button></a>
+            </div>
+        </header>
+        <div class="reklamas-meklesana">
+            <div class="margin-auto title"><p class="nedelas-reklamas-title">Visas šīs nedēļas reklāmas</p></div>
+            <div class="margin-auto hsw">
+                <div class="home-search-wrapper">
+                     <button class="home-search"></button>
+                     <span><input type="text" class="home-search-input" placeholder="Pilsēta, uzņēmums vai preces"/></span>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <section id="main-item-list">
+            <section class="m-i-li-center">
+                <article id="reklama1" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
                             </div>
-                            <a href="registracija.html"><button id="nav-right-button-register" class="button_nav"></button></a>
                         </div>
-                        <div class="header-left">
-                            <div class="header-left-map">
-                                <a href="#"><button></button></a>
-                            </div>
-                            <div class="header-left-content">
-                                <p class="address"><a href="">Saules iela 5a, Rīga</a></p>
-                                <p class="change_address"><a href="">Mainīt atrašanās vietu</a></p>
-                            </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
 
+                <article id="reklama2" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
                         </div>
-                    </section>
-                </header>
-        <section class="bg-with">
-            <section id="ka-tas-strada" class="main-content-center">
-                <header><p class="main-subject-title">Kā tas strādā?</p></header>             
-                <section class="sub-content">
-
-                    <section class="image">
-                        <button class="lokalize"></button>
-                    </section>
-                    <section class="image-content">
-                        <h5>Lokalizē</h5>
-                        <p>Iezīmē savu atrašanās vietu un saņem iknedēļas piedāvājumus no vietējiem pārdevējiem</p>                 
-                    </section>
-                </section> 
-                <section class="sub-content">
-                    <section class="image">
-                        <button class="atrodi"></button>
-                    </section>
-                    <section class="image-content">
-                        <h5>Atrodi</h5>
-                        <p>Apskati iknedēļas piedāvajumus un atrodi labākos no sava iecienītā pārdevēja</p>                 
-                    </section>
-                </section>
-                <section class="sub-content">
-                    <section class="image">
-                        <button class="ietaupi"></button>
-                    </section>
-                    <section class="image-content">
-                        <h5>Ietaupi</h5>
-                        <p>Ietaupi naudu savā nākamajā pirkumā</p>                 
-                    </section>
-                </section>
-            </section>     
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama3" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama4" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama5" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama6" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama7" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama8" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama9" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama10" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama11" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+                <article id="reklama12" class="reklamas">
+                    <p class="add-placeholder">Ad Placeholder</p>
+                    <p class="veikals">Veikals</p>
+                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    <article id="reklama-hover1" class="reklamas-hover">
+                        <button class="google-map"></button>
+                        <button class="star"></button>
+                        <div class="radit-div">
+                            <div class="radit-div-center">
+                            <button class="radit"></button>
+                            </div>
+                        </div>
+                        <p class="veikals">Veikals</p>
+                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
+                    </article>
+                </article>
+            </section>
         </section>
-    </section>
-
+        <div class="radit-vel-div">
+            <div class="radit-vel-div-center">
+            <button class="radit-vel"></button>
+            </div>
+        </div>
+        <header class="main-subject-header"><p class="main-subject-title">Populārākie pārdevēji</p></header>
+        <section class="image-slider">
+            <section class="prevnext"><div><p class="vertical_align"><button class="prev"></button></p></div></section>
+            <section class="images">
+                <img id="image-1" class="image">
+                <img id="image-2" class="image">
+                <img id="image-3" class="image">
+                <img id="image-4" class="image">
+                <img id="image-5" class="image">
+            </section>
+            <section class="prevnext"><div><p class="vertical_align"><button class="next"></button></p></div></section>
+        </section>
+            
+    </div>
     <div id="footer_include"></div>
     <script> 
     $(function(){
       $("#footer_include").load("footer.html"); 
     });
-    </script> 
+    </script>
+
+    <div class="wrapper-email hidden">
+        <div class="email-div">
+            <div class="email-div-center">
+                <button class="star_fill"></button>
+                <button id="wrapper-email-close" class="close"></button>
+                <section id="email-form">
+                    <p>Ievadiet E-pastu, lai saņemtu jaunumus par šo piedāvājumu</p>  
+                    <input type="text" class="email-input" placeholder="Epasta adrese">  
+                    <button class="email-submit"></button>
+                </section>
+
+            </div>
+        </div>
+
+    </div>
+
+
 </body>
 
 
