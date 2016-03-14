@@ -20,7 +20,9 @@
 //     });
 // });
 
-
+$(function(){
+  $("#main-nav_include").load("main-nav.html"); 
+});
 
 //home.html sadala "Reklāmas un piedāvājumi". Drop-down panel
 $(function(){

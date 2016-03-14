@@ -1,6 +1,6 @@
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
-/**{
+/*{
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -73,13 +73,12 @@ p{
 }
 
 header.main-nav{
-    /*height: 55px;*/
-    height: auto;
+    height: 55px;
+    /*height: auto;*/
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    clear: both;
-    overflow: hidden;
+
 }
 
 header.main-nav a{
@@ -89,6 +88,7 @@ header.main-nav a{
 
 .header-right{
     float: right;
+    height: 55px;
 }
 
 #hidden_button_login{
@@ -99,145 +99,145 @@ header.main-nav a{
 }
 
 
-/*******************/
-/* Login button starts  */
+    /*******************/
+    /* Login button starts  */
 
-#nav-right-button-login{
-    background: url("Pictures/login.png") no-repeat;
-    position:relative;
-    z-index:2;
-    cursor:pointer;
-    margin: 0;
-    padding: 0;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-}
+    #nav-right-button-login{
+        background: url("Pictures/login.png") no-repeat;
+        position:relative;
+        z-index:1;
+        cursor:pointer;
+        margin: 0;
+        padding: 0;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    }
 
-#nav-right-button-login:hover{
-    background: url("Pictures/login_r.png") no-repeat;
-}
+    #nav-right-button-login:hover{
+        background: url("Pictures/login_r.png") no-repeat;
+    }
 
 
-#loginContainer {
-    position:relative;
-    font-size:12px;
-    margin: 10px;
-    padding: 0;
-}
+    #loginContainer {
+        position:relative;
+        font-size:12px;
+        margin: 10px;
+        padding: 0;
+    }
 
-#loginBox {
-    position:absolute;
-    right:0;
-    display:none;
-    z-index:1;
-    width: 220px;
-    margin: 0;
-    padding: 0;
-}
+    #loginBox {
+        position:absolute;
+        right:0;
+        display:none;
+        z-index:2;
+        width: 220px;
+        margin: 0;
+        padding: 0;
+    }
 
-#loginForm hr {
-    border: none;
-    border-bottom: 1px solid #FC6B6B;
-    width: 100%;
-    margin-bottom: 10px;
-}
+    #loginForm hr {
+        border: none;
+        border-bottom: 1px solid #FC6B6B;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-#loginForm {
-    width:100%; 
-    background:#FFFFFF;
-    padding:6px;
-    float: right;
-}
+    #loginForm {
+        width:100%; 
+        background:#FFFFFF;
+        padding:6px;
+        float: right;
+    }
 
-#loginForm fieldset {
-    margin:0 0 5px 0;
-    display:block;
-    border:0;
-    padding:0;
-}
+    #loginForm fieldset {
+        margin:0 0 5px 0;
+        display:block;
+        border:0;
+        padding:0;
+    }
 
-fieldset#body {
-    background:#fff;
-    padding:10px 0 10px 13px;
-    margin:0;
-}
+    fieldset#body {
+        background:#fff;
+        padding:10px 0 10px 13px;
+        margin:0;
+    }
 
-#loginForm #checkbox {
-    width:auto;
-    margin:1px 9px 0 0;
-    float:left;
-    padding:0;
-    border:0;
+    #loginForm #checkbox {
+        width:auto;
+        margin:1px 9px 0 0;
+        float:left;
+        padding:0;
+        border:0;
 
-}
+    }
 
-#body label {
-    color:#3a454d;
-    margin:9px 0 0 0;
-    display:block;
-    float:left;
-}
+    #body label {
+        color:#3a454d;
+        margin:9px 0 0 0;
+        display:block;
+        float:left;
+    }
 
-#loginForm #body fieldset label {
-    display:inline-block;
-    float:none;
-    margin:0 0 6px 0;
-    width: 30%;
-}
+    #loginForm #body fieldset label {
+        display:inline-block;
+        float:none;
+        margin:0 0 6px 0;
+        width: 30%;
+    }
 
-#loginForm input {
-    width:60%;
-    border:1px solid #FC6B6B;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    color:#3a454d;
-    font-weight:bold;
-    padding:0 8px;
-    font-size:14px;
-    float: right;
-}
+    #loginForm input {
+        width:60%;
+        border:1px solid #FC6B6B;
+        border-radius:3px;
+        -moz-border-radius:3px;
+        color:#3a454d;
+        font-weight:bold;
+        padding:0 8px;
+        font-size:14px;
+        float: right;
+    }
 
-#loginForm input:focus {
-    box-shadow:inset 0px -1px 1px #FC6B6B;
-    -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
-    -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
-}
+    #loginForm input:focus {
+        box-shadow:inset 0px -1px 1px #FC6B6B;
+        -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
+        -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
+    }
 
-#loginForm #login {
-    width:auto;
-    float:left;
-    background: url("Pictures/ienakt.png") no-repeat;
-    width: 59px;
-    height: 22px;
-    margin:12px 12px 0 0;
-    cursor:pointer;
-    float: right;
+    #loginForm #login {
+        width:auto;
+        float:left;
+        background: url("Pictures/ienakt.png") no-repeat;
+        width: 59px;
+        height: 22px;
+        margin:12px 12px 0 0;
+        cursor:pointer;
+        float: right;
 
-}
+    }
 
-#loginForm #login:hover {
-    background: url("Pictures/ienakt_active.png") no-repeat;
-}
+    #loginForm #login:hover {
+        background: url("Pictures/ienakt_active.png") no-repeat;
+    }
 
-#loginForm span {
-    text-align:center;
-    display:block;
-    padding:7px 0 4px 0;
-}
+    #loginForm span {
+        text-align:center;
+        display:block;
+        padding:7px 0 4px 0;
+    }
 
-#loginForm span a {
-    color:#3a454d;
-    text-shadow:1px 1px #fff;
-    font-size:12px;
-}
+    #loginForm span a {
+        color:#3a454d;
+        text-shadow:1px 1px #fff;
+        font-size:12px;
+    }
 
-input:focus {
-    outline:none;
-}
-/* Login button ends */
-/*******************/
+    input:focus {
+        outline:none;
+    }
+    /* Login button ends */
+    /*******************/
 
 #nav-right-button-register{
     background: url("Pictures/register.png") no-repeat;
@@ -732,14 +732,20 @@ a.letter-list {
 }
 
 #popularakie-pardeveji button{
-    width: 16px;
+    width: 17px;
     height: 26px;
 }
 #popularakie-pardeveji button.prev{
     background: url('Pictures/prev.png') no-repeat;
 }
+#popularakie-pardeveji button.prev:hover{
+    background: url('Pictures/prev_active.png') no-repeat;
+}
 #popularakie-pardeveji button.next{
     background: url('Pictures/next.png') no-repeat;
+}
+#popularakie-pardeveji button.next:hover{
+    background: url('Pictures/next_active.png') no-repeat;
 }
 /****************************/
 
@@ -781,10 +787,17 @@ a.letter-list {
 #reklamas-un-piedavajumi .up{
     background: url('Pictures/up.png') no-repeat;
 }
+#reklamas-un-piedavajumi .up:hover{
+    background: url('Pictures/up_active.png') no-repeat;
+}
 
 #reklamas-un-piedavajumi .down{
     background: url('Pictures/down.png') no-repeat;
 }
+#reklamas-un-piedavajumi .down:hover{
+    background: url('Pictures/down_active.png') no-repeat;
+}
+
 
 #reklamas-un-piedavajumi .up, #reklamas-un-piedavajumi .down{
     float: right;
