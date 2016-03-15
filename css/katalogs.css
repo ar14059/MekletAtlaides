@@ -431,12 +431,13 @@ header.main-nav{
 }
 
     .m-i-li-center{
-        width: 604px;
+        max-width: 604px;
         /*width: auto;*/
         margin: 0 auto;
         height: 650px;
         background-color: yellow;
         padding: 10px;
+        overflow-y: hidden; 
     }
         .reklamas{
             display: inline-block;
@@ -845,7 +846,18 @@ footer button#en{
         }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 775px){
+    .m-i-li-center{
+        max-width: 458px;
+    }
+}
+@media screen and (max-width: 590px){
+    .m-i-li-center{
+        max-width: 312px;
+    }
+}
+
+@media screen and (max-width: 410px){
     .wrapper{
         width: 100%;
     }
