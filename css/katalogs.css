@@ -125,9 +125,10 @@ hr{
 
 
 header.main-nav{
-    width: 100%;
+    width: 60%;
     height: 70px;
     background-color: #FFF;
+    margin: 0 auto;
 }
 
 .nav-subject{
@@ -366,21 +367,17 @@ header.main-nav{
     }
 
 
-
 .reklamas-meklesana{
     width: 100%;
-    height: 50px;
-    /*background-color: gray;*/
-    padding-top: 22px;
+    height: 29px;
 }
 
 
     div.margin-auto.title{
 
         float: left;
-        height: 28px;
-        /*background-color: brown;*/
-        width: 35%;
+        height: 100%;
+        width: 200px;
         display: inline-block;
     }
     p.nedelas-reklamas-title{
@@ -392,54 +389,36 @@ header.main-nav{
     }
 
     div.margin-auto.hsw{
-        width: 40%;
-        min-width: 300px;
-        /*background-color: red;*/
-        display: inline-block;
+        width: 304px;
         float: right;
-        margin-bottom: 5px;
+        height: 100%;
     }
-        .home-search-wrapper{
-            height: 28px;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-
-            input.home-search-input,
-            button.home-search {
-                border:0;
-                background-color: #FFFFFF;
-                height: 28px;
-            }
 
             input.home-search-input{
                 background: url("Pictures/search_input_min.png") no-repeat;
                 border-radius: 2px 0 0 2px;
                 padding: 0 10px;
                 font-size: 10px;
-                width: 100%;
+                width: 276px;
+                height: 29px;
+                float: left;
             }
 
             button.home-search{
                 background: url("Pictures/search_button_min.png")no-repeat;
                 border-radius: 0 2px 2px 0;
-                width: 40px;
-                float: right;
+                width: 28px;
+                height: 28px;
             }
 
             button.home-search:hover{
                 background: url("Pictures/search_button_active_min.png")no-repeat;
             }
 
-            .home-search-wrapper span {
-                display: block;
-                overflow: hidden;
-            }
-
         .reklamas-meklesana hr{
             width: 95%;
             margin: 0 auto;
+            padding: 2px 0;
         }
 
 /* Galvenais kataloga saraksts */
@@ -453,9 +432,10 @@ header.main-nav{
 
     .m-i-li-center{
         width: 604px;
+        /*width: auto;*/
         margin: 0 auto;
         height: 650px;
-        /*background-color: yellow;*/
+        background-color: yellow;
         padding: 10px;
     }
         .reklamas{
@@ -847,7 +827,36 @@ footer button#en{
 
 /*CSS stils balstoties uz ierīce ekrāna izmēra*/
 /************************************************************************************************************/
+@media screen and (min-width: 1000px) and (max-width: 1320px){
+    header.main-nav{
+        width: 80%;
+    }
+}
 
+@media screen and (max-width: 1040px){
+    .wrapper{
+        width: 80%;
+    }
+    div.margin-auto.hsw{
+        width: 274px;
+    }
+        input.home-search-input{
+            width: 246px;
+        }
+}
+
+@media screen and (max-width: 400px){
+    .wrapper{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    header.main-nav{
+        width: 100%;
+    }
+}
 
 @media screen and (min-width: 601px) and (max-width: 800px){
     .home-search-wrapper{
@@ -925,6 +934,39 @@ footer button#en{
 
 
 @media screen and (max-width: 800px)  {
+    .nav-subject{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .nav-subject.left{
+        float: none;
+    }
+    .nav-subject.right{
+        float: none;
+        width: 480px;
+    }
+
+    header.main-nav{
+        height: 140px;
+    }
+    .reklamas-meklesana{
+        height: 70px;
+    }
+        div.margin-auto.title{
+            margin: 0 auto;
+            float: none;
+            display: block;
+            height: 20px;
+        }
+
+        div.margin-auto.hsw{
+            margin: 0 auto;
+            float: none;
+            display: block;
+            height: 50px;
+            padding-top: 20px;
+        }
 
     .main-content-center{
         width: 100%;
@@ -936,54 +978,28 @@ footer button#en{
     .body-welcome {
         width: 100%;
     }
-    header.main-nav{
-        width: 100%;
-    }
 
-    .header-right, .header-left{
-/*        display: block;*/
-/*        float: none;
-        margin: 0 auto;*/
-    }
-    .header-right{
-        display: block;  
-        float: none;
-        margin: 0 auto;  
-    }
 
-    .header-left{
-        display: block;
-        float: none;
-        margin: 0 auto;
-    }
 /*******************/
 /* Login button starts  */
     #loginContainer{
         display: none;
     }
     #hidden_button_login{
-        width: 195px;
-        height: 49px;
-        background: url("Pictures/login_m.png") no-repeat;
+        width: 137px;
+        height: 35px;
+        background: url("Pictures/login.png") no-repeat;
+        margin: 10px;
+        padding: 0 8px;
     }
 
     #hidden_button_login:hover{
-        background: url("Pictures/login_m_r.png") no-repeat;
+        background: url("Pictures/login_r.png") no-repeat;
     }
 
-    #nav-right-button-register{
-        background: url("Pictures/register_m.png") no-repeat;
-        width: 195px;
-        height: 49px;
-    }
+
 /* Login button ends */
 /*******************/
-
-
-    #nav-right-button-register:hover{
-        background: url("Pictures/register_m_r.png") no-repeat;
-    }
-
 
     .home-search-wrapper {
         height: 50px;
@@ -1240,7 +1256,21 @@ footer button#en{
 
 }
 
+@media screen and (max-width: 600px){
 
+    .nav-subject.right{
+        float: none;
+        width: 200px;
+    }
+
+    header.main-nav{
+        height: 250px;
+    }
+    #nav-right-button-register{
+        float: none;
+    }
+
+}
 
 
 @media screen and (max-width: 480px) {
@@ -1254,44 +1284,19 @@ footer button#en{
     .body-welcome {
         min-width: 320px;
     }
-    .header-right{
-        width: 100%;
-        text-align: center;
-    }
 
 
 /*******************/
 /* Login button starts  */
     #hidden_button_login{
-        display: block;
+        display: inline-block;
     }
 /* Login button ends */
 /*******************/
-    #nav-right-button-register{
-        display: block;
-    }
-    #nav-right-button-register, #hidden_button_login{
-        margin: 15 auto;
-    } 
-
     .home-search-wrapper{
         width: 100%;
     } 
 
-    .AppDownloadButtons{
-        padding: 0;
-        height: 140px;
-    }
-    .AppDownloadButtons div{
-        display: block;
-        width: 100%;
-        margin: 15px 0;
-        height: 40px;
-    }
-    .AppDownloadButtons button{
-        margin: 0;
-        padding: 0;
-    }
 /**************************************************************/
 
 
