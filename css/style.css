@@ -1,3 +1,4 @@
+
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
 /*{
@@ -648,10 +649,22 @@ button.karte{
     min-width: 50px;
 }
 
-/*.parejas-pilsetas{
-    height: 100px;
-display: block;
-}*/
+.lielakas-pilsetas p{
+    margin: 0;
+}
+
+.lielakas-pilsetas p:not(.sub-content-title):hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.parejas-pilsetas{
+/*    height: 100px;*/
+/*    display: block;*/
+    clear: both;
+/*    float: left;*/
+
+}
 
 #pilsetu-parskats ul{
     list-style-image: url('Pictures/list-item-marker_star.png') ;
@@ -671,6 +684,12 @@ p.letter-list{
     text-align: left;
     margin-left: 50px;
 }
+
+p.letter-list:hover{
+    color: red;
+    text-decoration: underline;
+}
+
 
 a.letter-list {
     color: #000000;
@@ -711,6 +730,7 @@ a.letter-list {
     vertical-align: text-top;
     height: 74px;
     overflow: hidden;
+    text-align: center;
 }
 
 #popularakie-pardeveji .image{
@@ -840,6 +860,18 @@ a.letter-list {
     margin: 0 auto;
     float: left;
 }
+
+    .produkts p{
+        margin: 0;
+    }
+
+
+    .produkts p:not(.product-title):hover{
+        margin: 0;
+        color: red;
+        text-decoration: underline;
+    }
+
 
 #popularakie-produkti .title-img{
     width: 34px;
@@ -1103,7 +1135,7 @@ footer button#en{
         width: 100%;
     }
 
-/* pilsetu-parskats */
+/* pilsētu-parskats */
     .pilsetas-karte{
         width: 35%;
         min-width: 261px;
@@ -1589,3 +1621,4 @@ footer button#en{
 /************************************************************************************************************/
 /************************************************************************************************************/
 /************************************************************************************************************/
+

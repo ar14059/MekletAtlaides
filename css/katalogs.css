@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
 
@@ -48,6 +72,7 @@ hr{
     width: 60%;
     /*background-color: red;*/
     margin: 0 auto;
+    text-align: center;
 
 }
 
@@ -435,7 +460,7 @@ header.main-nav{
         /*width: auto;*/
         margin: 0 auto;
         height: 650px;
-        background-color: yellow;
+        /*background-color: yellow;*/
         padding: 10px;
         overflow-y: hidden; 
     }
@@ -617,65 +642,73 @@ p.main-subject-title{
     margin-bottom: 60px;
 }
 
-.image-slider div{
-    height: 74px;
-    width: 16px;
-    text-align: left;
-    margin:auto;
-}
+    .image-slider div{
+        height: 74px;
+        width: 16px;
+        text-align: left;
+        margin:auto;
+    }
 
-.image-slider .vertical_align{
-    width: 100%;
-    height: 74px;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0 auto;
-}
+    .image-slider .vertical_align{
+        width: 100%;
+        height: 74px;
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0 auto;
+    }
 
-.image-slider .images{
-    width: 88%;
-    display: inline-block;
-    vertical-align: text-top;
-    height: 74px;
-    overflow:hidden;
-}
+    .image-slider .images{
+        width: 88%;
+        display: inline-block;
+        vertical-align: text-top;
+        height: 74px;
+        overflow:hidden;
+        text-align: center;
+    }
 
-.image-slider .images div.images-center{
-    width: 90%;
-/*    display: inline-block;*/
-    height: 74px;
-    overflow: hidden;
-    margin: 0 auto;
-}
+    .image-slider .images div.images-center{
+        width: 90%;
+    /*    display: inline-block;*/
+        height: 74px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 
-.image-slider .image{
-    content:url("Pictures/image-default.png");
-    width: 118px;
-    height: 72px;
-    margin: 1px 4px;
-    display: inline-block;
-}
+    .image-slider .image{
+        content:url("Pictures/image-default.png");
+        width: 118px;
+        height: 72px;
+        margin: 1px 4px;
+        display: inline-block;
+    }
 
 
-.image-slider .prevnext{
-    width: 4%;
-    display: inline-block;
-    vertical-align: text-top;
-    height: 74px;
-    text-align: center;
+    .image-slider .prevnext{
+        width: 4%;
+        display: inline-block;
+        vertical-align: text-top;
+        height: 74px;
+        text-align: center;
 
-}
+    }
 
-.image-slider button{
-    width: 16px;
-    height: 26px;
-}
-.image-slider button.prev{
-    background: url('Pictures/prev.png') no-repeat;
-}
-.image-slider button.next{
-    background: url('Pictures/next.png') no-repeat;
-}
+    .image-slider button{
+        width: 16px;
+        height: 26px;
+    }
+    .image-slider button.prev{
+        background: url('Pictures/prev.png') no-repeat;
+    }
+    .image-slider button.prev:hover{
+        background: url('Pictures/prev_active.png') no-repeat;
+    }
+
+    .image-slider button.next{
+        background: url('Pictures/next.png') no-repeat;
+    }
+    .image-slider button.next:hover{
+        background: url('Pictures/next_active.png') no-repeat;
+    }
 /****************************/
 
 
@@ -1386,3 +1419,9 @@ footer button#en{
 /************************************************************************************************************/
 /************************************************************************************************************/
 /************************************************************************************************************/
+
+
+
+
+
+

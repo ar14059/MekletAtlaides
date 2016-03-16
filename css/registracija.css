@@ -218,6 +218,11 @@ fieldset#submit_area{
     float: right;
 }
 
+#registreties_submit:hover{
+    background: url("Pictures/registreties_r.png") no-repeat;
+    float: right;
+}
+
 .submit_button{
     width: 125px;
     height: 30px;
