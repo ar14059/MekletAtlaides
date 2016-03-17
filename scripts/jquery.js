@@ -66,9 +66,48 @@ $(function() {
 });
 
 /////////////////////////////////
-
 //katalogs.html sadaļa "Galvenais kataloga saraksts". 
 //Tiek atvērts epasta logs, nospiežot uz zvaigznītes
+
+
+
+//Main iestatījumi reģistretam lietotājam. 
+$(function() {
+    var button = $('#main-settings-container');
+    var box = $('#main-settings-box');
+
+    var buttonClass= $("#loginContainer").attr("class");
+    button.click(function(login) {
+        if(buttonClass!='active')
+        {
+            button.toggleClass('active');
+            box.toggle();
+        } 
+    });
+    button.parents().click(function(){
+        if(buttonClass=='active')
+        {
+            button.toggleClass('active');
+            box.toggle();
+        } 
+    })
+
+
+    $(this).mouseup(function(login) {
+        if(!($(login.target).parent('#loginContainer').length > 0)) {
+            button.removeClass('active');
+            box.hide();
+        }
+    });
+});
+
+    /* Nomainu iestatījuma pogas krāsu */
+    $( function() {
+      $('td').click( function() {
+        $(this).toggleClass("red-cell");
+      } );
+    } );
+/////////////////////////////////
 
 $(function(){
     $(".star").click(function(){

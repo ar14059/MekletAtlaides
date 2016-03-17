@@ -78,7 +78,8 @@ p{
         /*height: auto;*/
         width: 100%;
         margin: 0 auto;
-        padding: 0;
+        /*padding: 0;*/
+        /*padding: 10px 0;*/
 
     }
 
@@ -90,32 +91,101 @@ p{
         .header-right{
             float: right;
             height: 100%;
+            /*margin: 10px 0;*/
         }
 
-                                        div.name_surname_div{
-                                            /*padding: 18px 0;*/
-                                            height: 100%;
-                                            width: auto;
-                                            /*background-color: yellow;*/
-                                            display: inline-block;
+            div.name_surname_div{
+                /*padding: 18px 0;*/
+                height: 100%;
+                width: auto;
+                /*background-color: yellow;*/
+                display: inline-block;
 
-                                        }
-                                        .name_surname_div p.login_user_data{
-                                            color: #FFF;
-                                            margin: 18px 20px;
-                                            font-style: italic;
-                                            display: inline-block;
-                                            float: left;
+            }
+            .name_surname_div p.login_user_data{
+                color: #FFF;
+                margin: 18px 0;
+                font-style: italic;
+                display: inline-block;
+                float: left;
 
-                                        }
+            }
 
-                                        #main-settings-container{
-                                            background-color: red;
-                                            width: 51px;
-                                            height: 51px;
-                                            display: inline-block;
+            #main-settings-container{
+                width: auto;
+                height: auto;
+                display: inline-block;
+                position: relative;
+                margin-right: 40px;
+                margin-top: 9px;
+                margin-bottom: 9px;
+            }
+            #main-settings-container:hover{
+                background-color: #FFF;
+            }
+            #main-settings-container:hover #main-settings-btn{
+                background: url("Pictures/main_option_btn_active.png") no-repeat;
+            }
 
-                                        }
+
+
+
+            .main-settings-container-active{
+                background-color: #FFF;
+            }
+            .main-settings-btn-active{
+                background: url("Pictures/main_option_btn_active.png") no-repeat;
+            }
+
+
+
+            
+
+                #main-settings-btn{
+                    background: url("Pictures/main_option_btn.png") no-repeat;
+                    width: 18px;
+                    height: 18px;
+                    margin: 9px;
+                    position:relative;
+                    z-index:1;
+                    cursor:pointer;
+                   /* margin: 0;*/
+                    padding: 0;
+                      -webkit-background-size: cover;
+                      -moz-background-size: cover;
+                      -o-background-size: cover;
+                      background-size: cover;
+                      float: left;
+                }
+/*                #main-settings-btn:hover{
+                    background: url("Pictures/main_option_btn_active.png") no-repeat;
+                }*/
+            #main-settings-box {
+                position:absolute;
+                right:0;
+                top: 36px;
+                /*display:none;*/
+                display:none;
+                z-index:2;
+                width: auto;
+                min-width: 140px;
+                margin: 0;
+                padding: 0;
+                background-color: #FFF;
+            }
+                #main-settings-box p.msb_p {
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 8px;
+                }
+                #main-settings-box p.msb_p:hover {
+                    background-color: #FF4D4D;
+                    color: #FFF;
+                }
+
+
+
 
 
 
