@@ -166,6 +166,9 @@ p{
                     font-weight: bold;
                     margin: 0;
                     padding: 8px;
+                    display: block;
+                    width: auto;
+                    min-width: 125px;
                 }
                 #main-settings-box p.msb_p:hover {
                     background-color: #FF4D4D;
