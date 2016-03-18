@@ -22,7 +22,7 @@
 
 
 
-//home.html sadala "Reklāmas un piedāvājumi". Drop-down panel
+//home.php sadala "Reklāmas un piedāvājumi". Drop-down panel
 $(function(){
 
     $(".flip").click(function(){
@@ -78,12 +78,27 @@ $(function() {
 
     var buttonClass= $("#loginContainer").attr("class");
     button.click(function(login) {
-        if(buttonClass!='active')
+        if(button!='active')
         {
+            button.css("background-color", "#FFF"); 
+            $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn_active.png)');
+            // $('#main-settings-container')
+            // $('#divID').css("background-image", "url(/myimage.jpg)");  
             button.toggleClass('active');
             box.toggle();
-        } 
+                    // button.mouseenter(function(login) { 
+                    //         button.css("background-color", "#FFF"); 
+                    //         $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn_active.png)');
+                    // });
+                    // button.mouseleave(function(login) { 
+                    //         button.css("background-color", "transparent"); 
+                    //         $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn.png)');
+                    // });
+        }       
+
+
     });
+
     button.parents().click(function(){
         if(buttonClass=='active')
         {
@@ -93,20 +108,18 @@ $(function() {
     })
 
 
+
     $(this).mouseup(function(login) {
         if(!($(login.target).parent('#loginContainer').length > 0)) {
             button.removeClass('active');
             box.hide();
+            button.css("background-color", "transparent"); 
+            $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn.png)');
         }
     });
 });
 
-    /* Nomainu iestatījuma pogas krāsu */
-    $( function() {
-      $('td').click( function() {
-        $(this).toggleClass("red-cell");
-      } );
-    } );
+
 /////////////////////////////////
 
 $(function(){

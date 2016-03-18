@@ -119,6 +119,7 @@ p{
                 margin-right: 40px;
                 margin-top: 9px;
                 margin-bottom: 9px;
+
             }
             #main-settings-container:hover{
                 background-color: #FFF;
@@ -130,16 +131,6 @@ p{
 
 
 
-            .main-settings-container-active{
-                background-color: #FFF;
-            }
-            .main-settings-btn-active{
-                background: url("Pictures/main_option_btn_active.png") no-repeat;
-            }
-
-
-
-            
 
                 #main-settings-btn{
                     background: url("Pictures/main_option_btn.png") no-repeat;
@@ -157,9 +148,6 @@ p{
                       background-size: cover;
                       float: left;
                 }
-/*                #main-settings-btn:hover{
-                    background: url("Pictures/main_option_btn_active.png") no-repeat;
-                }*/
             #main-settings-box {
                 position:absolute;
                 right:0;
