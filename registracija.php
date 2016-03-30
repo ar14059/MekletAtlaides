@@ -39,7 +39,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $surname = mysqli_real_escape_string($con, $_POST['surname']);
     $city = mysqli_real_escape_string($con, $_POST['city']);
     $address = mysqli_real_escape_string($con, $_POST['address']);
-    echo "<h1>Success</h1>";
+    // echo "<h1>Success</h1>";
      
      $checkemail = mysqli_query($con, "SELECT * FROM users WHERE EmailAddress = '".$email_address."'");
       
@@ -54,6 +54,12 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
             VALUES('".$email_address."', '".$password."', '".$name."', '".$surname."', '".$city."', '".$address."')");
         if($registerquery)
         {
+            $_SESSION['EmailAddress'] = $email_address;
+            $_SESSION['LoggedIn']=1;
+            $_SESSION['Name'] = $name;
+            $_SESSION['Surname'] = $surname;
+            header("Location: http://localhost/MekletAtlaides/home.php");
+            die();
             // echo "<h1>Success</h1>";
             // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
         }

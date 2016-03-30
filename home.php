@@ -33,7 +33,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['EmailAddress']))
 
         <div class="name_surname_div">
             <p id="name_surname" class="login_user_data">Lietotājs 
-                <code><?=$_SESSION['Name'];?></code>, 
+                <code><?=$_SESSION['Name'];?></code> 
                 <code><?=$_SESSION['Surname'];?></code>.
             </p>
         </div>
