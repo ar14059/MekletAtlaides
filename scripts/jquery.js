@@ -122,19 +122,52 @@ $(function() {
 
 /////////////////////////////////
 
-$(function(){
-    $(".star").click(function(){
-        var wrapperEmail = $( ".wrapper-email");
-        wrapperEmail.removeClass('hidden');
+
+//Katalogs.php 
+
+    //epasta ievada forma 
+
+    $(function() {
+        //ieslēgt
+        var wrapperUp = $( ".wrapper-up");
+        var email = $( "#email-div");
+        $(function(){
+            $(".star").click(function(){
+                wrapperUp.removeClass('hidden');
+                email.removeClass('hidden');
+            });
+        });
+
+        //izslēgt
+        $(function(){
+            $("#wrapper-email-close").click(function(){
+                wrapperUp.addClass('hidden');
+                email.addClass('hidden');
+            });
+        });
     });
-});
+    /////////////////////////////////
 
 
-$(function(){
-    $("#wrapper-email-close").click(function(){
-        var wrapperEmail = $( ".wrapper-email");
-        wrapperEmail.addClass('hidden');
+    //preces/uzņēmuma/pilsētas forma 
+
+    $(function() {
+        //ieslēgt
+        var wrapperUp = $( ".wrapper-up");
+        var showitem = $( "#showitem-div");
+        $(function(){
+            $(".radit").click(function(){
+                wrapperUp.removeClass('hidden');
+                showitem.removeClass('hidden');
+            });
+        });
+
+        //izslēgt
+        $(function(){
+            $("#wrapper-showitem-close").click(function(){
+                wrapperUp.addClass('hidden');
+                showitem.addClass('hidden');
+            });
+        });
     });
-});
-
-
+    /////////////////////////////////
