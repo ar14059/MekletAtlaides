@@ -186,7 +186,7 @@ else
                 <header><p class="main-subject-title">Kategorijas</p></header>
                 <section class="desktop hidden">
                     <article>
-                        <a href="katalogs.html"><button id="mebeles"></button></a>
+                        <a href="katalogs.php"><button id="mebeles"></button></a>
                         <button id="sporta-preces"></button>
                         <button id="rotallietas"></button>
                         <button id="elektronika"></button>

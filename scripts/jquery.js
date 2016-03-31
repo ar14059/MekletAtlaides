@@ -66,7 +66,7 @@ $(function() {
 });
 
 /////////////////////////////////
-//katalogs.html sadaļa "Galvenais kataloga saraksts". 
+//katalogs.php sadaļa "Galvenais kataloga saraksts". 
 //Tiek atvērts epasta logs, nospiežot uz zvaigznītes
 
 

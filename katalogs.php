@@ -50,7 +50,7 @@
                     </form>
                 </div>            
             </div>
-            <button id="nav-right-button-register" class="button_nav"></button>
+            <a href="registracija.php"><button id="nav-right-button-register" class="button_nav"></button></a>
         </div>
     </header>
     <div class="wrapper">
