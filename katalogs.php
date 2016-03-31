@@ -1,4 +1,4 @@
-
+<?php include "base.php"; ?>
 
 <html>
 <head>
@@ -29,28 +29,15 @@
             </div>
         </div>
         <div class="nav-subject right">
+            
+
+            <div id="navigation_include"></div>
+            <script> 
+            $(function(){
+              $("#navigation_include").load("navigation.php"); 
+            });
+            </script> 
             <a href="home.php"><button id="nav-right-button-back" class="button_nav"></button></a>
-            <button id="hidden_button_login" class="button_nav"></button>
-            <div id="loginContainer">
-                <button id="nav-right-button-login" class="button_nav"></button>
-                <div id="loginBox">   
-                    <form id="loginForm">
-                    <hr>  
-                        <fieldset id="body">
-                            <fieldset>
-                                <label for="email">E-pasts:</label>
-                                <input type="text" name="email" id="email" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="password">Parole:</label>
-                                <input type="password" name="password" id="password" />
-                            </fieldset>
-                            <button id="login"></button>
-                        </fieldset>
-                    </form>
-                </div>            
-            </div>
-            <a href="registracija.php"><button id="nav-right-button-register" class="button_nav"></button></a>
         </div>
     </header>
     <div class="wrapper">

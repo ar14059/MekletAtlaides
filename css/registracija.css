@@ -454,108 +454,6 @@ footer button#en{
 /*******************/
 
 /**************************************************************/
-
-/* Footer */
-/**************************************************************/
-
-    .sub-content.one{
-        float: none;
-        display: block;
-        margin-bottom: 70px;
-    }
-
-    .sub-content.two{
-        float: none;
-        display: block;
-        margin-bottom: 90px;
-    }
-
-    .sub-content.three{
-        float: none;
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    footer section.sub-content{
-        width: 90%;
-        min-width: 250px;
-        display: block;
-        vertical-align: text-top;
-        margin: 15px auto;
-    }
-
-    footer section.sub-content.one, footer section.sub-content.two{
-        display: none;
-    }
-
-    footer hr{
-        display: none;
-    }
-
-    footer .title{
-        text-align: center;
-        float: none;
-        color: #FFF5F5;
-        font-size: 16px;
-        font-weight: normal;
-    }
-
-    footer div.buttons{
-        margin: 0 auto;
-        overflow: hidden;
-        width: 90%;
-    }
-    footer .footer-info{
-        text-align: center;
-        float: none;
-    }
-
-
-    footer .soc_tikli{
-        width: 82px;
-        height: 82px;
-        border-radius: 2px;
-        float: none;
-    }
-
-    footer .valodas{
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-        float: none;
-        margin: 0 10px 0 0;
-    }
-
-    footer div.v_indekss{
-        display: none;
-    }
-
-    footer button#draugiemlv{
-        background: url('Pictures/draugiemlv_white_tablet.png') no-repeat;
-    }
-
-    footer button#facebook{
-        background: url('Pictures/facebook_white_tablet.png') no-repeat;
-    }
-
-    footer button#twitter{
-        background: url('Pictures/twitter_white_tablet.png') no-repeat;
-    }
-
-/*    footer button#lv{
-        background: url('Pictures/lv.png') no-repeat;
-    }
-
-    footer button#ru{
-        background: url('Pictures/ru.png') no-repeat;
-    }
-
-    footer button#en{
-        background: url('Pictures/en.png') no-repeat;
-    }*/
-
-/**************************************************************/
-
 }
 
 @media screen and (min-width: 481px)  and (max-width: 600px) {
@@ -642,12 +540,6 @@ footer button#en{
     }*/
 /**************************************************************/
 
-/* Footer */
-/**************************************************************/
-    footer .soc_tikli{
-        margin: 0 10px;
-    }
-/**************************************************************/
 }
 
 
@@ -673,14 +565,6 @@ footer button#en{
 /*******************/
 
 
-/**************************************************************/
-
-/* Footer */
-/**************************************************************/
-    footer .soc_tikli{
-        display: block;
-        margin: 15px auto;
-    }
 /**************************************************************/
 
 }

@@ -7,9 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <script type="text/javascript" src="scripts/jquery.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="scripts/jquery.js"></script>
+
 
 
     <title>Webpage</title>
@@ -22,9 +23,12 @@
         <header class="main-nav">
             <div class="header-right">
 
-
-
-
+<!--                 <div id="navigation_include"></div> -->
+                <script> 
+                // $(function(){
+                //   $("#navigation_include").load("navigation.php"); 
+                // });
+                </script> 
 
     <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['EmailAddress']))
@@ -70,6 +74,7 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
     }
     else
     {
+        echo "<script type='text/javascript'>alert('Worked but not how expected);</script>";
         echo "<h1>Error</h1>";
         echo "<p>Sorry, your account could not be found. Please <a href=\"home.php\">click here to try again</a>.</p>";
     }
@@ -106,21 +111,6 @@ else
  
 
 
-
-
-
-
-<!-- 
-                <div class="name_surname_div">
-                    <p id="name_surname" class="login_user_data">Lietotāja vārds, uzvārds</p>
-                </div>
-                <div id="main-settings-container">
-                    <button id="main-settings-btn"></button>
-                    <div id="main-settings-box">
-                        <p id="msb_profile" class="msb_p">Profils</p>
-                        <p id="msb_sign-out" class="msb_p">Iziet</p>
-                    </div>
-                </div> -->
             </div>
         </header>
         <div class="home-content">

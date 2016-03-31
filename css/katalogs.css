@@ -1,27 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
 
@@ -205,8 +182,91 @@ header.main-nav{
     width: 410px;
     /*background-color: blue;*/
     float: right;
-    width: auto;
+/*    width: auto;*/
 }
+
+    #navigation_include{
+        float: right;
+        background-color: #FF4D4D;
+    }
+    div.name_surname_div{
+        /*padding: 18px 0;*/
+        height: 100%;
+        width: auto;
+        display: inline-block;
+
+    }
+    .name_surname_div p.login_user_data{
+        color: #FFF;
+        margin: 20px 0;
+        font-style: italic;
+        display: inline-block;
+        float: left;
+        font-weight: bold;
+
+    }
+
+    #main-settings-container{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        position: relative;
+/*        margin-right: 40px;*/
+        margin-top: 9px;
+        margin-bottom: 9px;
+        /*background-color: #FF4D4D;*/
+
+
+    }
+    #main-settings-container:hover{
+        background-color: #FFF;
+    }
+    #main-settings-container:hover #main-settings-btn{
+        background: url("Pictures/main_option_btn_active.png") no-repeat;
+    }
+
+        #main-settings-btn{
+            background: url("Pictures/main_option_btn.png") no-repeat;
+            width: 18px;
+            height: 18px;
+            margin: 9px;
+            position:relative;
+            z-index:1;
+            cursor:pointer;
+           /* margin: 0;*/
+            padding: 0;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              float: left;
+        }
+    #main-settings-box {
+        position:absolute;
+        right:0;
+        top: 36px;
+        /*display:none;*/
+        display:none;
+        z-index:2;
+        width: auto;
+        min-width: 140px;
+        margin: 0;
+        padding: 0;
+        background-color: #FFF;
+    }
+        #main-settings-box p.msb_p {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            padding: 8px;
+            display: block;
+            width: auto;
+            min-width: 125px;
+        }
+        #main-settings-box p.msb_p:hover {
+            background-color: #FF4D4D;
+            color: #FFF;
+        }
 
     #hidden_button_login{
         display: none;
@@ -378,7 +438,7 @@ header.main-nav{
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-
+      float: right;
     }
 
     #nav-right-button-back:hover{
@@ -1088,110 +1148,6 @@ footer button#en{
     }
 /****************************/
 /**************************************************************/
-
-
-/* Footer */
-/**************************************************************/
-
-    .sub-content.one{
-        float: none;
-        display: block;
-        margin-bottom: 70px;
-    }
-
-    .sub-content.two{
-        float: none;
-        display: block;
-        margin-bottom: 90px;
-    }
-
-    .sub-content.three{
-        float: none;
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    footer section.sub-content{
-        width: 90%;
-        min-width: 250px;
-        display: block;
-        vertical-align: text-top;
-        margin: 15px auto;
-    }
-
-    footer section.sub-content.one, footer section.sub-content.two{
-        display: none;
-    }
-
-    footer hr{
-        display: none;
-    }
-
-    footer .title{
-        text-align: center;
-        float: none;
-        color: #FFF5F5;
-        font-size: 16px;
-        font-weight: normal;
-    }
-
-
-    footer div.buttons{
-        margin: 0 auto;
-        overflow: hidden;
-        width: 90%;
-    }
-    footer .footer-info{
-        text-align: center;
-        float: none;
-    }
-
-
-    footer .soc_tikli{
-        width: 82px;
-        height: 82px;
-        border-radius: 2px;
-        float: none;
-    }
-
-    footer .valodas{
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-        float: none;
-        margin: 0 10px 0 0;
-    }
-
-    footer div.v_indekss{
-        display: none;
-    }
-
-    footer button#draugiemlv{
-        background: url('Pictures/draugiemlv_white_tablet.png') no-repeat;
-    }
-
-    footer button#facebook{
-        background: url('Pictures/facebook_white_tablet.png') no-repeat;
-    }
-
-    footer button#twitter{
-        background: url('Pictures/twitter_white_tablet.png') no-repeat;
-    }
-
-/*    footer button#lv{
-        background: url('Pictures/lv.png') no-repeat;
-    }
-
-    footer button#ru{
-        background: url('Pictures/ru.png') no-repeat;
-    }
-
-    footer button#en{
-        background: url('Pictures/en.png') no-repeat;
-    }*/
-
-/**************************************************************/
-
 }
 
 @media screen and (min-width: 481px)  and (max-width: 600px) {
@@ -1266,12 +1222,7 @@ footer button#en{
 /**************************************************************/
 
 
-/* Footer */
-/**************************************************************/
-    footer .soc_tikli{
-        margin: 0 10px;
-    }
-/**************************************************************/
+
 }
 
 @media screen and (min-width: 491px)  and (max-width: 800px)  {
@@ -1404,14 +1355,6 @@ footer button#en{
 /****************************/
 /**************************************************************/
 
-
-/* Footer */
-/**************************************************************/
-    footer .soc_tikli{
-        display: block;
-        margin: 15px auto;
-    }
-/**************************************************************/
 
 }
 

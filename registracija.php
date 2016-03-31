@@ -31,6 +31,8 @@
 
 
 <?php
+
+
 if(!empty($_POST['email']) && !empty($_POST['password']))
 {
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
@@ -75,107 +77,87 @@ else
     ?>
 
 
-            <section class="par-mums">
-                <div id="par-mums_content">
-                    <form method="post" action="registracija.php" name="registerform" id="registerform" class="content">
-                    <!-- <section class="content"> -->
-                        <p class="subject-title">Par mums</p>
-                        <hr>
-                        <fieldset id="input_area" class="content_area">
-                            <fieldset>
-                                <label for="name">Vārds:</label>
-                                <input type="text" name="name" id="name" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="surname">Uzvārds:</label>
-                                <input type="text" name="surname" id="surname" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="email">E-pasts:</label>
-                                <input type="text" name="email" id="email" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="email">Atkārtot E-pastu:</label>
-                                <input type="text" name="email_repeat" id="email_repeat" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="city">Pilsēta:</label>
-                                <input type="text" name="city" id="city" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="address">Adrese:</label>
-                                <input type="text" name="address" id="address" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="password">Parole:</label>
-                                <input type="password" name="password" id="password" />
-                            </fieldset>
-                            <fieldset>
-                                <label for="password_repeat">Atkārtot Paroli:</label>
-                                <input type="password" name="password_repeat" id="password_repeat" />
-                            </fieldset>
-                        </fieldset>
-                        <fieldset id="submit_area" class="content_area">
-                            <fieldset>
-                                <div><p class="vertical_align"><input type="checkbox" class="checkbox_css" ><span>Piekrītu lietošanas noteikumiem</span></p></div>
-                                <button type="submit" name="registreties_submit" id="registreties_submit"  class="submit_button"></button>
-                            </fieldset>
-                        </fieldset>
-                    <!-- </section> -->
-                    </form>
-                </div>
-            </section>
+    <section class="par-mums">
+        <div id="par-mums_content">
+            <form method="post" action="registracija.php" name="registerform" 
+            id="registerform" class="content">
+            <!-- <section class="content"> -->
+                <p class="subject-title">Par mums</p>
+                <hr>
+                <fieldset id="input_area" class="content_area">
+                    <fieldset>
+                        <label for="name">Vārds:</label>
+                        <input type="text" name="name" id="name" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="surname">Uzvārds:</label>
+                        <input type="text" name="surname" id="surname" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">E-pasts:</label>
+                        <input type="text" name="email" id="email" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">Atkārtot E-pastu:</label>
+                        <input type="text" name="email_repeat" id="email_repeat" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="city">Pilsēta:</label>
+                        <input type="text" name="city" id="city" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="address">Adrese:</label>
+                        <input type="text" name="address" id="address" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="password">Parole:</label>
+                        <input type="password" name="password" id="password" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="password_repeat">Atkārtot Paroli:</label>
+                        <input type="password" name="password_repeat" id="password_repeat" />
+                    </fieldset>
+                </fieldset>
+                <fieldset id="submit_area" class="content_area">
+                    <fieldset>
+                        <div><p class="vertical_align"><input type="checkbox" class="checkbox_css" ><span>Piekrītu lietošanas noteikumiem</span></p></div>
+                        <button type="submit" name="registreties_submit" id="registreties_submit"  class="submit_button"></button>
+                    </fieldset>
+                </fieldset>
+            <!-- </section> -->
+            </form>
+        </div>
+    </section>
     <?php
 }
+// $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// echo "<script type='text/javascript'>alert('$actual_link');</script>";
 ?>
 
         </section>
 
 
-        <footer>
-            <section id="footer" class="main-content-center">
-                <section class="sub-content one">
-                    <p class="title">Par mums</p><br>
-                    <hr class="under-title">
-                    <div>
-                        <p class="footer-info"><a href="#">Kas ir ...?</a></p>
-                        <p class="footer-info"><a href="#">Kā mēs strādājam?</a></p>
-                    </div>
-                </section>
-                <section class="sub-content two">
-                    <p class="title">Sazinies ar mums</p><br>
-                    <hr class="under-title">
-                    <div>
-                        <p class="footer-info"><a href="#">Epasts - tirgus@tirgus.lv</a></p>
-                        <p class="footer-info"><a href="#">Tālrunis - 22334455</a></p>
-                        <p class="footer-info"><a href="#">Skype - TirgusLv</a></p>
-                    </div>
-                </section>
-                <section class="sub-content three">
-                    <p class="title">Seko mums</p><br>
-                    <hr class="under-title">
-                    <div class="buttons">
-                        <p class="footer-info">
-                            <button id="draugiemlv" class="soc_tikli"></button>
-                            <button id="facebook" class="soc_tikli"></button>
-                            <button id="twitter" class="soc_tikli"></button>
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="buttons">
-                        <p class="footer-info">
-                            <div class="v_indekss"><button id="lv" class="valodas"></button>LV</div>
-                            <div class="v_indekss"><button id="ru" class="valodas"></button>RU</div>
-                            <div class="v_indekss"><button id="en" class="valodas"></button>EN</div>
-                        </p>
-                    </div>
-                </section>
-            </section>
-        </footer>
-
+    <div id="footer_include"></div>
+    <script> 
+    $(function(){
+      $("#footer_include").load("footer.html"); 
+    });
+    </script>
     </section>
     
-
+    <div id="katalogs-wrapper-up" class="wrapper-up hidden">
+        <div id="email-div" class="email-div hidden">
+            <div class="email-div-center">
+                <button class="star_fill"></button>
+                <button id="wrapper-email-close" class="close"></button>
+                <section id="email-form">
+                    <p>Ievadiet E-pastu, lai saņemtu jaunumus par šo piedāvājumu</p>  
+                    <input type="text" id="kwu-email" class="email-input" placeholder="Epasta adrese">  
+                    <button class="email-submit"></button>
+                </section>
+            </div>
+        </div>
+    </div>
 
 
 
