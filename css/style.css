@@ -93,6 +93,9 @@ p{
             height: 100%;
             /*margin: 10px 0;*/
         }
+            div#navigation_include{
+                float: right;
+            }
 
             div.name_surname_div{
                 /*padding: 18px 0;*/
@@ -104,10 +107,12 @@ p{
             }
             .name_surname_div p.login_user_data{
                 color: #FFF;
+                /*color: #FF4D4D;*/
                 margin: 18px 0;
                 font-style: italic;
                 display: inline-block;
                 float: left;
+
 
             }
 
@@ -532,6 +537,36 @@ button.home-search:hover{
     width: 100%;
 /*    display: block;*/
 }
+
+.sub-content button{
+    border: none;
+    width: 93px;
+    height: 90px;
+    margin: 10px auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sub-content button.lokalize{
+    background: url('Pictures/lokalize.png') no-repeat;
+}
+.sub-content button.atrodi{
+    background: url('Pictures/atrodi.png') no-repeat;
+}
+.sub-content button.ietaupi{
+    background: url('Pictures/ietaupi.png') no-repeat;
+}
+#ka-tas-strada h5{
+    margin: 0;
+    padding: 10px 0;
+}
+#ka-tas-strada p{
+    font-weight: normal;
+    font-size: 12px;    
+}
+
 /****************************/
 
 
@@ -542,9 +577,10 @@ button.home-search:hover{
     padding-bottom: 10px;
 }
 #kategorijas section article{
-    width: 100%;
+    width: 710px;
+    margin: 0 auto;
 }
-#kategorijas section article button{
+#kategorijas section button{
 /*    width: 100px;
     height: 50px;*/
     width: 114px;
@@ -657,34 +693,7 @@ button.home-search:hover{
 }
 
 
-.sub-content button{
-    border: none;
-    width: 93px;
-    height: 90px;
-    margin: 10px auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
-.sub-content button.lokalize{
-    background: url('Pictures/lokalize.png') no-repeat;
-}
-.sub-content button.atrodi{
-    background: url('Pictures/atrodi.png') no-repeat;
-}
-.sub-content button.ietaupi{
-    background: url('Pictures/ietaupi.png') no-repeat;
-}
-#ka-tas-strada h5{
-    margin: 0;
-    padding: 10px 0;
-}
-#ka-tas-strada p{
-    font-weight: normal;
-    font-size: 12px;    
-}
 /****************************/
 
 
@@ -1120,13 +1129,20 @@ div.product-list{
 
 }
 
+@media screen and (max-width: 1265px){
+    #kategorijas section article{
+        width: 470px;
+    }
+}
+
+
 @media screen and (min-width: 601px) and (max-width: 1130px){
 /* Kategorijas */
     #kategorijas .tablet {
-        display: block;
+
     }
     #kategorijas .desktop {
-        display: none;
+
     }
     #ka-tas-strada>section{
         width: 40%;
@@ -1316,11 +1332,11 @@ div.product-list{
 @media screen and (min-width: 491px)  and (max-width: 800px)  {
     /* Kategorijas */
         #kategorijas .tablet {
-            display: block;
+
         }
 
         #kategorijas .desktop {
-            display: none;
+
         }
     /****************************/
 }
@@ -1329,11 +1345,11 @@ div.product-list{
 
 /* Kategorijas */
     #kategorijas .tabletphone {
-        display: block;
+
     }
 
     #kategorijas .desktop {
-        display: none;
+
     }
 
 /****************************/
@@ -1408,12 +1424,9 @@ div.product-list{
 
 
 /* Kategorijas */
-    #kategorijas .phone {
-        display: block;
-    }
 
-    #kategorijas .desktop {
-        display: none;
+    #kategorijas .desktop article {
+        width: 360px;
     }
 
 /****************************/
@@ -1458,6 +1471,15 @@ div.product-list{
 /****************************/
 /**************************************************************/
 
+}
+
+@media screen and (max-width: 380px) {
+    #kategorijas .desktop {
+        width: 100%;
+    }
+    #kategorijas .desktop article {
+        width: 250px;
+    }
 }
 
 

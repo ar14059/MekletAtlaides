@@ -182,84 +182,10 @@ else
                         <button id="elektronika"></button>
                         <button id="darba-riki"></button>
                         <button id="atlaizu-veikali"></button>
-                    </article>
-                    <article>
                         <button id="automobiliem"></button>
                         <button id="universalveikali"></button>
                         <button id="kosmetika"></button>
                         <button id="apgerbi"></button>
-                        <button id="majdzivnieki"></button>
-                        <button id="citi"></button>
-                    </article>
-                </section> 
-                <section class="tablet hidden">
-                    <article>
-                        <button id="mebeles"></button>
-                        <button id="sporta-preces"></button>
-                        <button id="rotallietas"></button>
-                        <button id="elektronika"></button>
-                    </article>
-                    <article>
-                        <button id="darba-riki"></button>
-                        <button id="atlaizu-veikali"></button>
-                        <button id="automobiliem"></button>
-                        <button id="universalveikali"></button>
-                    </article>
-                    <article>
-                        <button id="kosmetika"></button>
-                        <button id="apgerbi"></button>
-                        <button id="majdzivnieki"></button>
-                        <button id="citi"></button>
-                    </article>
-                </section> 
-
-
-                <section class="tabletphone hidden">
-                    <article>
-                        <button id="mebeles"></button>
-                        <button id="sporta-preces"></button>
-                        <button id="rotallietas"></button>
-                    </article>
-                    <article>
-                        <button id="elektronika"></button>
-                        <button id="darba-riki"></button>
-                        <button id="atlaizu-veikali"></button>
-                    </article>
-                    <article>
-                        <button id="automobiliem"></button>
-                        <button id="universalveikali"></button>
-                        <button id="kosmetika"></button>
-                    </article>
-                    <article>
-                        <button id="apgerbi"></button>
-                        <button id="majdzivnieki"></button>
-                        <button id="citi"></button>
-                    </article>
-                </section>
-
-
-                <section class="phone hidden">
-                    <article>
-                        <button id="mebeles"></button>
-                        <button id="sporta-preces"></button>
-                    </article>
-                    <article>
-                        <button id="rotallietas"></button>
-                        <button id="elektronika"></button>
-                    </article>
-                    <article>
-                        <button id="darba-riki"></button>
-                        <button id="atlaizu-veikali"></button>
-                    </article>
-                    <article>
-                        <button id="automobiliem"></button>
-                        <button id="universalveikali"></button>
-                    </article>
-                    <article>
-                        <button id="kosmetika"></button>
-                        <button id="apgerbi"></button>
-                    </article>
-                    <article>
                         <button id="majdzivnieki"></button>
                         <button id="citi"></button>
                     </article>
