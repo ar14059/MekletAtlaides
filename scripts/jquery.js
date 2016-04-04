@@ -82,18 +82,9 @@ $(function() {
         {
             button.css("background-color", "#FFF"); 
             $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn_active.png)');
-            // $('#main-settings-container')
-            // $('#divID').css("background-image", "url(/myimage.jpg)");  
+
             button.toggleClass('active');
             box.toggle();
-                    // button.mouseenter(function(login) { 
-                    //         button.css("background-color", "#FFF"); 
-                    //         $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn_active.png)');
-                    // });
-                    // button.mouseleave(function(login) { 
-                    //         button.css("background-color", "transparent"); 
-                    //         $('#main-settings-btn').css("background-image", 'url(css/Pictures/main_option_btn.png)');
-                    // });
         }       
 
 

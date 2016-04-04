@@ -19,21 +19,15 @@
 <body>
 
     <section class="body-welcome">
-<!--         <div id="main-nav_include"></div> -->
-        <script> 
-        // $(function(){
-        //   $("#main-nav_include").load("main-nav.html"); 
-        // });
-        </script> 
 
         <header class="main-nav">
             <div class="header-right">
                 
-                <div id="navigation_include"></div>
+<!--                 <div id="navigation_include"></div> -->
                 <script> 
-                $(function(){
-                  $("#navigation_include").load("navigation.php"); 
-                });
+                // $(function(){
+                //   $("#navigation_include").load("navigation.php"); 
+                // });
                 </script> 
                 <a href="home.php"><button id="nav-right-button-back" class="button_nav"></button></a>
             </div>
