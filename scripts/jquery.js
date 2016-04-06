@@ -120,7 +120,8 @@ $(function() {
 
     $(function() {
         //ieslēgt
-        var wrapperUp = $( ".wrapper-up");
+        // var wrapperUp = $( ".wrapper-up");
+        var wrapperUp = $( "#katalogs-wrapper-up");
         var email = $( "#email-div");
         $(function(){
             $(".star").click(function(){
@@ -144,7 +145,7 @@ $(function() {
 
     $(function() {
         //ieslēgt
-        var wrapperUp = $( ".wrapper-up");
+        var wrapperUp = $( "#katalogs-wrapper-up");
         var showitem = $( "#showitem-div");
         $(function(){
             $(".radit").click(function(){
@@ -162,3 +163,28 @@ $(function() {
         });
     });
     /////////////////////////////////
+/////////////////////////////////
+
+//registracija.php 
+
+    $(function() {
+        //ieslēgt
+        var wrapperUp = $( "#register-wrapper-up");
+        var showitem = $( "#register-div");
+        $(function(){
+            $("#address_form_btn").click(function(){
+                wrapperUp.removeClass('hidden');
+                showitem.removeClass('hidden');
+            });
+        });
+
+        //izslēgt
+        $(function(){
+            $("#wrapper-register-close").click(function(){
+                wrapperUp.addClass('hidden');
+                showitem.addClass('hidden');
+            });
+        });
+    });
+
+/////////////////////////////////
