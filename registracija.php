@@ -39,27 +39,27 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $surname = mysqli_real_escape_string($con, $_POST['surname']);
-    $city = mysqli_real_escape_string($con, $_POST['city']);
-    $address = mysqli_real_escape_string($con, $_POST['address']);
-    // echo "<h1>Success</h1>";
+    // $city = mysqli_real_escape_string($con, $_POST['city']);
+    // $address = mysqli_real_escape_string($con, $_POST['address']);
      
-     $checkemail = mysqli_query($con, "SELECT * FROM users WHERE EmailAddress = '".$email_address."'");
+    $checkemail = mysqli_query($con, "SELECT Epasts FROM lietotajs WHERE Epasts = '".$email_address."'");
       
-     if(mysqli_num_rows($checkemail) == 1)
-     {
+    if(mysqli_num_rows($checkemail) == 1)
+    {
         echo "<h1>Error</h1>";
         echo "<p>Sorry, that username is taken. Please go back and try again.</p>";
-     }
-     else
-     {
-        $registerquery = mysqli_query($con, "INSERT INTO users (EmailAddress, Password, Name, Surname, City, Address) 
-            VALUES('".$email_address."', '".$password."', '".$name."', '".$surname."', '".$city."', '".$address."')");
+    }
+    else
+    {
+
+        $registerquery = mysqli_query($con, "INSERT INTO lietotajs (Vards, Uzvards, Epasts, Parole) 
+            VALUES('".$name."', '".$surname."', '".$email_address."', '".$password."');");
         if($registerquery)
         {
-            $_SESSION['EmailAddress'] = $email_address;
+            $_SESSION['Epasts'] = $email_address;
             $_SESSION['LoggedIn']=1;
-            $_SESSION['Name'] = $name;
-            $_SESSION['Surname'] = $surname;
+            $_SESSION['Vards'] = $name;
+            $_SESSION['Uzvards'] = $surname;
             header("Location: http://localhost/MekletAtlaides/home.php");
             die();
             // echo "<h1>Success</h1>";
@@ -70,7 +70,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
             echo "<h1>Error</h1>";
             echo "<p>Sorry, your registration failed. Please go back and try again.</p>";    
         }       
-     }
+    }
 }
 else
 {
@@ -82,15 +82,15 @@ else
             <form method="post" action="registracija.php" name="registerform" 
             id="registerform" class="content">
             <!-- <section class="content"> -->
-                <p class="subject-title">Par mums</p>
+                <p class="subject-title">Reģistrācija</p>
                 <hr>
                 <fieldset id="input_area" class="content_area">
                     <fieldset>
-                        <label for="name">Vārds:</label>
+                        <label for="name">Vards:</label>
                         <input type="text" name="name" id="name" />
                     </fieldset>
                     <fieldset>
-                        <label for="surname">Uzvārds:</label>
+                        <label for="surname">Uzvards:</label>
                         <input type="text" name="surname" id="surname" />
                     </fieldset>
                     <fieldset>
@@ -101,14 +101,17 @@ else
                         <label for="email">Atkārtot E-pastu:</label>
                         <input type="text" name="email_repeat" id="email_repeat" />
                     </fieldset>
+
                     <fieldset>
-                        <label for="city">Pilsēta:</label>
-                        <input type="text" name="city" id="city" />
+                        <label for="address">Adrese</label>
+                        <div class="address-div">
+                            <input type="text" name="address" id="address" />
+                            <div id="address_form_btn" class="">
+                                <p class="a_f_b_title">Aizpildi adreses laukus</p>
+                            </div>
+                        </div>
                     </fieldset>
-                    <fieldset>
-                        <label for="address">Adrese:</label>
-                        <input type="text" name="address" id="address" />
-                    </fieldset>
+
                     <fieldset>
                         <label for="password">Parole:</label>
                         <input type="password" name="password" id="password" />
@@ -145,16 +148,40 @@ else
     </script>
     </section>
     
-    <div id="katalogs-wrapper-up" class="wrapper-up hidden">
-        <div id="email-div" class="email-div hidden">
-            <div class="email-div-center">
-                <button class="star_fill"></button>
-                <button id="wrapper-email-close" class="close"></button>
-                <section id="email-form">
-                    <p>Ievadiet E-pastu, lai saņemtu jaunumus par šo piedāvājumu</p>  
-                    <input type="text" id="kwu-email" class="email-input" placeholder="Epasta adrese">  
-                    <button class="email-submit"></button>
-                </section>
+    <div id="register-wrapper-up" class="wrapper-up hidden">
+        <div id="register-div" class="register-div hidden">
+            <div class="register-div-center">
+<!--                 <button class="star_fill"></button> -->
+                <button id="wrapper-register-close" class="close"></button>
+                <form method="post"  name="address-form" id="address-form" >
+<!--                     <p>Ievadiet E-pastu, lai saņemtu jaunumus par šo piedāvājumu</p>   -->
+                    <fieldset>
+                        <label for="novads">Novads:</label>
+                        <input type="text" id="novads" class="register-input" 
+                        name="novads" placeholder="Novads">
+                    </fieldset>
+                    <fieldset>
+                        <label for="pilseta">Pilsēta:</label>
+                        <input type="text" id="pilseta" class="register-input" 
+                        name="pilseta" placeholder="Pilsēta">
+                    </fieldset>
+                    <fieldset>
+                        <label for="pagasts">Pagasts:</label>
+                        <input type="text" id="pagasts" class="register-input" 
+                        name="pagasts" placeholder="Pagasts">
+                    </fieldset>
+                    <fieldset>
+                        <label for="ek_nr">Ēkas nr./Nos, korpuss:</label>
+                        <input type="text" id="ek_nr" class="register-input" 
+                        name="ek_nr" placeholder="Ēkas nr./Nos, korpuss">
+                    </fieldset>
+                    <fieldset>
+                        <label for="novads">Telpu grupa (dzīvoklis):</label>
+                        <input type="text" id="dzivoklis" class="register-input" 
+                        name="dzivoklis" placeholder="Telpu grupa (dzīvoklis)">
+                    </fieldset>
+                    <div class="register-submit"><p class="r-s-title">Saglabāt</p></div>
+                </form>
             </div>
         </div>
     </div>
