@@ -31,14 +31,14 @@
                 </script> 
 
     <?php
-if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['EmailAddress']))
+if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 {
     ?>
 
         <div class="name_surname_div">
             <p id="name_surname" class="login_user_data">Lietotājs 
-                <code><?=$_SESSION['Name'];?></code> 
-                <code><?=$_SESSION['Surname'];?></code>.
+                <code><?=$_SESSION['Vards'];?></code> 
+                <code><?=$_SESSION['Uzvards'];?></code>.
             </p>
         </div>
         <div id="main-settings-container">
@@ -56,20 +56,20 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
      
-    $checklogin = mysqli_query($con ,"SELECT * FROM users WHERE EmailAddress = '".$email_address."' AND Password = '".$password."'");
+    $checklogin = mysqli_query($con ,"SELECT * FROM lietotajs WHERE Epasts = '".$email_address."' AND Parole = '".$password."'");
      
     if(mysqli_num_rows($checklogin) == 1)
     {
         $row = mysqli_fetch_array($checklogin);
         // $email = $row['EmailAddress'];
-        $name = $row['Name'];
-        $surname = $row['Surname'];
+        $name = $row['Vards'];
+        $surname = $row['Uzvards'];
          
-        $_SESSION['EmailAddress'] = $email_address;
-        $_SESSION['Name'] = $name;
-        $_SESSION['Surname'] = $surname;
+        $_SESSION['Epasts'] = $email_address;
+        $_SESSION['Vards'] = $name;
+        $_SESSION['Uzvards'] = $surname;
         $_SESSION['LoggedIn'] = 1;
-         
+        
         header("Refresh:0");
     }
     else

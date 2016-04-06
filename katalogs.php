@@ -29,8 +29,6 @@
             </div>
         </div>
         <div class="nav-subject right">
-            
-
             <div id="navigation_include"></div>
             <script> 
             $(function(){
