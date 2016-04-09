@@ -10,3 +10,4 @@ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("MySQL Error: "
 mysqli_set_charset($con, 'utf8');
 // mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
 ?>
+

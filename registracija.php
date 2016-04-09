@@ -19,6 +19,164 @@
 </head>
 <body>
 
+<!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
+<!--___________________________________________________________-->
+    <div id="register-wrapper-up" class="wrapper-up hidden">
+        <div id="register-div" class="register-div hidden">
+            <div class="register-div-center">
+<!--                 <button class="star_fill"></button> -->
+                <button id="wrapper-register-close" class="close"></button>
+
+
+<?php
+
+
+if(!empty($_POST['novads']))
+{
+    $novads = mysqli_real_escape_string($con, $_POST['novads']);
+    $pilna_adrese=$novads;
+
+        // $regquery_address = mysqli_query($con, "INSERT INTO lietotaja_adrese (Novads, Pilna_adrese) 
+        //     VALUES('".$novads."', '".$pilna_adrese."');");
+        // if($regquery_address)
+        // {
+        //     $_SESSION['Novads'] = $novads;
+        //     $_SESSION['Pilna_adrese'] = $pilna_adrese;
+        // }
+        // else
+        // {
+        //     echo "<h1>Error</h1>";
+        //     echo "<p>Sorry, your registration failed. Address.</p>";    
+        // } 
+
+}
+else
+{
+    $novads = "";
+    $pilna_adrese=$novads; 
+    // $_SESSION['Novads'] = "";
+    // $_SESSION['Pilna_adrese'] = "";
+    ?>
+
+    <form method="post"  name="address-form" id="address-form" >
+        <fieldset>
+            <label for="novads">Novads:</label>
+            <input type="text" id="novads" class="register-input" 
+            name="novads" placeholder="Novads" 
+            value="<?php echo htmlspecialchars($novads); ?>">
+        </fieldset>
+        <fieldset>
+            <label for="pilseta">Pilsēta:</label>
+            <input type="text" id="pilseta" class="register-input" 
+            name="pilseta" placeholder="Pilsēta">
+        </fieldset>
+        <fieldset>
+            <label for="pagasts">Pagasts:</label>
+            <input type="text" id="pagasts" class="register-input" 
+            name="pagasts" placeholder="Pagasts">
+        </fieldset>
+        <fieldset>
+            <label for="ek_nr">Ēkas nr./Nos, korpuss:</label>
+            <input type="text" id="ek_nr" class="register-input" 
+            name="ek_nr" placeholder="Ēkas nr./Nos, korpuss">
+        </fieldset>
+        <fieldset>
+            <label for="novads">Telpu grupa (dzīvoklis):</label>
+            <input type="text" id="dzivoklis" class="register-input" 
+            name="dzivoklis" placeholder="Telpu grupa (dzīvoklis)">
+        </fieldset>
+        <button type="submit" name="reg-submit-address" id="reg-submit-address" 
+        class="reg-submit-address">Saglabāt</button>
+    </form>
+
+    <?php
+}
+?>
+
+<?php
+
+?>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="body-welcome">
         <header class="main-nav">
             <div class="header-right">
@@ -26,7 +184,6 @@
                 <!-- <button id="nav-right-button-back" class="button_nav"></button> -->
             </div>
         </header>
-
         <section id="body-content">
 
 
@@ -77,8 +234,8 @@ else
     ?>
 
 
-    <section class="par-mums">
-        <div id="par-mums_content">
+    <section class="registracija">
+        <div id="registracija_content">
             <form method="post" action="registracija.php" name="registerform" 
             id="registerform" class="content">
             <!-- <section class="content"> -->
@@ -105,9 +262,29 @@ else
                     <fieldset>
                         <label for="address">Adrese</label>
                         <div class="address-div">
-                            <input type="text" name="address" id="address" />
-                            <div id="address_form_btn" class="">
+                            <input type="text" name="address" id="address" 
+                            value="<?php echo htmlspecialchars($novads); ?>" readonly />
+
+                            <div id="address-edit">Hi</div>
+                            <?php
+                                if($novads!=""){
+                                    // echo "<script type='text/javascript'>alert('$novads');</script>";
+                            ?>
+                            <style type="text/css">#address_form_btn{
+                                display:none;
+                            }</style>
+                            <?php
+                                }else{
+                            ?>
+                            <style type="text/css">#address_form_btn{
+                                display:block;
+                            }</style> 
+                            <?php
+                            }
+                            ?>
+                            <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
+
                             </div>
                         </div>
                     </fieldset>
@@ -124,7 +301,8 @@ else
                 <fieldset id="submit_area" class="content_area">
                     <fieldset>
                         <div><p class="vertical_align"><input type="checkbox" class="checkbox_css" ><span>Piekrītu lietošanas noteikumiem</span></p></div>
-                        <button type="submit" name="registreties_submit" id="registreties_submit"  class="submit_button"></button>
+                        <button type="submit" name="registreties_submit" id="registreties_submit"  
+                        class="submit_button"></button>
                     </fieldset>
                 </fieldset>
             <!-- </section> -->
@@ -147,44 +325,6 @@ else
     });
     </script>
     </section>
-    
-    <div id="register-wrapper-up" class="wrapper-up hidden">
-        <div id="register-div" class="register-div hidden">
-            <div class="register-div-center">
-<!--                 <button class="star_fill"></button> -->
-                <button id="wrapper-register-close" class="close"></button>
-                <form method="post"  name="address-form" id="address-form" >
-<!--                     <p>Ievadiet E-pastu, lai saņemtu jaunumus par šo piedāvājumu</p>   -->
-                    <fieldset>
-                        <label for="novads">Novads:</label>
-                        <input type="text" id="novads" class="register-input" 
-                        name="novads" placeholder="Novads">
-                    </fieldset>
-                    <fieldset>
-                        <label for="pilseta">Pilsēta:</label>
-                        <input type="text" id="pilseta" class="register-input" 
-                        name="pilseta" placeholder="Pilsēta">
-                    </fieldset>
-                    <fieldset>
-                        <label for="pagasts">Pagasts:</label>
-                        <input type="text" id="pagasts" class="register-input" 
-                        name="pagasts" placeholder="Pagasts">
-                    </fieldset>
-                    <fieldset>
-                        <label for="ek_nr">Ēkas nr./Nos, korpuss:</label>
-                        <input type="text" id="ek_nr" class="register-input" 
-                        name="ek_nr" placeholder="Ēkas nr./Nos, korpuss">
-                    </fieldset>
-                    <fieldset>
-                        <label for="novads">Telpu grupa (dzīvoklis):</label>
-                        <input type="text" id="dzivoklis" class="register-input" 
-                        name="dzivoklis" placeholder="Telpu grupa (dzīvoklis)">
-                    </fieldset>
-                    <div class="register-submit"><p class="r-s-title">Saglabāt</p></div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -192,6 +332,8 @@ else
 
 </body>
 
+
+<!-- <script type="text/javascript" src="scripts/backspace_disable.js"></script> -->
 
 
 </html>
