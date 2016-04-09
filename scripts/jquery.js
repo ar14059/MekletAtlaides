@@ -169,12 +169,27 @@ $(function() {
 
     $(function() {
         //ieslēgt
+
         var wrapperUp = $( "#register-wrapper-up");
         var showitem = $( "#register-div");
+        $(function(){
+            $("#address-edit").click(function(){
+                // $("#address_form_btn").show();
+                wrapperUp.removeClass('hidden');
+                showitem.removeClass('hidden');
+            });
+        });
         $(function(){
             $("#address_form_btn").click(function(){
                 wrapperUp.removeClass('hidden');
                 showitem.removeClass('hidden');
+            });
+        });
+        $(function(){
+            $("#reg-submit-address").click(function(){
+                // $("#address_form_btn").show();
+                wrapperUp.addClass('hidden');
+                showitem.addClass('hidden');
             });
         });
 
@@ -185,6 +200,11 @@ $(function() {
                 showitem.addClass('hidden');
             });
         });
+
+        // $('input#address').attr('disabled', 'disabled'); //Disable
     });
+    //Paslēpj adreses formas pogu, ja adreses input lauks satur vērtību
+
+
 
 /////////////////////////////////
