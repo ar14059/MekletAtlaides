@@ -171,14 +171,8 @@ $(function() {
         //ieslēgt
 
         var wrapperUp = $( "#register-wrapper-up");
-        var showitem = $( "#register-div");
-        $(function(){
-            $("#address-edit").click(function(){
-                // $("#address_form_btn").show();
-                wrapperUp.removeClass('hidden');
-                showitem.removeClass('hidden');
-            });
-        });
+        var showitem = $( "#register-wrapper-div");
+
         $(function(){
             $("#address_form_btn").click(function(){
                 wrapperUp.removeClass('hidden');
@@ -187,9 +181,38 @@ $(function() {
         });
         $(function(){
             $("#reg-submit-address").click(function(){
-                // $("#address_form_btn").show();
+                // $.ajax({
+                //     type: "POST",
+                //     url: "registracija.php",
+                //     data: {text:$('#novads').val()}
+                // });
+                var addaddressbtn = $("#address_form_btn");
                 wrapperUp.addClass('hidden');
                 showitem.addClass('hidden');
+                var novads = $('#novads').val();
+                $('#novads_hide').val(novads);
+                var pilseta = $('#pilseta').val();
+                $('#pilseta_hide').val(pilseta);
+                var pagasts = $('#pagasts').val();
+                $('#pagasts_hide').val(pagasts);
+                var ek_nr = $('#ek_nr').val();
+                $('#ek_nr_hide').val(ek_nr);
+                var dzivoklis = $('#dzivoklis').val();
+                $('#dzivoklis_hide').val(dzivoklis);
+
+                $('#address').val(novads);
+                var adrese = $('#address').val();
+                if(adrese != '')
+                {
+                    addaddressbtn.hide();                   
+                }else{
+                    addaddressbtn.show();
+                }
+                $("#address-edit").click(function(){
+                    wrapperUp.removeClass('hidden');
+                    showitem.removeClass('hidden');         
+                });
+                // alert(adrese);
             });
         });
 
@@ -200,11 +223,14 @@ $(function() {
                 showitem.addClass('hidden');
             });
         });
+      
 
         // $('input#address').attr('disabled', 'disabled'); //Disable
     });
     //Paslēpj adreses formas pogu, ja adreses input lauks satur vērtību
 
+$('#inlinesubmit_button').click(function(){
 
+});
 
 /////////////////////////////////
