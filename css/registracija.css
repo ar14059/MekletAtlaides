@@ -287,6 +287,7 @@ fieldset.content_area fieldset div.address-div{
         height: auto;
         margin: 0;
         padding: 0;
+        z-index: 3;
     }
         .wrapper-up div.register-div-center{
             width: 550px;
@@ -347,18 +348,18 @@ fieldset.content_area fieldset div.address-div{
                         font-weight: bold;
                         float: right;
                     }
-                #address-form button.reg-submit-address{
+                button.reg-submit-address{
                     width: 200px;
                     height: 30px;
                     background-color: #FB6B6B;
                     color: #FFF;
                     /*float: right;*/
-                    margin: 10px auto 0 auto;
+                    margin: 0 auto 20px auto;
                     display: block;
 
                 }
 
-                #address-form button.reg-submit-address:hover{
+                button.reg-submit-address:hover{
                     background-color: red;
                 }
 
