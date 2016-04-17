@@ -209,127 +209,126 @@ p{
                 }
 
 
-                #loginContainer {
-                    position:relative;
-                    font-size:12px;
-                    margin: 10px;
-                    padding: 0;
-                }
+                    #loginContainer {
+                        position:relative;
+                        font-size:12px;
+                        margin: 10px;
+                        padding: 0;
+                    }
 
-                #loginBox {
-                    position:absolute;
-                    right:0;
-                    display:none;
-                    z-index:2;
-                    width: 220px;
-                    margin: 0;
-                    padding: 0;
-                }
+                    #loginBox {
+                        position:absolute;
+                        right:0;
+                        display:none;
+                        z-index:2;
+                        width: 220px;
+                        margin: 0;
+                        padding: 0;
+                    }
 
-                #loginForm hr {
-                    border: none;
-                    border-bottom: 1px solid #FC6B6B;
-                    width: 100%;
-                    margin-bottom: 10px;
-                }
+                    #loginForm hr {
+                        border: none;
+                        border-bottom: 1px solid #FC6B6B;
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
 
-                #loginForm {
-                    width:100%; 
-                    background:#FFFFFF;
-                    padding:6px;
-                    float: right;
-                }
+                    #loginForm {
+                        width:100%; 
+                        background:#FFFFFF;
+                        padding:6px;
+                        float: right;
+                    }
 
-                #loginForm fieldset {
-                    margin:0 0 5px 0;
-                    display:block;
-                    border:0;
-                    padding:0;
-                }
+                    #loginForm fieldset {
+                        margin:0 0 5px 0;
+                        display:block;
+                        border:0;
+                        padding:0;
+                    }
 
-                fieldset#body {
-                    background:#fff;
-                    padding:10px 0 10px 13px;
-                    margin:0;
-                }
+                    fieldset#body {
+                        background:#fff;
+                        padding:10px 0 10px 13px;
+                        margin:0;
+                    }
 
-                #loginForm #checkbox {
-                    width:auto;
-                    margin:1px 9px 0 0;
-                    float:left;
-                    padding:0;
-                    border:0;
+                    #loginForm #checkbox {
+                        width:auto;
+                        margin:1px 9px 0 0;
+                        float:left;
+                        padding:0;
+                        border:0;
 
-                }
+                    }
 
-                #body label {
-                    color:#3a454d;
-                    display:block;
-                    float:left;
-                }
+                    #body label {
+                        color:#3a454d;
+                        display:block;
+                        float:left;
+                    }
 
-                #loginForm #body fieldset label {
-                    display:inline-block;
-                    float:none;
-                    width: 30%;
-                    line-height: 22px;
-                }
+                    #loginForm #body fieldset label {
+                        display:inline-block;
+                        float:none;
+                        width: 30%;
+                        line-height: 22px;
+                    }
 
-                #loginForm input {
-                    width:60%;
-                    border:1px solid #FC6B6B;
-                    border-radius:3px;
-                    -moz-border-radius:3px;
-                    color:#3a454d;
-                    font-weight:bold;
-                    padding:3px 8px;
-                    font-size:12px;
-                    float: right;
-                }
+                    #loginForm input {
+                        width:60%;
+                        border:1px solid #FC6B6B;
+                        border-radius:3px;
+                        -moz-border-radius:3px;
+                        color:#3a454d;
+                        font-weight:bold;
+                        padding:3px 8px;
+                        font-size:12px;
+                        float: right;
+                    }
 
-/*                #loginForm input:focus {
-                    box-shadow:inset 0px -1px 1px #FC6B6B;
-                    -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
-                    -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
-                }*/
+    /*                #loginForm input:focus {
+                        box-shadow:inset 0px -1px 1px #FC6B6B;
+                        -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
+                        -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
+                    }*/
 
-                #loginForm #login {
-                    width:auto;
-                    float:left;
-                    background: url("Pictures/ienakt.png") no-repeat;
-                    width: 59px;
-                    height: 22px;
-                    margin:12px 12px 0 0;
-                    cursor:pointer;
-                    float: right;
+                    #loginForm #login {
+                        width:auto;
+                        float:left;
+                        background: url("Pictures/ienakt.png") no-repeat;
+                        width: 59px;
+                        height: 22px;
+                        margin:12px 12px 0 0;
+                        cursor:pointer;
+                        float: right;
 
-                }
+                    }
 
-                #loginForm #login:hover {
-                    background: url("Pictures/ienakt_active.png") no-repeat;
-                }
+                    #loginForm #login:hover {
+                        background: url("Pictures/ienakt_active.png") no-repeat;
+                    }
 
-                #loginForm span {
-                    text-align:center;
-                    display:block;
-                    padding:7px 0 4px 0;
-                }
+                    #loginForm span {
+                        text-align:center;
+                        display:block;
+                        padding:7px 0 4px 0;
+                    }
 
-                #loginForm span a {
-                    color:#3a454d;
-                    text-shadow:1px 1px #fff;
-                    font-size:12px;
-                }
+                    #loginForm span a {
+                        color:#3a454d;
+                        text-shadow:1px 1px #fff;
+                        font-size:12px;
+                    }
 
-                input:focus {
-                    outline:none;
-                }
-                /* Login button ends */
-                /*******************/
+                    input:focus {
+                        outline:none;
+                    }
+                    /* Login button ends */
+                    /*******************/
 
 #nav-right-button-register{
     background: url("Pictures/register.png") no-repeat;
-    margin: 10px;
     padding: 0;
     display: inline-block;
   -webkit-background-size: cover;
@@ -338,6 +337,55 @@ p{
   background-size: cover;
 
 }
+
+
+    #registerContainer {
+            position:relative;
+            font-size:12px;
+            margin: 10px;
+            padding: 0;
+        }
+
+        #registerBox {
+            position:absolute;
+            right:0;
+            display:none;
+            z-index:2;
+            width: 137px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #registerForm {
+            width:100%; 
+            background:#FFFFFF;
+            float: right;
+        }
+            #registerForm a.rsb_p {
+                font-size: 12px;
+                font-weight: bold;
+                margin: 0;
+                display: block;
+                width: 121px;
+                text-align: center;
+                padding: 8px;
+                cursor: default;
+            }
+            #registerForm a.rsb_p:hover {
+                background-color: #FF4D4D;
+                color: #FFF;
+            }
+
+
+        #registernForm hr {
+            border: none;
+            border-bottom: 1px solid #FC6B6B;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+
+
 
 #nav-right-button-register:hover{
     background: url("Pictures/register_rr.png") no-repeat;
