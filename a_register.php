@@ -54,7 +54,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
     echo "AIZPILDIET LAUKUS";
 }
 ?>
-    <div id="register-wrapper-up" class="wrapper-up hidden">
+    <div id="register-wrapper-up" class="wrapper-up">
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
                 <form method="post" action="a_register.php" name="admin-form" id="admin-form" class="address-form">
