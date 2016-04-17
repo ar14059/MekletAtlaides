@@ -65,6 +65,42 @@ $(function() {
     });
 });
 
+
+$(function() {
+    var button = $('#nav-right-button-register');
+    var box = $('#registerBox');
+    var form = $('#registerForm');
+    var buttonClass= $("#registerContainer").attr("class");
+    button.click(function(login) {
+        if(buttonClass!='active')
+        {
+            button.toggleClass('active');
+            box.toggle();
+        } 
+    });
+    button.parents().click(function(){
+        if(buttonClass=='active')
+        {
+            button.toggleClass('active');
+            box.toggle();
+        } 
+    })
+    form.mouseup(function() { 
+        return false;
+    });
+
+    $(this).mouseup(function(register) {
+        if(!($(register.target).parent('#nav-right-button-register').length > 0)) {
+            button.removeClass('active');
+            box.hide();
+        }
+    });
+});
+
+
+
+
+
 /////////////////////////////////
 //katalogs.php sadaļa "Galvenais kataloga saraksts". 
 //Tiek atvērts epasta logs, nospiežot uz zvaigznītes
