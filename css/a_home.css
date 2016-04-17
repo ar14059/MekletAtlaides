@@ -1,0 +1,217 @@
+
+/*Globālie CSS parametri*/
+/************************************************************************************************************/
+/*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
+body{
+    margin: 0;
+    font-family: "Arial", Gadget, sans-serif;
+    min-width: 320px;
+    background-color: #FFF5F5;
+}
+button{
+    border: none;
+}
+
+button:focus {outline:0;}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    color: #545454;
+}
+
+p{
+    color: #545454;
+}
+
+.hidden{
+    display: none;
+}
+
+/*CSS parametri specifiski katram elementam*/
+/************************************************************************************************************/
+
+
+/* "Wlcome" content */
+.body-welcome{
+
+    background-image: url('Pictures/background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFF5F5;
+    width: 56%;
+    min-width: 530px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+
+/* Main content */
+/**************************************************************/
+
+.wrapper-up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 716px;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.2);
+    margin: 0;
+    padding: 0;
+}
+
+    .wrapper-up div.register-div{
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 190px;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+    }
+        .wrapper-up div.register-div-center{
+            width: 550px;
+            /*height: 170px;*/
+            height: auto;
+            background-color: #292929;
+            margin: 0 auto;
+            padding: 20px 0;
+            position: relative;
+        }
+                .register-div-center button.a_back{
+                    width: auto;
+                    height: 20px;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    background-color: #FB6B6B;
+                    color: #FFF;
+                }
+
+                button.a_back:hover{
+                    background-color: red;
+                }
+
+
+                form.address-form{
+                    width: auto;
+                    padding: 40px 40px 25px 40px;
+    /*                width: 80%;
+                    padding: 40px 0 25px 0;*/
+                    margin: 0 auto;
+                }
+                    .address-form fieldset{
+                        border: none;
+                        padding: 10px 0;
+                        height: auto;
+                    }               
+                        .address-form p{
+                            color: #B0AEAE;
+                            text-align: left;
+                            font-size: 11px;
+                            margin-bottom: 25px;
+                        }
+                        .address-form label{
+                            float: left;
+                            color: #B0AEAE;
+                            width: 45%;
+                            line-height: 22px;
+                            font-weight: bold;
+                        }
+
+
+                        .address-form input.register-input{
+                            width: 55%; 
+                            height: 22px;
+                            padding: 2px 10px;
+                            font-size: 12px;
+                            font-style: italic;
+                            font-weight: bold;
+                            float: right;
+                        }
+                    button#a-submit-login{
+                        margin: 10px auto 0 auto;                  
+                    }
+                    button.a_buttons{
+                        width: 200px;
+                        height: 30px;
+                        background-color: #FB6B6B;
+                        color: #FFF;
+                        /*float: right;*/
+                        margin: 10px auto 10px auto;
+                        display: block;
+
+                    }
+
+                    button.a_buttons:hover{
+                        background-color: red;
+                    }
+
+                    button.login-submit-address{
+                        width: 200px;
+                        height: 30px;
+                        background-color: #FB6B6B;
+                        color: #FFF;
+                        /*float: right;*/
+                        margin: 0 auto 20px auto;
+                        display: block;
+                    }
+
+                    button.login-submit-address:hover{
+                        background-color: red;
+                    }
+
+/*a_user_list.php*/
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    margin: 0 auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    width: auto;
+}
+
+tr{background-color: #f2f2f2}
+
+th {
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS stils balstoties uz ierīce ekrāna izmēra*/
+/************************************************************************************************************/
+
+
+
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+
