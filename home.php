@@ -33,6 +33,7 @@
     <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 {
+    if($_SESSION['Lietotaja_limenis']<2){
     ?>
 
         <div class="name_surname_div">
@@ -49,7 +50,10 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
             </div>
         </div>
       
-     <?php
+    <?php
+    }else{
+        header("location: a_home.php"); 
+    }
 }
 elseif(!empty($_POST['email']) && !empty($_POST['password']))
 {
@@ -64,17 +68,19 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
         // $email = $row['EmailAddress'];
         $name = $row['Vards'];
         $surname = $row['Uzvards'];
+        $user_level = $row['Lietotaja_limenis'];
          
         $_SESSION['Epasts'] = $email_address;
         $_SESSION['Vards'] = $name;
         $_SESSION['Uzvards'] = $surname;
         $_SESSION['LoggedIn'] = 1;
+        $_SESSION['Lietotaja_limenis'] = $user_level;
         
         header("Refresh:0");
     }
     else
     {
-        echo "<script type='text/javascript'>alert('Worked but not how expected);</script>";
+        // echo "<script type='text/javascript'>alert('Worked but not how expected);</script>";
         echo "<h1>Error</h1>";
         echo "<p>Sorry, your account could not be found. Please <a href=\"home.php\">click here to try again</a>.</p>";
     }
@@ -103,7 +109,16 @@ else
             </form>
         </div>            
     </div>
-    <a href="registracija.php"><button id="nav-right-button-register" class="button_nav"></button></a>
+    <div id="registerContainer">
+        <button id="nav-right-button-register" class="button_nav"></button>
+        <div id="registerBox">   
+            <form method="post" action="home.php" name="registerForm" id="registerForm">
+                <?php
+                echo "<a href='check_user_level.php?u_level=0' id='msb_pircejs' class='rsb_p'>Pircējs</a>";
+                echo "<a href='check_user_level.php?u_level=1' id='msb_uznemums' class='rsb_p'>Uzņēmums</a>";
+                ?>
+        </div>            
+    </div>
      
    <?php
 }
