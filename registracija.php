@@ -1,4 +1,5 @@
 <?php include "base.php"; ?>
+<?php include 'functions.php'; ?>
 <html>
 <head>
     
@@ -18,6 +19,11 @@
     <title>Webpage</title>
 </head>
 <body>
+
+<p><?php 
+// echo $_SESSION['u_level']; 
+?></p>
+
 
 <!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
 <!--___________________________________________________________-->
@@ -56,18 +62,9 @@
                 </form>
                 <button name="reg-submit-address" id="reg-submit-address" 
                 class="reg-submit-address">Saglabāt</button>
-
-
             </div>
         </div>
     </div>
-
-
-
-<?php
-    $_POST['blabla']='bla';
-
-?>
 
 
 
@@ -156,12 +153,16 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $surname = mysqli_real_escape_string($con, $_POST['surname']);
+    if($_SESSION['Lietotaja_limenis']==1){
+        $uzn_reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr']);
+        $uzn_password = md5(mysqli_real_escape_string($con, $_POST['ent_password']));
+    }else if($_SESSION['Lietotaja_limenis']==0){
     $novads = mysqli_real_escape_string($con, $_POST['novads_hide']);
     $pilseta = mysqli_real_escape_string($con, $_POST['pilseta_hide']);
     $pagasts = mysqli_real_escape_string($con, $_POST['pagasts_hide']);
     $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
     $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
-
+    }
 
     // $city = mysqli_real_escape_string($con, $_POST['city']);
     // $address = mysqli_real_escape_string($con, $_POST['address']);
@@ -193,6 +194,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
             $_SESSION['LoggedIn']=1;
             $_SESSION['Vards'] = $name;
             $_SESSION['Uzvards'] = $surname;
+            // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
             header("Location: http://localhost/MekletAtlaides/home.php");
             die();
             // echo "<h1>Success</h1>";
@@ -207,6 +209,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
 }
 else
 {
+    // if($_SESSION['u_level']==0){
     ?>
 
 
@@ -234,23 +237,19 @@ else
                         <label for="email">Atkārtot E-pastu:</label>
                         <input type="text" name="email_repeat" id="email_repeat" />
                     </fieldset>
+                    <?php if($_SESSION['Lietotaja_limenis']==0){  ?>
                     <fieldset>
                         <label for="address">Adrese</label>
                         <div class="address-div">
                             <input type="text" name="address" id="address" 
                             value="" readonly />
                             <div id="address-edit">Hi</div>
-
-
-                            <!-- php kods te -->
-
-
                             <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
                             </div>
                         </div>
                     </fieldset>
-
+                    <?php } ?> 
                     <fieldset>
                         <label for="password">Parole:</label>
                         <input type="password" name="password" id="password" />
@@ -259,7 +258,17 @@ else
                         <label for="password_repeat">Atkārtot Paroli:</label>
                         <input type="password" name="password_repeat" id="password_repeat" />
                     </fieldset>
-
+                    <?php if($_SESSION['Lietotaja_limenis']==1){ ?>
+                    <hr class="form-hr">
+                    <fieldset>
+                        <label for="email">Uzņemuma reģ.nr.:</label>
+                        <input type="text" name="reg_nr" id="reg_nr" />
+                    </fieldset>
+                    <fieldset>
+                        <label for="password">Uzņēmuma parole:</label>
+                        <input type="password" name="ent_password" id="ent_password" />
+                    </fieldset>
+                    <?php } ?>
 
                     <fieldset class="hidden">
                         <input type="text" name="novads_hide" id="novads_hide" />
@@ -290,6 +299,9 @@ else
         </div>
     </section>
     <?php
+    // }else{
+    //     echo "Errrrrrrrrrrrrrrrrrrrrrrrrrrrrrror";
+    // }
 }
 // $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // echo "<script type='text/javascript'>alert('$actual_link');</script>";
