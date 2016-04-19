@@ -68,12 +68,22 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                 $darbveids_id."','+371', '".$tel_nr."', '".$epasts."', '".$mates_uzn_id."', '".$uzn_parole."');");
         if($registercompany)
         {
-            echo "<p style='color:red'>Uzņēmums veiksmīgi saglabāts!</p>"; 
+            echo "<p style='color:green'>Uzņēmums veiksmīgi saglabāts!</p><br>"; 
+            $user_id = $_SESSION['ID'];
+            $company_id = mysqli_insert_id($con);
+            $registerowners = mysqli_query($con, 
+                "INSERT INTO uznemums_lietotajs (Lietotaja_ID, Uzn_ID) 
+                VALUES('".$user_id."', '".$company_id."');");
+            if($registerowners)
+            {
+                echo "<p style='color:green'>Uzņēmuma īpašnieks veiksmīgi saglabāts!</p><br>"; 
+            }else{
+                echo "<p style='color:red'>Uzņēmuma īpašnieks netika reģistrēts!</p><br>";
+            }
         }
         else
         {
-            echo "<h1>Error</h1>";
-            echo "<p>Sorry, your registration failed. Please try again.</p>";    
+            echo "<p style='color:red'>Uzņēmums netika reģistrēts!</p><br>"; 
         } 
     }
 }else{
