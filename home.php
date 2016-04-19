@@ -66,16 +66,21 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
     {
         $row = mysqli_fetch_array($checklogin);
         // $email = $row['EmailAddress'];
-        $name = $row['Vards'];
-        $surname = $row['Uzvards'];
-        $user_level = $row['Lietotaja_limenis'];
-         
-        $_SESSION['Epasts'] = $email_address;
-        $_SESSION['Vards'] = $name;
-        $_SESSION['Uzvards'] = $surname;
-        $_SESSION['LoggedIn'] = 1;
-        $_SESSION['Lietotaja_limenis'] = $user_level;
-        
+        $active = $row['Aktivs'];
+        if($active==1){ 
+            $id = $row['ID'];
+            $_SESSION['ID'] = $id;
+            $name = $row['Vards'];
+            $surname = $row['Uzvards'];
+            $user_level = $row['Lietotaja_limenis'];     
+            $_SESSION['Epasts'] = $email_address;
+            $_SESSION['Vards'] = $name;
+            $_SESSION['Uzvards'] = $surname;
+            $_SESSION['LoggedIn'] = 1;
+            $_SESSION['Lietotaja_limenis'] = $user_level;  
+        }else{
+            // echo "<h1>Jūs nobloķēja administrators!</h1>";
+        }
         header("Refresh:0");
     }
     else
@@ -191,7 +196,7 @@ else
                 <header><p class="main-subject-title">Kategorijas</p></header>
                 <section class="desktop hidden">
                     <article>
-                        <a href="katalogs.php"><button id="mebeles"></button></a>
+                        <button id="mebeles"><a href="katalogs.php"></a></button>
                         <button id="sporta-preces"></button>
                         <button id="rotallietas"></button>
                         <button id="elektronika"></button>
