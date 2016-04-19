@@ -157,11 +157,11 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         $uzn_reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr']);
         $uzn_password = md5(mysqli_real_escape_string($con, $_POST['ent_password']));
     }else if($_SESSION['Lietotaja_limenis']==0){
-    $novads = mysqli_real_escape_string($con, $_POST['novads_hide']);
-    $pilseta = mysqli_real_escape_string($con, $_POST['pilseta_hide']);
-    $pagasts = mysqli_real_escape_string($con, $_POST['pagasts_hide']);
-    $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
-    $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
+        $novads = mysqli_real_escape_string($con, $_POST['novads_hide']);
+        $pilseta = mysqli_real_escape_string($con, $_POST['pilseta_hide']);
+        $pagasts = mysqli_real_escape_string($con, $_POST['pagasts_hide']);
+        $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
+        $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
     }
 
     // $city = mysqli_real_escape_string($con, $_POST['city']);
@@ -176,35 +176,68 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     }
     else
     {
-        $registeraddress = mysqli_query($con, 
-            "INSERT INTO lietotaja_adrese (Novads, Pilsēta, Pagasts, Ēkas_nr, Dzīvokļa_nr) 
-            VALUES('".$novads."', '".$pilseta."', '".$pagasts."', '".$ek_nr."', '".$dzivoklis."');"); 
-        // if (mysqli_query($con, $registeraddress)) {
-        if ($registeraddress) {
-            $last_id = mysqli_insert_id($con);
-        } else {
-            echo "Error: " . $registeraddress . "<br>" . mysqli_error($con);
-        }
+        if($_SESSION['Lietotaja_limenis']==0){
+            $registeraddress = mysqli_query($con, 
+                "INSERT INTO lietotaja_adrese (Novads, Pilsēta, Pagasts, Ēkas_nr, Dzīvokļa_nr) 
+                VALUES('".$novads."', '".$pilseta."', '".$pagasts."', '".$ek_nr."', '".$dzivoklis."');"); 
+            // if (mysqli_query($con, $registeraddress)) {
+            if ($registeraddress) {
+                $last_id = mysqli_insert_id($con);
+            } else {
+                echo "Error: " . $registeraddress . "<br>" . mysqli_error($con);
+            }
 
-        $registerquery = mysqli_query($con, "INSERT INTO lietotajs (Vards, Uzvards, Epasts, Parole, Adreses_ID) 
-            VALUES('".$name."', '".$surname."', '".$email_address."', '".$password."', '".$last_id."');");
-        if($registerquery)
-        {
-            $_SESSION['Epasts'] = $email_address;
-            $_SESSION['LoggedIn']=1;
-            $_SESSION['Vards'] = $name;
-            $_SESSION['Uzvards'] = $surname;
-            // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
-            header("Location: http://localhost/MekletAtlaides/home.php");
-            die();
-            // echo "<h1>Success</h1>";
-            // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
+            $registerquery = mysqli_query($con, "INSERT INTO lietotajs (Vards, Uzvards, Epasts, Parole, Adreses_ID) 
+                VALUES('".$name."', '".$surname."', '".$email_address."', '".$password."', '".$last_id."');");
+            if($registerquery)
+            {
+                $_SESSION['Epasts'] = $email_address;
+                $_SESSION['LoggedIn']=1;
+                $_SESSION['Vards'] = $name;
+                $_SESSION['Uzvards'] = $surname;
+                // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
+                header("Location: http://localhost/MekletAtlaides/home.php");
+                die();
+                // echo "<h1>Success</h1>";
+                // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
+            }
+            else
+            {
+                echo "<h1>Error</h1>";
+                echo "<p>Sorry, your registration failed. Please go back and try again.</p>";    
+            }   
+        }else if($_SESSION['Lietotaja_limenis']==1){  
+            $registercompany = mysqli_query($con ,"SELECT * FROM uznemums 
+                WHERE Reģ_nr = '".$uzn_reg_nr."' AND Uzņ_parole = '".$uzn_password."'");
+
+            if(mysqli_num_rows($registercompany) == 1){
+                $company_row = mysqli_fetch_array($registercompany);
+                $c_id = $company_row['ID'];
+                $registerquery = mysqli_query($con, "INSERT INTO lietotajs (Vards, Uzvards, Epasts, Parole, Lietotaja_limenis) 
+                    VALUES('".$name."', '".$surname."', '".$email_address."', '".$password."', '1');");
+                if($registerquery)
+                {
+                    $last_id = mysqli_insert_id($con);
+
+                    $registerworker = mysqli_query($con, "INSERT INTO uznemums_lietotajs (Lietotaja_ID, Uzn_ID) 
+                        VALUES('".$last_id."', '".$c_id."');");
+                    $_SESSION['Epasts'] = $email_address;
+                    $_SESSION['LoggedIn']=1;
+                    $_SESSION['Vards'] = $name;
+                    $_SESSION['Uzvards'] = $surname;
+                    // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
+                    header("Location: http://localhost/MekletAtlaides/home.php");
+                    die();
+                    // echo "<h1>Success</h1>";
+                    // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
+                }
+                else
+                {
+                    echo "<h1>Error</h1>";
+                    echo "<p>Sorry, your registration failed. Please go back and try again.</p>";    
+                }    
+            }else{echo "Nav tāda uzņēmuma, ievadiet uzņēmuma datus vēlreiz!";}        
         }
-        else
-        {
-            echo "<h1>Error</h1>";
-            echo "<p>Sorry, your registration failed. Please go back and try again.</p>";    
-        }       
     }
 }
 else
