@@ -45,6 +45,8 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
         if($u_level>=2){
             $name = $row['Vards'];
             $surname = $row['Uzvards'];
+            $id = $row['ID'];
+            $_SESSION['ID'] = $id;
             $_SESSION['Epasts'] = $email_address;
             $_SESSION['Vards'] = $name;
             $_SESSION['Uzvards'] = $surname;

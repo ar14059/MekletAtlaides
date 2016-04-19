@@ -34,7 +34,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     ?>
         <h3>Welcome, <?php echo $_SESSION['Vards'];?> 
             <?php echo $_SESSION['Uzvards'];?> 
-            <?php echo $_SESSION['Lietotaja_limenis'];?></h3>
+            <?php echo $_SESSION['Lietotaja_limenis'];?> </h3>
     <?php      
     }
     else
@@ -51,29 +51,29 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     <div id="register-wrapper-up" class="wrapper-up">
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
-                <a href="a_user_list.php"><button name="users_table" id="users_table" 
-                class="a_buttons">Lietotāju saraksts</button></a>
+                <div class="btn_div"><div class="btn_div_center"><a href="a_user_list.php"><button name="users_table" id="users_table" 
+                class="a_buttons">Lietotāju saraksts</button></a></div></div>
 
-                <a href=""><button name="create_concern" id="create_concern" 
-                class="a_buttons">Uzņēmumu saraksts</button></a>
+                <div class="btn_div"><div class="btn_div_center"><a href="a_company_list.php"><button name="create_concern" id="create_concern" 
+                class="a_buttons">Uzņēmumu saraksts</button></a></div></div>
 
                 <?php if($u_level==3){ ?>
 
-                <a href="a_register.php"><button name="create_concern" id="create_concern" 
-                class="a_buttons">Reģistrēt uzņ vadītāju</button></a>
+                <div class="btn_div"><div class="btn_div_center"><a href="a_register.php"><button name="create_concern" id="create_concern" 
+                class="a_buttons">Reģistrēt uzņ vadītāju</button></a></div></div>
 
                 <?php 
                 } else{
                 ?>
 
-                <a href="a_company_r.php"><button name="create_company" id="create_company" 
-                class="a_buttons">Reģistrēt uzņēmumu</button></a>
+                <div class="btn_div"><div class="btn_div_center"><a href="a_company_r.php"><button name="create_company" id="create_company" 
+                class="a_buttons">Reģistrēt uzņēmumu</button></a></div></div>
 
                 <?php
                 }
                 ?>
-                <a href="a_logout.php"><button name="create_concern" id="create_concern" 
-                class="a_buttons">Log Out</button></a>            
+                <div class="btn_div"><div class="btn_div_center"><a href="a_logout.php"><button name="create_concern" id="create_concern" 
+                class="a_buttons">Log Out</button></a></div></div>         
             </div>
         </div>
     </div>
