@@ -1,54 +1,8 @@
-<?php include "base.php"; ?>
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<?php require "a_header.php"; ?>
 
-    <link rel="stylesheet" type="text/css" href="css/a_home.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
-
-
-
-    <title>Webpage</title>
-</head>
-
-
-<body>
-
-<?php
-if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
-{ 
-    $_SESSION['activation']='user';
-    $activation=$_SESSION['activation'];
-    $u_level = $_SESSION['Lietotaja_limenis'];
-    if($u_level>=2){
-    ?>
-        <h3>Welcome, <?php echo $_SESSION['Vards'];?> 
-            <?php echo $_SESSION['Uzvards'];?> 
-            <?php echo $_SESSION['Lietotaja_limenis'];?></h3>
-    <?php      
-    }
-    else
-    {
-        header("location: home.php"); 
-    }
-}else{
-
-    header("location: a_login.php"); 
-}
-?>
-
-
-
-
-<div id="register-wrapper-up" class="wrapper-up">
     <div id="register-wrapper-div" class="register-div">
         <div class="register-div-center">
-
+            <h3><?php echo $greeting_text; ?></h3>
 
 
 	<table>
@@ -121,7 +75,7 @@ if($_SESSION['Lietotaja_limenis']==3){
 
         </div>
     </div>
-</div>
+
 
 
 
@@ -134,7 +88,8 @@ if($_SESSION['Lietotaja_limenis']==3){
 
 </body>
 
-</html>
+
+<?php require "a_footer.php"; ?>
 
 
 

@@ -1,13 +1,16 @@
 
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
-/*{
+h3{
     margin: 0;
-    padding: 0;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #D3D3D3;
     -webkit-box-sizing: border-box;
     -mox-box-sizing: border-box;
     box-sizing: border-box;
-}*/
+}
 
 body{
     margin: 0;
@@ -40,61 +43,40 @@ p{
 
 
 /* "Wlcome" content */
-.body-welcome{
 
-    background-image: url('Pictures/background.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #FFF5F5;
-    width: 56%;
-    min-width: 530px;
-    margin: 0 auto;
-    font-weight: bold;
-}
 
 
 /* Main content */
 /**************************************************************/
 
-.wrapper-up{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    min-height: 716px;
-    width: 100%;
-    z-index: 2;
-    background-color: rgba(0,0,0,0.2);
-    margin: 0;
-    padding: 0;
-}
 
-    .wrapper-up div.register-div{
-        position: fixed;
+
+    div.register-div{
+        position: absolute;
         top: 50px;
         left: 0;
         width: 100%;
-        height: 190px;
+        min-height: 190px;
+        height: auto;
         margin: 0;
         padding: 0;
         z-index: 3;
+        padding-bottom: 50px;
     }
-        .wrapper-up div.register-div-center{
+        div.register-div-center{
             width: 550px;
             /*height: 170px;*/
             height: auto;
             background-color: #292929;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 0 0 20px 0;
             position: relative;
         }
                 .register-div-center button.a_back{
                     width: auto;
                     height: 20px;
                     position: absolute;
-                    top: 5px;
+                    top: 48px;
                     left: 5px;
                     background-color: #FB6B6B;
                     color: #FFF;
@@ -105,9 +87,9 @@ p{
                 }
 
 
-                form.address-form{
+                .address-form{
                     width: auto;
-                    padding: 40px 40px 25px 40px;
+                    padding: 25px 40px 0 40px;
     /*                width: 80%;
                     padding: 40px 0 25px 0;*/
                     margin: 0 auto;
@@ -182,49 +164,56 @@ table {
     margin: 0 auto;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-    width: auto;
-    /*border: 1px solid black;*/
+    th, td {
+        text-align: left;
+        padding: 8px;
+        width: auto;
+        /*border: 1px solid black;*/
+    }
+
+    td, th{
+        height: 35px;
+    }
+    td.td-center{
+        text-align: center;
+    }
+
+    tr{background-color: #f2f2f2}
+
+    th {
+        background-color: red;
+        color: white;
+    }
+    .add_btn{
+        width: 100%;
+        height:35px;
+        background-color: red;
+        color: #FFFFFF;
+        padding: 0;
+    }
+
+    .no_padding{
+        padding: 0;
+    }
+
+    div.btn_div{
+        height: 30px;
+    }
+
+    div.btn_div_center{
+        width: 200px;
+        height: 100%;
+        margin: 0 auto;
+
+    }
+
+
+
+
+.panel {
+    padding: 50px auto;
+    display: none;
 }
-
-td, th{
-    height: 35px;
-}
-
-tr{background-color: #f2f2f2}
-
-th {
-    background-color: red;
-    color: white;
-}
-.add_btn{
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    color: #FFFFFF;
-    padding: 0;
-}
-
-.no_padding{
-    padding: 0;
-}
-
-div.btn_div{
-    height: 30px;
-}
-
-div.btn_div_center{
-    width: 200px;
-    height: 100%;
-    margin: 0 auto;
-
-}
-
-
-
-
 
 
 

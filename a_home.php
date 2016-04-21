@@ -1,56 +1,11 @@
-<?php include "base.php"; ?>
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" type="text/css" href="css/a_home.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
+<?php require "a_header.php"; ?>
 
 
-
-    <title>Webpage</title>
-</head>
-
-
-<body>
-
-
-<!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
-<!--___________________________________________________________-->
-
-
-
-
-<?php
-if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
-{ 
-    $u_level = $_SESSION['Lietotaja_limenis'];
-    if($u_level>=2){
-    ?>
-        <h3>Welcome, <?php echo $_SESSION['Vards'];?> 
-            <?php echo $_SESSION['Uzvards'];?> 
-            <?php echo $_SESSION['Lietotaja_limenis'];?> </h3>
-    <?php      
-    }
-    else
-    {
-        header("location: home.php"); 
-    }
-}else{
-
-    header("location: a_login.php"); 
-}
-?>
-    
-
-    <div id="register-wrapper-up" class="wrapper-up">
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
+                <h3><?php echo $greeting_text; ?></h3>
+
+
                 <div class="btn_div"><div class="btn_div_center"><a href="a_user_list.php"><button name="users_table" id="users_table" 
                 class="a_buttons">Lietotāju saraksts</button></a></div></div>
 
@@ -76,7 +31,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
                 class="a_buttons">Log Out</button></a></div></div>         
             </div>
         </div>
-    </div>
+
 </body>
 
-</html>
+<?php require "a_footer.php"; ?>

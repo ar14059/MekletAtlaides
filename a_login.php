@@ -31,11 +31,9 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 }else if(!empty($_POST['email']) && !empty($_POST['password'])){
     // echo "Preparing to log in";
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
-    $password = md5(mysqli_real_escape_string($con, $_POST['password']));
-     
+    $password = md5(mysqli_real_escape_string($con, $_POST['password']));  
     $checklogin = mysqli_query($con ,"SELECT * FROM lietotajs 
         WHERE Epasts = '".$email_address."' AND Parole = '".$password."'");
-     
     if(mysqli_num_rows($checklogin) == 1)
     {
 
@@ -66,7 +64,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     }
 }
 ?>
-    <div id="register-wrapper-up" class="wrapper-up">
+
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
                 <form method="post" action="a_login.php" name="address-form" id="address-form" class="address-form">
@@ -87,7 +85,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 
             </div>
         </div>
-    </div>
+
 
 </body>
 

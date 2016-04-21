@@ -1,24 +1,6 @@
-<?php include "base.php"; ?>
-
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" type="text/css" href="css/a_home.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
+<?php require "a_header.php"; ?>
 
 
-
-    <title>Webpage</title>
-</head>
-
-
-<body>
 
 
 <?php
@@ -54,9 +36,10 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
     echo "AIZPILDIET LAUKUS";
 }
 ?>
-    <div id="register-wrapper-up" class="wrapper-up">
+
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
+                <h3><?php echo $greeting_text; ?></h3>
                 <form method="post" action="a_register.php" name="admin-form" id="admin-form" class="address-form">
                     <fieldset>
                         <label for="name">Vārds:</label>
@@ -85,8 +68,10 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 
             </div>
         </div>
-    </div>
+
 
 </body>
 
-</html>
+
+<?php require "a_footer.php"; ?>
+

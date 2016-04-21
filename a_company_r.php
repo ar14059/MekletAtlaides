@@ -1,24 +1,6 @@
-<?php include "base.php"; ?>
-
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" type="text/css" href="css/a_home.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
+<?php require "a_header.php"; ?>
 
 
-
-    <title>Webpage</title>
-</head>
-
-
-<body>
 
 
 <?php
@@ -76,23 +58,23 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                 VALUES('".$user_id."', '".$company_id."');");
             if($registerowners)
             {
-                echo "<p style='color:green'>Uzņēmuma īpašnieks veiksmīgi saglabāts!</p><br>"; 
+                // echo "<p style='color:green'>Uzņēmuma īpašnieks veiksmīgi saglabāts!</p><br>"; 
             }else{
-                echo "<p style='color:red'>Uzņēmuma īpašnieks netika reģistrēts!</p><br>";
+                // echo "<p style='color:red'>Uzņēmuma īpašnieks netika reģistrēts!</p><br>";
             }
         }
         else
         {
-            echo "<p style='color:red'>Uzņēmums netika reģistrēts!</p><br>"; 
+            // echo "<p style='color:red'>Uzņēmums netika reģistrēts!</p><br>"; 
         } 
     }
 }else{
-    echo "AIZPILDIET LAUKUS";
+    // echo "AIZPILDIET LAUKUS";
 }
 ?>
-    <div id="register-wrapper-up" class="wrapper-up">
         <div id="register-wrapper-div" class="register-div">
             <div class="register-div-center">
+                <h3><?php echo $greeting_text; ?></h3>
                 <form method="post" action="a_company_r.php" name="admin-form" id="admin-form" class="address-form">
                     <fieldset>
                         <label for="reg_nr">Reģ. numurs:</label>
@@ -181,8 +163,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
 
             </div>
         </div>
-    </div>
 
 </body>
 
-</html>
+<?php require "a_footer.php"; ?>
