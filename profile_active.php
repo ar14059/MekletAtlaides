@@ -20,7 +20,6 @@
 			mysqli_query($con, "UPDATE lietotajs SET Aktivs='1' WHERE id='$u_id'");
 			header("location: a_user_list.php");
 		}
-
 	}
 	else if(!empty($c_id)){
 		if($pieslegts == 1){
