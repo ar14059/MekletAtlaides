@@ -23,13 +23,6 @@
         <header class="main-nav">
             <div class="header-right">
 
-<!--                 <div id="navigation_include"></div> -->
-                <script> 
-                // $(function(){
-                //   $("#navigation_include").load("navigation.php"); 
-                // });
-                </script> 
-
     <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 {
