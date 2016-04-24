@@ -14,6 +14,8 @@ mysqli_set_charset($con, 'utf8');
 // mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
 ?>
 
+<?php $curr_location = $_SERVER['SCRIPT_NAME']; ?>
+
 <?php
 function get_browsername() {
 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE){
