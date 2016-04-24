@@ -2,17 +2,8 @@
 
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+    <?php require "head.php"; ?>
     <link rel="stylesheet" type="text/css" href="css/katalogs.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
-
-
     <title>Webpage</title>
 </head>
 
@@ -29,13 +20,7 @@
             </div>
         </div>
         <div class="nav-subject right">
-            <div id="navigation_include"></div>
-            <script> 
-            $(function(){
-              $("#navigation_include").load("navigation.php"); 
-            });
-            </script> 
-            <a href="home.php"><button id="nav-right-button-back" class="button_nav"></button></a>
+            <?php require "navigation.php"; ?>
         </div>
     </header>
     <div class="wrapper">
@@ -298,7 +283,7 @@
 
 </body>
 
-
+    <script src="scripts/jquery.js"></script>
 
 </html>
 

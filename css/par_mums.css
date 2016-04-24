@@ -74,293 +74,32 @@ p{
 #body-content{
     margin: 0 auto;
     width: 100%;
-    /*padding: 50px;*/
     min-width: 320px;
     clear: both;
-    /*min-height: 419px;*/
     min-height: 344px;
 }
 
-header.main-nav{
-    height: 54px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    clear: both;
-    /*overflow: hidden;*/
-}
-
-    .header-right{
-        float: right;
-        margin-right: 3%;
-        height: 100%;
-    }
-
-
-            div.name_surname_div{
-                /*padding: 18px 0;*/
-                height: 100%;
-                width: auto;
-                /*background-color: yellow;*/
-                display: inline-block;
-
-            }
-            .name_surname_div p.login_user_data{
-                color: #FFF;
-                margin: 18px 0;
-                font-style: italic;
-                display: inline-block;
-                float: left;
-
-            }
-
-            #main-settings-container{
-                width: auto;
-                height: auto;
-                display: inline-block;
-                position: relative;
-                margin-right: 40px;
-                margin-top: 9px;
-                margin-bottom: 9px;
-
-
-            }
-            #main-settings-container:hover{
-                background-color: #FFF;
-            }
-            #main-settings-container:hover #main-settings-btn{
-                background: url("Pictures/main_option_btn_active.png") no-repeat;
-            }
-
-
-
-
-
-                #main-settings-btn{
-                    background: url("Pictures/main_option_btn.png") no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    margin: 9px;
-                    position:relative;
-                    z-index:1;
-                    cursor:pointer;
-                   /* margin: 0;*/
-                    padding: 0;
-                      -webkit-background-size: cover;
-                      -moz-background-size: cover;
-                      -o-background-size: cover;
-                      background-size: cover;
-                      float: left;
-                }
-            #main-settings-box {
-                position:absolute;
-                right:0;
-                top: 36px;
-                /*display:none;*/
-                display:none;
-                z-index:2;
-                width: auto;
-                min-width: 140px;
-                margin: 0;
-                padding: 0;
-                background-color: #FFF;
-            }
-                #main-settings-box p.msb_p {
-                    font-size: 12px;
-                    font-weight: bold;
-                    margin: 0;
-                    padding: 8px;
-                    display: block;
-                    width: auto;
-                    min-width: 125px;
-                }
-                #main-settings-box p.msb_p:hover {
-                    background-color: #FF4D4D;
-                    color: #FFF;
-                }
-
-.header-right .button_nav{
-    box-shadow: 2px 2px 8px 2px #545454;
-    float: right;
-}
-
-#navigation_include{
-    float: right;
-    font-weight: bold;
-
-}
-
-#hidden_button_login{
-    display: none;
-    background: url("Pictures/login.png") no-repeat;
-    margin: 10px 5px;
-    /*margin: 10px;*/
-    padding: 8px;
-}
-    /*******************/
-    /* Login button starts  */
-
-    #nav-right-button-login{
-        background: url("Pictures/login.png") no-repeat;
-        position:relative;
-        z-index:1;
-        cursor:pointer;
-        margin: 0;
-        padding: 0;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-    }
-
-    #nav-right-button-login:hover{
-        background: url("Pictures/login_active.png") no-repeat;
-    }
-    #loginContainer {
-        position:relative;
-        font-size:12px;
-        margin: 10px;
-        padding: 0;
-    }
-    #loginBox {
-        position:absolute;
-        right:0;
-        display:none;
-        z-index:2;
-        width: 220px;
-        margin: 0;
-        padding: 0;
-    }
-    #loginForm hr {
-        border: none;
-        border-bottom: 1px solid #FC6B6B;
+    header.main-nav{
+        height: auto;
+        /*height: auto;*/
         width: 100%;
-        margin-bottom: 10px;
+        margin: 0 auto;
+        /*padding: 0;*/
+        /*padding: 10px 0;*/
+
     }
-    #loginForm {
-        width:100%; 
-        background:#FFFFFF;
-        padding:6px;
+
+    header.main-nav a{
+        display: inline-block;
         float: right;
     }
-    #loginForm fieldset {
-        margin:0 0 5px 0;
-        display:block;
-        border:0;
-        padding:0;
-    }
-    fieldset#body {
-        background:#fff;
-        padding:10px 0 10px 13px;
-        margin:0;
-    }
-    #loginForm #checkbox {
-        width:auto;
-        margin:1px 9px 0 0;
-        float:left;
-        padding:0;
-        border:0;
-    }
-    #body label {
-        color:#3a454d;
-        margin:9px 0 0 0;
-        display:block;
-        float:left;
-    }
-    #loginForm #body fieldset label {
-        display:inline-block;
-        float:none;
-        margin:0 0 6px 0;
-        width: 30%;
-    }
-    #loginForm input {
-        width:60%;
-        border:1px solid #FC6B6B;
-        border-radius:3px;
-        -moz-border-radius:3px;
-        color:#3a454d;
-        font-weight:bold;
-        padding:0 8px;
-        font-size:14px;
-        float: right;
-    }
-    #loginForm input:focus {
-        box-shadow:inset 0px -1px 1px #FC6B6B;
-        -webkit-box-shadow:inset 0px -1px 1px #FC6B6B;
-        -moz-box-shadow:inset 0px -1px 1px #FC6B6B;
-    }
-    #loginForm #login {
-        width:auto;
-        float:left;
-        background: url("Pictures/ienakt.png") no-repeat;
-        width: 59px;
-        height: 22px;
-        margin:12px 12px 0 0;
-        cursor:pointer;
-        float: right;
 
-    }
-    #loginForm #login:hover {
-        background: url("Pictures/ienakt_active.png") no-repeat;
-    }
-    #loginForm span {
-        text-align:center;
-        display:block;
-        padding:7px 0 4px 0;
-    }
+        .header-right{
+            float: right;
+            height: auto;
+            /*margin: 10px 0;*/
+        }
 
-    #loginForm span a {
-        color:#3a454d;
-        text-shadow:1px 1px #fff;
-        font-size:12px;
-    }
-
-    input:focus {
-        outline:none;
-    }
-    /* Login button ends */
-    /*******************/
-
-#nav-right-button-register{
-    background: url("Pictures/register.png") no-repeat;
-    margin: 10px;
-    padding: 0;
-    display: inline-block;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#nav-right-button-register:hover{
-    background: url("Pictures/register_active.png") no-repeat;
-}
-
-#nav-right-button-back{
-    background: url("Pictures/back.png") no-repeat;
-    margin: 10px;
-    padding: 0;
-    display: inline-block;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#nav-right-button-back:hover{
-    background: url("Pictures/back_active.png") no-repeat;
-}
-
-#nav-right-button-login, .button_nav{
-    width: 137px;
-    height: 35px;
-    box-shadow: 2px 2px 8px 2px #545454;
-}
-
-
-.header-right div{
-    display: inline-block;
-}
 
 
 /**************************************************************/
