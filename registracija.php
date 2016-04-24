@@ -1,5 +1,5 @@
 <?php include "base.php"; ?>
-<?php include 'functions.php'; ?>
+
 <html>
 <head>
     
@@ -11,126 +11,15 @@
     <link rel="stylesheet" type="text/css" href="css/registracija.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <script type="text/javascript" src="scripts/jquery.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="scripts/jquery.js"></script>
 
 
     <title>Webpage</title>
 </head>
 <body>
 
-<p><?php 
-// echo $_SESSION['u_level']; 
-?></p>
-
-
-<!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
-<!--___________________________________________________________-->
-    <div id="register-wrapper-up" class="wrapper-up hidden">
-        <div id="register-wrapper-div" class="register-div hidden">
-            <div class="register-div-center">
-<!--                 <button class="star_fill"></button> -->
-                <button id="wrapper-register-close" class="close"></button>
-                <form name="address-form" id="address-form" >
-                    <fieldset>
-                        <label for="novads">Novads:</label>
-                        <input type="text" id="novads" class="register-input" 
-                        name="novads" placeholder="Novads" 
-                        value="">
-                    </fieldset>
-                    <fieldset>
-                        <label for="pilseta">Pilsēta:</label>
-                        <input type="text" id="pilseta" class="register-input" 
-                        name="pilseta" placeholder="Pilsēta">
-                    </fieldset>
-                    <fieldset>
-                        <label for="pagasts">Pagasts:</label>
-                        <input type="text" id="pagasts" class="register-input" 
-                        name="pagasts" placeholder="Pagasts">
-                    </fieldset>
-                    <fieldset>
-                        <label for="ek_nr">Ēkas nr./Nos, korpuss:</label>
-                        <input type="text" id="ek_nr" class="register-input" 
-                        name="ek_nr" placeholder="Ēkas nr./Nos, korpuss">
-                    </fieldset>
-                    <fieldset>
-                        <label for="dzivoklis">Telpu grupa (dzīvoklis):</label>
-                        <input type="text" id="dzivoklis" class="register-input" 
-                        name="dzivoklis" placeholder="Telpu grupa (dzīvoklis)">
-                    </fieldset>
-                </form>
-                <button name="reg-submit-address" id="reg-submit-address" 
-                class="reg-submit-address">Saglabāt</button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php require "address_form.php"; ?>
 
 
 
@@ -157,15 +46,16 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         $uzn_reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr']);
         $uzn_password = md5(mysqli_real_escape_string($con, $_POST['ent_password']));
     }else if($_SESSION['Lietotaja_limenis']==0){
+        $pasta_indekss = mysqli_real_escape_string($con, $_POST['pasta_indekss_hide']);
         $novads = mysqli_real_escape_string($con, $_POST['novads_hide']);
         $pilseta = mysqli_real_escape_string($con, $_POST['pilseta_hide']);
         $pagasts = mysqli_real_escape_string($con, $_POST['pagasts_hide']);
+        $ciems = mysqli_real_escape_string($con, $_POST['ciems_hide']);
+        $iela = mysqli_real_escape_string($con, $_POST['iela_hide']);
         $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
         $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
+        
     }
-
-    // $city = mysqli_real_escape_string($con, $_POST['city']);
-    // $address = mysqli_real_escape_string($con, $_POST['address']);
      
     $checkemail = mysqli_query($con, "SELECT Epasts FROM lietotajs WHERE Epasts = '".$email_address."'");
       
@@ -178,8 +68,8 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     {
         if($_SESSION['Lietotaja_limenis']==0){
             $registeraddress = mysqli_query($con, 
-                "INSERT INTO lietotaja_adrese (Novads, Pilsēta, Pagasts, Ēkas_nr, Dzīvokļa_nr) 
-                VALUES('".$novads."', '".$pilseta."', '".$pagasts."', '".$ek_nr."', '".$dzivoklis."');"); 
+                "INSERT INTO lietotaja_adrese (Pasta_indekss, Novads, Pilsēta, Pagasts, Ciems, Iela, Ēkas_nr, Dzīvokļa_nr) 
+                VALUES('".$pasta_indekss."', '".$novads."', '".$pilseta."', '".$pagasts."', '".$ciems."', '".$iela."', '".$ek_nr."', '".$dzivoklis."');"); 
             // if (mysqli_query($con, $registeraddress)) {
             if ($registeraddress) {
                 $last_id = mysqli_insert_id($con);
@@ -276,7 +166,7 @@ else
                         <div class="address-div">
                             <input type="text" name="address" id="address" 
                             value="" readonly />
-                            <div id="address-edit">Hi</div>
+                            <div id="address-edit">Edit</div>
                             <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
                             </div>
@@ -303,13 +193,18 @@ else
                     </fieldset>
                     <?php } ?>
 
+
                     <fieldset class="hidden">
+                        <input type="text" name="pasta_indekss_hide" id="pasta_indekss_hide">
                         <input type="text" name="novads_hide" id="novads_hide" />
                         <input type="text" name="pilseta_hide" id="pilseta_hide">
                         <input type="text" name="pagasts_hide" id="pagasts_hide">
+                        <input type="text" name="ciems_hide" id="ciems_hide">
+                        <input type="text" name="iela_hide" id="iela_hide">
                         <input type="text" name="ek_nr_hide" id="ek_nr_hide">
                         <input type="text" name="dzivoklis_hide" id="dzivoklis_hide">
                     </fieldset>
+                        
 
 
                 </fieldset>
@@ -356,7 +251,7 @@ else
 
 
 </body>
-
+<script type="text/javascript" src="scripts/jquery.js"></script>
 
 <!-- <script type="text/javascript" src="scripts/backspace_disable.js"></script> -->
 

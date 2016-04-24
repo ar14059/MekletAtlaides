@@ -2,7 +2,9 @@
 
 
 
-
+<?php 
+require "address_form.php"; 
+?>
 <?php
 if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
     // echo "Preparing to log in";
@@ -72,7 +74,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
     // echo "AIZPILDIET LAUKUS";
 }
 ?>
-        <div id="register-wrapper-div" class="register-div">
+        <div id="regaddr-wrapper-div" class="register-div">
             <div class="register-div-center">
                 <h3><?php echo $greeting_text; ?></h3>
                 <form method="post" action="a_company_r.php" name="admin-form" id="admin-form" class="address-form">
@@ -101,11 +103,21 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                             <?php } ?>
                         </datalist>
                     </fieldset>
+
+
                     <fieldset>
                         <label for="jurid_adrese">Juridiskā adrese:</label>
-                        <input type="text" id="jurid_adrese" class="register-input" 
-                        name="jurid_adrese" placeholder="Juridiskā adrese">
+                        <div class="address-div">
+                            <input type="text" id="jurid_adrese" class="register-input" 
+                            name="jurid_adrese" placeholder="Juridiskā adrese" readonly>
+                            <div id="address-edit">Edit</div>
+                            <div id="address_form_btn_a" class="address_form_btn">
+                                <p class="a_f_b_title">Aizpildi adreses laukus</p>
+                            </div>
+                        </div>
                     </fieldset>
+
+
                     <fieldset>
                         <label for="darb_veids">Darbības veids:</label>
                         <input type="text" list="d_v_list" id="darb_veids" class="register-input" 
@@ -145,6 +157,17 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
 
 
 
+                    <fieldset class="hidden">
+                        <input type="text" name="pasta_indekss_a_hide" id="pasta_indekss_a_hide">
+                        <input type="text" name="novads_a_hide" id="novads_a_hide" />
+                        <input type="text" name="pilseta_a_hide" id="pilseta_a_hide">
+                        <input type="text" name="pagasts_a_hide" id="pagasts_a_hide">
+                        <input type="text" name="ciems_a_hide" id="ciems_a_hide">
+                        <input type="text" name="iela_a_hide" id="iela_a_hide">
+                        <input type="text" name="ek_nr_a_hide" id="ek_nr_a_hide">
+                        <input type="text" name="dzivoklis_a_hide" id="dzivoklis_a_hide">
+                    </fieldset>
+
 
 <!--                     <fieldset>
                         <label for="email">Epasts:</label>
@@ -165,5 +188,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
         </div>
 
 </body>
+
+
 
 <?php require "a_footer.php"; ?>
