@@ -7,11 +7,15 @@
     <link rel="stylesheet" type="text/css" href="css/a_home.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
     <title>Webpage</title>
 </head>
 
 
 <body>
+
+
 
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
@@ -25,8 +29,9 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
         // echo "<script type='text/javascript'>alert('$url');</script>";
         $_SESSION['activation']='user';
     }
-    
-    $activation=$_SESSION['activation'];
+    if(!empty($_SESSION['activation'])){
+        $activation=$_SESSION['activation'];
+    }
     $u_level = $_SESSION['Lietotaja_limenis'];
     if($u_level>=2){
         $greeting_text = 'Welcome, '.$_SESSION['Vards'].' '.$_SESSION['Uzvards'].' '.$_SESSION['Lietotaja_limenis']; 
