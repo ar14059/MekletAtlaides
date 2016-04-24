@@ -233,9 +233,14 @@ fieldset.content_area fieldset div.address-div{
         height: 100%;
         border:1px solid #FC6B6B;
         border-radius:3px;
-        width: 30px;
+        width: 36px;
         background-color: green;
         cursor: default;
+        color: #FFFFFF;
+        line-height: 18px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
     }
 
         div#address-edit span{
@@ -353,6 +358,15 @@ fieldset.content_area fieldset div.address-div{
                         font-style: italic;
                         font-weight: bold;
                         float: right;
+                    }
+                    #address-form input#iela{
+                        width: 35%;
+                        float: left;
+                    }
+                    #address-form select#iela_abr{
+                        height: 22px;
+                        float: right;
+                        width: 19%;
                     }
                 button.reg-submit-address{
                     width: 200px;
