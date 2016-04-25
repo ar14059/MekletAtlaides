@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<?php require "address_form.php"; ?>
+
 
 
 
@@ -54,7 +54,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         $iela = mysqli_real_escape_string($con, $_POST['iela_hide']);
         $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
         $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
-        
+        $pilna_adrese = mysqli_real_escape_string($con, $_POST['address']);
     }
      
     $checkemail = mysqli_query($con, "SELECT Epasts FROM lietotajs WHERE Epasts = '".$email_address."'");
@@ -68,8 +68,8 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     {
         if($_SESSION['Lietotaja_limenis']==0){
             $registeraddress = mysqli_query($con, 
-                "INSERT INTO lietotaja_adrese (Pasta_indekss, Novads, Pilsēta, Pagasts, Ciems, Iela, Ēkas_nr, Dzīvokļa_nr) 
-                VALUES('".$pasta_indekss."', '".$novads."', '".$pilseta."', '".$pagasts."', '".$ciems."', '".$iela."', '".$ek_nr."', '".$dzivoklis."');"); 
+                "INSERT INTO lietotaja_adrese (Pasta_indekss, Novads, Pilsēta, Pagasts, Ciems, Iela, Ēkas_nr, Dzīvokļa_nr, Pilna_adrese, Īpašnieks) 
+                VALUES('".$pasta_indekss."', '".$novads."', '".$pilseta."', '".$pagasts."', '".$ciems."', '".$iela."', '".$ek_nr."', '".$dzivoklis."', '".$pilna_adrese."', 'lietotājs');"); 
             // if (mysqli_query($con, $registeraddress)) {
             if ($registeraddress) {
                 $last_id = mysqli_insert_id($con);
@@ -135,7 +135,7 @@ else
     // if($_SESSION['u_level']==0){
     ?>
 
-
+    <?php require "address_form.php"; ?>
     <section class="registracija">
         <div id="registracija_content">
             <form method="post" action="registracija.php" name="registerform" 

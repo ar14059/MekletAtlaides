@@ -2,9 +2,7 @@
 
 
 
-<?php 
-require "address_form.php"; 
-?>
+
 <?php
 if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
     // echo "Preparing to log in";
@@ -33,7 +31,18 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
             $ties_formas_id = $run_ties_forma['ID'];          
         }
 
-        $jurid_adrese = mysqli_real_escape_string($con, $_POST['jurid_adrese']);
+        $pasta_indekss = mysqli_real_escape_string($con, $_POST['pasta_indekss_hide']);
+        $novads = mysqli_real_escape_string($con, $_POST['novads_hide']);
+        $pilseta = mysqli_real_escape_string($con, $_POST['pilseta_hide']);
+        $pagasts = mysqli_real_escape_string($con, $_POST['pagasts_hide']);
+        $ciems = mysqli_real_escape_string($con, $_POST['ciems_hide']);
+        $iela = mysqli_real_escape_string($con, $_POST['iela_hide']);
+        $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
+        $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
+        $pilna_adrese = mysqli_real_escape_string($con, $_POST['jurid_adrese']);
+
+
+
 
         $darb_veids = mysqli_real_escape_string($con, $_POST['darb_veids']);
         $darbveids = mysqli_query($con ,"SELECT ID FROM uzn_darbibas_veids 
@@ -46,9 +55,20 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
         $epasts = mysqli_real_escape_string($con, $_POST['epasts']);
         $mates_uzn_id = mysqli_real_escape_string($con, $_POST['mates_uzn']);
         $uzn_parole = md5(mysqli_real_escape_string($con, $_POST['uzn_parole']));
+
+
+        $registeraddress = mysqli_query($con, 
+            "INSERT INTO lietotaja_adrese (Pasta_indekss, Novads, Pilsēta, Pagasts, Ciems, Iela, Ēkas_nr, Dzīvokļa_nr, Pilna_adrese, Īpašnieks) 
+            VALUES('".$pasta_indekss."', '".$novads."', '".$pilseta."', '".$pagasts."', '".$ciems."', '".$iela."', '".$ek_nr."', '".$dzivoklis."', '".$pilna_adrese."', 'uzņēmums');"); 
+        // if (mysqli_query($con, $registeraddress)) {
+        if ($registeraddress) {
+            $last_id = mysqli_insert_id($con);
+        } else {
+            echo "Error: " . $registeraddress . "<br>" . mysqli_error($con);
+        }
         $registercompany = mysqli_query($con, 
-            "INSERT INTO uznemums (Reģ_nr, Nosaukums, Tiesiskās_formas_ID, Juridiskā_adrese, Darbības_veida_ID, Tel_nr_kods, Tel_nr, Epasts, Mates_uzn_ID, Uzņ_parole) 
-            VALUES('".$reg_nr."', '".$nosaukums."', '".$ties_formas_id."', '".$jurid_adrese."', '".
+            "INSERT INTO uznemums (Reģ_nr, Nosaukums, Tiesiskās_formas_ID, Jur_adreses_ID, Darbības_veida_ID, Tel_nr_kods, Tel_nr, Epasts, Mates_uzn_ID, Uzņ_parole) 
+            VALUES('".$reg_nr."', '".$nosaukums."', '".$ties_formas_id."', '".$last_id."', '".
                 $darbveids_id."','+371', '".$tel_nr."', '".$epasts."', '".$mates_uzn_id."', '".$uzn_parole."');");
         if($registercompany)
         {
@@ -74,6 +94,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
     // echo "AIZPILDIET LAUKUS";
 }
 ?>
+        <?php require "address_form.php"; ?>
         <div id="regaddr-wrapper-div" class="register-div">
             <div class="register-div-center">
                 <h3><?php echo $greeting_text; ?></h3>
@@ -111,7 +132,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                             <input type="text" id="jurid_adrese" class="register-input" 
                             name="jurid_adrese" placeholder="Juridiskā adrese" readonly>
                             <div id="address-edit">Edit</div>
-                            <div id="address_form_btn_a" class="address_form_btn">
+                            <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
                             </div>
                         </div>
@@ -158,14 +179,14 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
 
 
                     <fieldset class="hidden">
-                        <input type="text" name="pasta_indekss_a_hide" id="pasta_indekss_a_hide">
-                        <input type="text" name="novads_a_hide" id="novads_a_hide" />
-                        <input type="text" name="pilseta_a_hide" id="pilseta_a_hide">
-                        <input type="text" name="pagasts_a_hide" id="pagasts_a_hide">
-                        <input type="text" name="ciems_a_hide" id="ciems_a_hide">
-                        <input type="text" name="iela_a_hide" id="iela_a_hide">
-                        <input type="text" name="ek_nr_a_hide" id="ek_nr_a_hide">
-                        <input type="text" name="dzivoklis_a_hide" id="dzivoklis_a_hide">
+                        <input type="text" name="pasta_indekss_hide" id="pasta_indekss_hide">
+                        <input type="text" name="novads_hide" id="novads_hide" />
+                        <input type="text" name="pilseta_hide" id="pilseta_hide">
+                        <input type="text" name="pagasts_hide" id="pagasts_hide">
+                        <input type="text" name="ciems_hide" id="ciems_hide">
+                        <input type="text" name="iela_hide" id="iela_hide">
+                        <input type="text" name="ek_nr_hide" id="ek_nr_hide">
+                        <input type="text" name="dzivoklis_hide" id="dzivoklis_hide">
                     </fieldset>
 
 
