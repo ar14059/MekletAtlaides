@@ -201,22 +201,46 @@ $(function() {
     /////////////////////////////////
 /////////////////////////////////
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //registracija.php 
 //saglabā adreses ievaddatus pēc pogas 'saglabāt' piespiešanas
     $(function() {
-        //ieslēgt
 
+        function myTrim(x) {
+            return x.replace(/^\s+|\s+$/gm,'');
+        }
         var wrapperUp = $( "#register-wrapper-up");
         var showitem = $( "#register-wrapper-div");
         var a_regadd = $( "#regaddr-wrapper-div");
-        
-
         $(function(){
             $("#address_form_btn").click(function(){
-                wrapperUp.removeClass('hidden');
-                showitem.removeClass('hidden');
-            });
-            $("#address_form_btn_a").click(function(){
                 wrapperUp.removeClass('hidden');
                 showitem.removeClass('hidden');
                 a_regadd.addClass('hidden');
@@ -228,59 +252,154 @@ $(function() {
             $("#reg-submit-address").click(function(){
                 var addaddressbtn = $("#address_form_btn");
                 var addaddressbtn_a = $("#address_form_btn_a");
-                wrapperUp.addClass('hidden');
-                showitem.addClass('hidden');
-                a_regadd.removeClass('hidden');
-                var pasta_indekss = $('#pasta_indekss').val();
+
+                var pasta_indekss = myTrim($('#pasta_indekss').val());
                 $('#pasta_indekss_hide').val(pasta_indekss);
-                var novads = $('#novads').val();
+                var novads = myTrim($('#novads').val());
                 $('#novads_hide').val(novads);
-                var pilseta = $('#pilseta').val();
+                var pilseta = myTrim($('#pilseta').val());
                 $('#pilseta_hide').val(pilseta);
-                var pagasts = $('#pagasts').val();
+                var pagasts = myTrim($('#pagasts').val());
                 $('#pagasts_hide').val(pagasts);
-                var ciems = $('#ciems').val();
+                var ciems = myTrim($('#ciems').val());
                 $('#ciems_hide').val(ciems);
-                var iela = $('#iela').val();
+                var iela = myTrim($('#iela').val());
                 $('#iela_hide').val(iela);
-                var ek_nr = $('#ek_nr').val();
+                var ek_nr = myTrim($('#ek_nr').val());
                 $('#ek_nr_hide').val(ek_nr);
-                var dzivoklis = $('#dzivoklis').val();
+                var dzivoklis = myTrim($('#dzivoklis').val());
                 $('#dzivoklis_hide').val(dzivoklis);
+                var iela_selected = $( "#iela_abr option:selected" ).text();
 
-                var pasta_indekss_a = $('#pasta_indekss_a').val();
-                $('#pasta_indekss_hide').val(pasta_indekss_a);
-                var novads_a = $('#novads_a').val();
-                $('#novads_hide').val(novads_a);
-                var pilseta_a = $('#pilseta_a').val();
-                $('#pilseta_hide').val(pilseta_a);
-                var pagasts_a = $('#pagasts_a').val();
-                $('#pagasts_hide').val(pagasts_a);
-                var ciems_a = $('#ciems_a').val();
-                $('#ciems_hide').val(ciems_a);
-                var iela_a = $('#iela_a').val();
-                $('#iela_hide').val(iela_a);
-                var ek_nr_a = $('#ek_nr_a').val();
-                $('#ek_nr_hide').val(ek_nr_a);
-                var dzivoklis_a = $('#dzivoklis_a').val();
-                $('#dzivoklis_hide').val(dzivoklis_a);
+                if(ek_nr !=''){
+                    $('#ek_nr_e').addClass('hidden');
+                    $('#ek_nr_e').text('');
+                    if(iela != '' && iela_selected !=''){
+                        $('#iela_e').addClass('hidden');
+                        $('#iela_e').text('');
+                        pilna_adrese = iela+' '+iela_selected+' '+ek_nr;
+                    }else{
+                        if(iela != '' && iela_selected =='' || iela == '' && iela_selected !=''){
+                            $('#iela_e').removeClass('hidden');
+                            $('#iela_e').text('Aizpildiet lauku');               
+                        }else if(iela == '' && iela_selected ==''){
+                            if(isFinite(String(ek_nr.charAt(0)))===true){
+                                $('#iela_e').removeClass('hidden');
+                                $('#iela_e').text('Aizpildiet lauku');     
+                            }else{
+                                pilna_adrese = ek_nr;
+                                $('#iela_e').addClass('hidden');
+                                $('#iela_e').text('');                              
+                            }
+                        }
+                    }        
+                }else{
+                    if(ek_nr == ''){
+                        $('#ek_nr_e').removeClass('hidden');
+                        $('#ek_nr_e').text('Aizpildiet lauku');
+                    }
+                }                 
+                if(dzivoklis!=''){
+                    if (dzivoklis.indexOf('k') == -1) {
+                        pilna_adrese+='-'+dzivoklis;
+                    }else{
+                        pilna_adrese+=' '+dzivoklis;
+                    }
+                    
+                }
 
-                $('#address').val(novads);
+                if(pagasts =='' && novads =='' && pilseta ==''){
+                    $('#novads_e').text('Aizpildiet lauku');
+                    $('#novads_e').removeClass('hidden');  
+                    $('#pagasts_e').text('Aizpildiet lauku');
+                    $('#pagasts_e').removeClass('hidden');  
+                    if(ciems==''){
+                        $('#pilseta_e').text('Aizpildiet lauku');
+                        $('#pilseta_e').removeClass('hidden');                 
+                    }else{
+                        $('#pilseta_e').addClass('hidden');
+                        $('#pilseta_e').text('');
+                         pilna_adrese+=', '+ciems;
+                    }
+                }
+                if(pilseta ==''){
+                    if(pagasts !='' || novads !=''){
+                        $('#pilseta_e').addClass('hidden');
+                        $('#pilseta_e').text('');                         
+                    }
+                    if(pagasts !='' && novads ==''){
+                        $('#pagasts_e').addClass('hidden');
+                        $('#pagasts_e').text(''); 
+                        $('#novads_e').removeClass('hidden');
+                        $('#novads_e').text('Aizpildiet lauku');
+                        pilna_adrese+=', '+pagasts+' pag.'; 
+                    }else if(novads !='' && pagasts ==''){
+                        $('#novads_e').addClass('hidden');
+                        $('#novads_e').text('');                   
+                        $('#pagasts_e').removeClass('hidden');
+                        $('#pagasts_e').text('Aizpildiet lauku'); 
+                        pilna_adrese+=', '+novads+' nov.'; 
+                    }else if(pagasts !='' && novads !=''){
+                        $('#novads_e').addClass('hidden');  
+                        $('#novads_e').text('');
+                        $('#pagasts_e').addClass('hidden');
+                        $('#pagasts_e').text('')
+                        pilna_adrese+=', '+pagasts+' pag., '+novads+' nov.';                    
+                    }
+                }else if(pilseta !=''){
+                    $('#pilseta_e').addClass('hidden');
+                    $('#pilseta_e').text('');  
+                    $('#novads_e').addClass('hidden');  
+                    $('#novads_e').text('');
+                    $('#pagasts_e').addClass('hidden');
+                    $('#pagasts_e').text(''); 
+                    pilna_adrese+=', '+pilseta;                  
+                }
+
+
+                if(pasta_indekss !=''){
+                    $('#pasta_indekss_e').addClass('hidden');
+                    $('#pasta_indekss_e').text('');
+                    pilna_adrese +=', '+pasta_indekss;
+                }else{
+                    $('#pasta_indekss_e').text('Aizpildiet lauku');
+                    $('#pasta_indekss_e').removeClass('hidden');
+
+                }    
+
+
+                var check_errors = 0;
+                $('.err_m_register').each(function () { 
+                    if($(this).text()!=''){
+                        check_errors = 1;
+                    }
+                });
+                if(check_errors == '0'){
+                    wrapperUp.addClass('hidden');
+                    showitem.addClass('hidden');
+                    a_regadd.removeClass('hidden');
+                }
+
+                $('#address').val(pilna_adrese);
+                $('#address').attr('title', $('#address').val() );
                 var adrese = $('#address').val();
-                $('#jurid_adrese').val(novads_a);
-                var jurid_adrese = $('#jurid_adrese').val();
                 if(adrese != '')
                 {
                     addaddressbtn.hide();                   
                 }else{
                     addaddressbtn.show();
                 }
+                $('#jurid_adrese').val(pilna_adrese);
+                $('#jurid_adrese').attr('title', $('#jurid_adrese').val() );
+                var jurid_adrese = $('#jurid_adrese').val();
                 if(jurid_adrese != '')
                 {
                     addaddressbtn_a.hide();                   
                 }else{
                     addaddressbtn_a.show();
                 }
+
+
                 $("#address-edit").click(function(){
                     wrapperUp.removeClass('hidden');
                     showitem.removeClass('hidden');   
@@ -314,6 +433,25 @@ $('#pilseta').on('input', function() {
     }
 });
 
+
+$('#ek_nr').on('input', function() {
+    if($(this).val().length){
+        if(isFinite(String($(this).val().charAt(0)))===false){
+            $('#iela').prop('disabled', true);
+            $('#iela').val("");
+            $('#iela_abr').prop('disabled', true);
+            $('#iela_abr').val("");         
+        }
+        else{
+            $('#iela').prop('disabled', false);
+            $('#iela_abr').prop('disabled', false);          
+        }
+    }else{
+        $('#iela').prop('disabled', false);
+        $('#iela_abr').prop('disabled', false);
+    }
+});
+
 $('#pagasts, #ciems, #novads').on('input', function() {
     if($('#pagasts').val().length || $('#ciems').val().length || $('#novads').val().length){
         $('#pilseta').prop('disabled', true);
@@ -323,28 +461,5 @@ $('#pagasts, #ciems, #novads').on('input', function() {
     }
 });
 
-$('#pilseta_a').on('input', function() {
-    if($(this).val().length){
-        $('#pagasts_a').prop('disabled', true);
-        $('#pagasts_a').val("");
-        $('#ciems_a').prop('disabled', true);
-        $('#ciems_a').val("");
-        $('#novads_a').prop('disabled', true);
-        $('#novads_a').val("");
-    }else{
-        $('#pagasts_a').prop('disabled', false);
-        $('#ciems_a').prop('disabled', false);
-        $('#novads_a').prop('disabled', false);
-    }
-});
-
-$('#pagasts_a, #ciems_a, #novads_a').on('input', function() {
-    if($('#pagasts_a').val().length || $('#ciems_a').val().length || $('#novads_a').val().length){
-        $('#pilseta_a').prop('disabled', true);
-        $('#pilseta_a').val("");
-    }else{
-        $('#pilseta_a').prop('disabled', false);
-    }
-});
 
 /////////////////////////////////
