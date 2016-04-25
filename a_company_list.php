@@ -78,11 +78,11 @@ if($_SESSION['Lietotaja_limenis']==3){
                 <div class="panel 1" panel-id="1">
                     <section class="address-form">
                         <fieldset>
-                            <label for="reg_nr">Reģ. numurs:</label>
+                            <label for="reg_nr" class="add_c_label">Reģ. numurs:</label>
                             <input type="text" id="reg_nr" class="register-input" name="reg_nr" placeholder="Reģ. numurs">
                         </fieldset>
                         <fieldset>
-                            <label for="uzn_parole">Uzņēmuma parole:</label>
+                            <label for="uzn_parole" class="add_c_label">Uzņēmuma parole:</label>
                             <input type="password" id="uzn_parole" class="register-input" 
                             name="uzn_parole" placeholder="Uzņēmuma parole">
                         </fieldset>

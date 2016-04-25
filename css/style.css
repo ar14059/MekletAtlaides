@@ -496,7 +496,7 @@ button.karte{
 }
 
 .lielakas-pilsetas p:not(.sub-content-title):hover{
-    color: red;
+    color: #FF4D4D;
     text-decoration: underline;
 }
 
@@ -528,7 +528,7 @@ p.letter-list{
 }
 
 p.letter-list:hover{
-    color: red;
+    color: #FF4D4D;
     text-decoration: underline;
 }
 
@@ -710,7 +710,7 @@ a.letter-list {
 
     .produkts p:not(.product-title):hover{
         margin: 0;
-        color: red;
+        color: #FF4D4D;
         text-decoration: underline;
     }
 
