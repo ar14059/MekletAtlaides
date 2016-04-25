@@ -66,18 +66,21 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 ?>
 
         <div id="register-wrapper-div" class="register-div">
-            <div class="register-div-center">
+            <div id="login-div-center" class="register-div-center">
                 <form method="post" action="a_login.php" name="address-form" id="address-form" class="address-form">
                     <fieldset>
-                        <label for="novads">Epasts:</label>
-                        <input type="text" id="email" class="register-input" 
+                        <label for="novads" class="login-label">Epasts:</label>
+                        <input type="text" id="email" class="login-input" 
                         name="email" placeholder="E - pasts">
                     </fieldset>
                     <fieldset>
-                        <label for="pilseta">Parole:</label>
-                        <input type="password" id="password" class="register-input" 
+                        <label for="pilseta" class="login-label">Parole:</label>
+                        <input type="password" id="password" class="login-input" 
                         name="password" placeholder="Parole">
                     </fieldset>
+
+                        <a href="" class="forgot_uname_pword">Aizmirsi lietotājvārdu/paroli?</a>
+
                     <button type="submit" name="a-submit-login" id="a-submit-login" 
                     class="a_buttons">Ielogoties</button>
                 </form>
