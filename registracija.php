@@ -14,11 +14,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-
     <title>Webpage</title>
 </head>
 <body>
-
 
 
 
@@ -35,8 +33,12 @@
 
 <?php
 
+// if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['surname']) 
+//     && isset($_POST['email_repeat']) && isset($_POST['address']) && isset($_POST['password_repeat'])){
 
-if(!empty($_POST['email']) && !empty($_POST['password']))
+
+if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['surname']) 
+    && !empty($_POST['email_repeat']) && !empty($_POST['password_repeat']))
 {
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
@@ -86,8 +88,6 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
                 $_SESSION['Vards'] = $name;
                 $_SESSION['Uzvards'] = $surname;
                 // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
-                header("Location: http://localhost/MekletAtlaides/home.php");
-                die();
                 // echo "<h1>Success</h1>";
                 // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
             }
@@ -108,34 +108,32 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
                 if($registerquery)
                 {
                     $last_id = mysqli_insert_id($con);
-
                     $registerworker = mysqli_query($con, "INSERT INTO uznemums_lietotajs (Lietotaja_ID, Uzn_ID) 
                         VALUES('".$last_id."', '".$c_id."');");
                     $_SESSION['Epasts'] = $email_address;
                     $_SESSION['LoggedIn']=1;
                     $_SESSION['Vards'] = $name;
                     $_SESSION['Uzvards'] = $surname;
-                    // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
-                    header("Location: http://localhost/MekletAtlaides/home.php");
-                    die();
-                    // echo "<h1>Success</h1>";
-                    // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
                 }
                 else
                 {
                     echo "<h1>Error</h1>";
                     echo "<p>Sorry, your registration failed. Please go back and try again.</p>";    
                 }    
-            }else{echo "Nav tāda uzņēmuma, ievadiet uzņēmuma datus vēlreiz!";}        
+            }else{
+            }        
         }
     }
 }
+
 else
 {
     // if($_SESSION['u_level']==0){
     ?>
 
     <?php require "address_form.php"; ?>
+
+
     <section class="registracija">
         <div id="registracija_content">
             <form method="post" action="registracija.php" name="registerform" 
@@ -147,18 +145,22 @@ else
                     <fieldset>
                         <label for="name">Vards:</label>
                         <input type="text" name="name" id="name" value=""/>
+                        <p id="vards_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="surname">Uzvards:</label>
                         <input type="text" name="surname" id="surname" />
+                        <p id="uzvards_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="email">E-pasts:</label>
                         <input type="text" name="email" id="email" />
+                        <p id="epasts_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
-                        <label for="email">Atkārtot E-pastu:</label>
+                        <label for="email_repeat">Atkārtot E-pastu:</label>
                         <input type="text" name="email_repeat" id="email_repeat" />
+                        <p id="epasts_atk_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <?php if($_SESSION['Lietotaja_limenis']==0){  ?>
                     <fieldset>
@@ -166,31 +168,37 @@ else
                         <div class="address-div">
                             <input type="text" name="address" id="address" 
                             value="" readonly />
-                            <div id="address-edit">Edit</div>
+                            <div id="address-edit">Mainīt</div>
                             <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
                             </div>
                         </div>
+                        <p id="adrese_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <?php } ?> 
                     <fieldset>
                         <label for="password">Parole:</label>
                         <input type="password" name="password" id="password" />
+                        <p id="parole_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="password_repeat">Atkārtot Paroli:</label>
                         <input type="password" name="password_repeat" id="password_repeat" />
+                        <p id="parole_atk_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <?php if($_SESSION['Lietotaja_limenis']==1){ ?>
                     <hr class="form-hr">
                     <fieldset>
-                        <label for="email">Uzņemuma reģ.nr.:</label>
+                        <label for="reg_nr">Uzņ.reģ.nr.:</label>
                         <input type="text" name="reg_nr" id="reg_nr" />
+                        <p id="uzn_reg_nr_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="password">Uzņēmuma parole:</label>
                         <input type="password" name="ent_password" id="ent_password" />
+                        <p id="uzn_parole_e" class="err_m_register hidden"></p>
                     </fieldset>
+                    <p id="uzn_e" class="err_m_register"></p>
                     <?php } ?>
 
 
@@ -253,7 +261,6 @@ else
 </body>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 
-<!-- <script type="text/javascript" src="scripts/backspace_disable.js"></script> -->
 
 
 </html>
