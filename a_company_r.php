@@ -4,7 +4,9 @@
 
 
 <?php
-if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
+if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['ties_forma']) 
+    && !empty($_POST['jurid_adrese']) && !empty($_POST['darb_veids']) && !empty($_POST['tel_nr']) 
+    && !empty($_POST['epasts']) && !empty($_POST['uzn_parole'])){
     // echo "Preparing to log in";
     $reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr']);
     $nosaukums = mysqli_real_escape_string($con, $_POST['nosaukums']);
@@ -40,8 +42,6 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
         $ek_nr = mysqli_real_escape_string($con, $_POST['ek_nr_hide']);
         $dzivoklis = mysqli_real_escape_string($con, $_POST['dzivoklis_hide']);
         $pilna_adrese = mysqli_real_escape_string($con, $_POST['jurid_adrese']);
-
-
 
 
         $darb_veids = mysqli_real_escape_string($con, $_POST['darb_veids']);
@@ -102,11 +102,14 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                     <fieldset>
                         <label for="reg_nr">Reģ. numurs:</label>
                         <input type="text" id="reg_nr" class="register-input" name="reg_nr" placeholder="Reģ. numurs">
+                        <p id="reg_nr_e" class="err_m_register hidden"></p>
+
                     </fieldset>
                     <fieldset>
                         <label for="nosaukums">Nosaukums:</label>
                         <input type="text" id="nosaukums" class="register-input" 
                         name="nosaukums" placeholder="Nosaukums">
+                        <p id="nosaukums_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="ties_forma">Tiesiskā forma:</label>
@@ -123,6 +126,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                             <option><?php echo $pilns_nos; ?></option>
                             <?php } ?>
                         </datalist>
+                        <p id="ties_forma_e" class="err_m_register hidden"></p>
                     </fieldset>
 
 
@@ -131,11 +135,12 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                         <div class="address-div">
                             <input type="text" id="jurid_adrese" class="register-input" 
                             name="jurid_adrese" placeholder="Juridiskā adrese" readonly>
-                            <div id="address-edit">Edit</div>
+                            <div id="address-edit">Mainīt</div>
                             <div id="address_form_btn" class="address_form_btn">
                                 <p class="a_f_b_title">Aizpildi adreses laukus</p>
                             </div>
                         </div>
+                        <p id="jurid_adrese_e" class="err_m_register hidden"></p>
                     </fieldset>
 
 
@@ -147,33 +152,37 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums'])){
                             <?php
                             $list_query = mysqli_query($con, "SELECT * FROM uzn_darbibas_veids");
                             while($run_list = mysqli_fetch_array($list_query)){
-                                // $id = $run_list['ID'];
                                 $nace_kods = $run_list['NACE_kods'];
                                 $nozares_nos = $run_list['Nozares_nos'];
                             ?>
                             <option><?php echo $nozares_nos; ?></option>
                             <?php } ?>
                         </datalist>
+                        <p id="darb_veids_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="tel_nr">Telefona numurs:</label>
                         <input type="text" id="tel_nr" class="register-input" 
                         name="tel_nr" placeholder="Telefona numurs">
+                        <p id="tel_nr_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="epasts">E-pasts:</label>
                         <input type="text" id="epasts" class="register-input" 
                         name="epasts" placeholder="Epasts">
+                        <p id="epasts_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="mates_uzn">Mātes uzņēmums:</label>
                         <input type="text" id="mates_uzn" class="register-input" 
                         name="mates_uzn" placeholder="Mates uzņēmums">
+                        <p id="mates_uzn_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
                         <label for="uzn_parole">Uzņēmuma parole:</label>
                         <input type="password" id="uzn_parole" class="register-input" 
                         name="uzn_parole" placeholder="Uzņēmuma parole">
+                        <p id="uzn_parole_e" class="err_m_register hidden"></p>
                     </fieldset>
 
 
