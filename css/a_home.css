@@ -164,14 +164,14 @@ p{
                             float: right;
                             width: 20%;
                         }
-                        #address-form p.err_m_register{
+                        #address-form p.err_m_register, #admin-form p.err_m_register{
                             color: #FF4D4D;
-                            padding-top: 10px;
+                            padding-top: 2px;
                             margin: 0;
                             float: right;
-                            text-align: left;
+                            text-align: center;
                             width: 60%;
-                            font-size: 14px;
+                            font-size: 12px;
                         }
                         label.add_c_label{
                             color: #292929;
@@ -318,7 +318,7 @@ input#jurid_adrese{
         top: 0;
         right: 0;
         height: 100%;
-        width: 36px;
+        width: 45px;
         background-color: green;
         cursor: default;
         color: #FFFFFF;
