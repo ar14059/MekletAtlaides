@@ -70,3 +70,10 @@ $('button#a-append-company').on('click', function(){
 
 
 
+function myTrim(x) {
+    return x.replace(/^\s+|\s+$/gm,'');
+}
+
+function FirstLetterCapital(string) {
+return string.charAt(0).toUpperCase() + string.slice(1);
+}
