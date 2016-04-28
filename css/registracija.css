@@ -138,21 +138,23 @@ header.main-nav{
 
     
 }
-#registracija_content fieldset{
-    border: none;
-}
 #registracija_content{
     background-color: #FFFFFF;
-    width: 390px;
+    width: 425px;
     float: left;
     box-shadow: 2px 2px 8px 2px #545454;
 }
+#registracija_content fieldset{
+    border: none;
+}
+
 #registracija_content form.content{
     margin: 15px;
     float: left;
     padding: 0;
     border: none;
     text-align: justify;
+    width: 92%;
 }
 
 fieldset.content_area{
@@ -197,12 +199,13 @@ fieldset.content_area{
             display:inline-block;
             float:none;
             margin:0;
-            width: 40%;
+            width: 30%;
         }
 
         #registracija_content input {
-            width:50%;
-            border:1px solid #FC6B6B;
+            width:60%;
+           /* border:1px solid #FC6B6B;*/
+            border:1px solid #545454;
             border-radius:3px;
             -moz-border-radius:3px;
             color:#3a454d;
@@ -211,11 +214,13 @@ fieldset.content_area{
             float: right;
         }
 
+
+
 fieldset.content_area fieldset div.address-div{
     margin: 0;
     padding: 0;
     display: inline;
-    width: 50%;
+    width: 60%;
     height: auto;
     float: right;
     position: relative;
@@ -235,13 +240,12 @@ fieldset.content_area fieldset div.address-div{
         height: 100%;
         border:1px solid #FC6B6B;
         border-radius:3px;
-        width: 36px;
+        width: 45px;
         background-color: green;
         cursor: default;
         color: #FFFFFF;
         line-height: 18px;
         text-align: center;
-        font-weight: bold;
         font-size: 14px;
     }
 
@@ -370,15 +374,24 @@ fieldset.content_area fieldset div.address-div{
                         float: right;
                         width: 20%;
                     }
-                    #address-form p.err_m_register{
+                    #address-form p.err_m_register, #registerform p.err_m_register{
                         color: #FF4D4D;
-                        padding-top: 10px;
+                        padding-top: 2px;
                         margin: 0;
                         float: right;
-                        text-align: left;
+                        text-align: center;
                         width: 60%;
-                        font-size: 14px;
+                        font-size: 12px;
                     }
+                    #registerform p#uzn_e{;
+                        float: none;
+                        width: 100%;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+
+
                 button.reg-submit-address{
                     width: 200px;
                     height: 30px;
