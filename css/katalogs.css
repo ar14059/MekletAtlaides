@@ -46,7 +46,7 @@ hr{
 /************************************************************************************************************/
 
 .wrapper{
-    width: 60%;
+    width: 810px;
     /*background-color: red;*/
     margin: 0 auto;
     text-align: center;
@@ -127,7 +127,7 @@ hr{
 
 
 header.main-nav{
-    width: 60%;
+    width: 810px;
     height: 70px;
     background-color: #FFF;
     background-color: #A9A9A9;
@@ -279,14 +279,28 @@ header.main-nav{
                 font-weight: bold;
                 font-size: 14px;
             }
-            .reklamas p.add-placeholder{
 
+
+
+            .reklamas p.add-placeholder{
                 color: #FFF;
                 font-size: 22px;
-/*                margin: 50px 0 45px 0;*/
                 position: absolute;
                 top: 50px;
                 left: 0;
+            }
+            img.rekl_kat_attels{
+                width: 130px;
+                margin: 5px;
+                border: 5px solid black;
+            }
+
+
+            .reklamas p.rekl_virsraksts{
+                font-size: 14px;
+                color: #000;
+                font-weight: bold;
+                margin-top: 5px;
             }
             .reklamas p.veikals{
                 font-size: 12px;
@@ -506,130 +520,22 @@ p.main-subject-title{
     }
 /****************************/
 
-
-
 /* Footer */
-/**************************************************************/
-footer{
-    background-color:#404040;
-    margin: 0;
-    width: 100%;
-    clear: both;
-    font-weight: bold;
+section#footer{
+    /*width: 800px;*/
+    /*width: 56%;*/
+    text-align: center;
+/*    position: relative;*/
+    margin: 0 auto;
+    min-width: 530px;
 }
 
-#footer{
-    overflow: hidden;
-}
-
-
-footer section.sub-content{
-    width: 29%;
-    min-width: 150px;
-    display: inline-block;
-    margin: 15px auto;
-    padding: 0 15px;
-}
-
-.sub-content.one{
-    float: left;
-}
-
-.sub-content.three{
-    float: right;
-}
-footer .title{
-    float: left;
-    color: #FFF5F5;
-    font-size: 12px;
-    font-weight: normal;
-}
-
-footer .title a{
-    color: #FFF5F5;
-}
-
-footer hr{
-    border: 1px solid #FFF5F5;
-    float: left;
-    display: table-cell;
-    width: 90%;
-    min-width: 150px;
-}
-
-
-footer .footer-info{
-    float: left;
-    margin: 5px 0;
-    width: 100%;
-}
-
-footer .footer-info a{
-    color: #A0A0A0;
-    font-size: 10px;
-    float: left;
-}
-
-
-footer div.buttons{
-    margin: 10px;
-    overflow: hidden;
-    width: 100%;
+section#footer header{
+    padding:20px 0;
+    margin: 0 auto;
 
 }
-
-footer .soc_tikli, footer .valodas{
-    border-radius: 2px;
-    float: left;
-    margin: 0 10px 0 0;
-}
-
-footer .soc_tikli{
-    width: 17px;
-    height: 17px;
-}
-
-
-footer .valodas{
-    width: 16px;
-    height: 16px;
-}
-
-footer div.v_indekss{
-    margin: 0 10px 0 0;
-    width: 16px;
-    font-size: 10px;
-    display: inline-block;
-    float: left;
-    color: #FFF5F5;
-
-}
-
-footer button#draugiemlv{
-    background: url('Pictures/draugiemlv_white.png') no-repeat;
-}
-
-footer button#facebook{
-    background: url('Pictures/facebook_white.png') no-repeat;
-}
-
-footer button#twitter{
-    background: url('Pictures/twitter_white.png') no-repeat;
-}
-
-footer button#lv{
-    background: url('Pictures/lv.png') no-repeat;
-}
-
-footer button#ru{
-    background: url('Pictures/ru.png') no-repeat;
-}
-
-footer button#en{
-    background: url('Pictures/en.png') no-repeat;
-}
-/**************************************************************/
-
+    
 /************************************************************************************************************/
 
 
@@ -711,6 +617,12 @@ footer button#en{
 
 }
 
+@media screen and (min-width: 801px){
+    section#footer{
+        width: 800px;
+    }
+
+}
 @media screen and (min-width: 801px) and (max-width: 1324px){
     .home-search-wrapper{
         width: 100%;

@@ -24,7 +24,7 @@
     <section class="body-welcome">
         <header class="main-nav">
             <div class="header-right">
-                <a href="home.php"><button id="nav-right-button-back" class="button_nav"></button></a>
+                <button id="nav-right-button-back" class="button_nav" onclick="goBack()"></button>
                 <!-- <button id="nav-right-button-back" class="button_nav"></button> -->
             </div>
         </header>
@@ -32,9 +32,6 @@
 
 
 <?php
-
-// if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['surname']) 
-//     && isset($_POST['email_repeat']) && isset($_POST['address']) && isset($_POST['password_repeat'])){
 
 
 if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['surname']) 
@@ -72,7 +69,6 @@ if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name'
             $registeraddress = mysqli_query($con, 
                 "INSERT INTO lietotaja_adrese (Pasta_indekss, Novads, Pilsēta, Pagasts, Ciems, Iela, Ēkas_nr, Dzīvokļa_nr, Pilna_adrese, Īpašnieks) 
                 VALUES('".$pasta_indekss."', '".$novads."', '".$pilseta."', '".$pagasts."', '".$ciems."', '".$iela."', '".$ek_nr."', '".$dzivoklis."', '".$pilna_adrese."', 'lietotājs');"); 
-            // if (mysqli_query($con, $registeraddress)) {
             if ($registeraddress) {
                 $last_id = mysqli_insert_id($con);
             } else {
@@ -87,9 +83,6 @@ if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name'
                 $_SESSION['LoggedIn']=1;
                 $_SESSION['Vards'] = $name;
                 $_SESSION['Uzvards'] = $surname;
-                // $_SESSION['Lietotaja_limenis'] = $_SESSION['u_level'];
-                // echo "<h1>Success</h1>";
-                // echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
             }
             else
             {
@@ -128,7 +121,6 @@ if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name'
 
 else
 {
-    // if($_SESSION['u_level']==0){
     ?>
 
     <?php require "address_form.php"; ?>
@@ -223,35 +215,18 @@ else
                         class="submit_button" onclick="submitForms()"></button>
                     </fieldset>
                 </fieldset>
-            <!-- </section> -->
             </form>
-<!--                 <fieldset id="submit_area" class="content_area">
-                    <fieldset>
-                        <div><p class="vertical_align"><input type="checkbox" class="checkbox_css" ><span>Piekrītu lietošanas noteikumiem</span></p></div>
-                        <button name="registreties_submit" id="registreties_submit"  
-                        class="submit_button" onclick="submitForms()"></button>
-                    </fieldset>
-                </fieldset> -->
+
         </div>
     </section>
     <?php
-    // }else{
-    //     echo "Errrrrrrrrrrrrrrrrrrrrrrrrrrrrrror";
-    // }
 }
-// $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-// echo "<script type='text/javascript'>alert('$actual_link');</script>";
+
 ?>
 
         </section>
 
 
-    <div id="footer_include"></div>
-    <script> 
-    $(function(){
-      $("#footer_include").load("footer.html"); 
-    });
-    </script>
     </section>
 
 
@@ -260,7 +235,7 @@ else
 
 </body>
 <script type="text/javascript" src="scripts/jquery.js"></script>
-
+<script type="text/javascript" src="scripts/javascript.js"></script>
 
 
 </html>

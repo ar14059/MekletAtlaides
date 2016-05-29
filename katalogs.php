@@ -34,25 +34,13 @@
         </div>
         <section id="main-item-list">
             <section class="m-i-li-center">
-                <article id="reklama1" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
 
-                <article id="reklama2" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
+            <?php
+            for ($i = 1; $i <= 16; $i++) {
+            ?>
+                <article id="<?php echo 'reklama'.$i; ?>" class="reklamas">
+                    <p class="rekl_virsraksts">Produkta nos</p>
+                    <img class="rekl_kat_attels" src="css/pictures/green_apple.jpg">
                     <p class="veikals">Veikals</p>
                     <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
                     <article id="reklama-hover1" class="reklamas-hover">
@@ -67,166 +55,10 @@
                         <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
                     </article>
                 </article>
-                <article id="reklama3" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama4" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama5" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama6" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama7" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama8" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama9" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama10" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama11" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
-                <article id="reklama12" class="reklamas">
-                    <p class="add-placeholder">Ad Placeholder</p>
-                    <p class="veikals">Veikals</p>
-                    <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    <article id="reklama-hover1" class="reklamas-hover">
-                        <button class="google-map"></button>
-                        <button class="star"></button>
-                        <div class="radit-div">
-                            <div class="radit-div-center">
-                            <button class="radit"></button>
-                            </div>
-                        </div>
-                        <p class="veikals">Veikals</p>
-                        <p class="der-termins">Beidzas pēc <span>x</span> dienām</p>
-                    </article>
-                </article>
+            <?php
+            }
+            ?>
+
             </section>
         </section>
         <div class="radit-vel-div">
@@ -248,12 +80,7 @@
         </section>
             
     </div>
-    <div id="footer_include"></div>
-    <script> 
-    $(function(){
-      $("#footer_include").load("footer.html"); 
-    });
-    </script>
+
 
     <div id="katalogs-wrapper-up" class="wrapper-up hidden">
         <div id="email-div" class="email-div hidden">
@@ -280,6 +107,7 @@
         </div>
     </div>
 
+    <?php require "footer.php"; ?>
 
 </body>
 

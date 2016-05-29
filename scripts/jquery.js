@@ -78,8 +78,8 @@ $(function() {
 
 
 /////////////////////////////////
-//katalogs.php sadaļa "Galvenais kataloga saraksts". 
-//Tiek atvērts epasta logs, nospiežot uz zvaigznītes
+
+
 
 
 
@@ -129,7 +129,6 @@ $(function() {
 //Katalogs.php 
 
     //epasta ievada forma 
-
     $(function() {
         //ieslēgt
         // var wrapperUp = $( ".wrapper-up");
@@ -153,28 +152,6 @@ $(function() {
     /////////////////////////////////
 
 
-    //preces/uzņēmuma/pilsētas forma 
-
-    $(function() {
-        //ieslēgt
-        var wrapperUp = $( "#katalogs-wrapper-up");
-        var showitem = $( "#showitem-div");
-        $(function(){
-            $(".radit").click(function(){
-                wrapperUp.removeClass('hidden');
-                showitem.removeClass('hidden');
-            });
-        });
-
-        //izslēgt
-        $(function(){
-            $("#wrapper-showitem-close").click(function(){
-                wrapperUp.addClass('hidden');
-                showitem.addClass('hidden');
-            });
-        });
-    });
-    /////////////////////////////////
 /////////////////////////////////
 
 
@@ -208,7 +185,31 @@ $(function() {
 //registracija.php 
 //saglabā adreses ievaddatus pēc pogas 'saglabāt' piespiešanas
     $(function() {
+        // if($('#uzn_edit').val()!==null){
+        //     var uzn_edit = $('#uzn_edit').val();
+        //     var addaddressbtn = $("#address_form_btn");
+        //     if(uzn_edit == "jā"){
+        //         var pasta_indekss_hide = myTrim($('#pasta_indekss_hide').val());
+        //         $('#pasta_indekss').val(pasta_indekss_hide);
+        //         var novads_hide = myTrim($('#novads_hide').val());
+        //         $('#novads').val(novads_hide);
+        //         var pilseta_hide = myTrim($('#pilseta_hide').val());
+        //         $('#pilseta').val(pilseta_hide);
+        //         var pagasts_hide = myTrim($('#pagasts_hide').val());
+        //         $('#pagasts').val(pagasts_hide);
+        //         var ciems_hide = myTrim($('#ciems_hide').val());
+        //         $('#ciems').val(ciems_hide);
+        //         var iela_hide = myTrim($('#iela_hide').val());
+        //         $('#iela').val(iela_hide);
+        //         var ek_nr_hide = myTrim($('#ek_nr_hide').val());
+        //         $('#ek_nr').val(ek_nr_hide);
+        //         var dzivoklis_hide = myTrim($('#dzivoklis_hide').val());
+        //         $('#dzivoklis').val(dzivoklis_hide);
 
+
+        //         addaddressbtn.hide();
+        //     }
+        // }
         function myTrim(x) {
             return x.replace(/^\s+|\s+$/gm,'');
         }
@@ -223,11 +224,17 @@ $(function() {
             showitem.removeClass('hidden');
             a_regadd.addClass('hidden');
         });
+        $("#address-edit").click(function(){
+            wrapperUp.removeClass('hidden');
+            showitem.removeClass('hidden');   
+            a_regadd.addClass('hidden');      
+        });
         $(function(){
             $('#address').val('');
-            $('#jurid_adrese').val('');
-            $("#reg-submit-address").click(function(){
+            // $('#jurid_adrese').val('');
+    
 
+            $("#reg-submit-address").click(function(){
                 var addaddressbtn = $("#address_form_btn");
                 var addaddressbtn_a = $("#address_form_btn_a");
 
@@ -247,6 +254,11 @@ $(function() {
                 $('#ek_nr_hide').val(ek_nr);
                 var dzivoklis = myTrim($('#dzivoklis').val());
                 $('#dzivoklis_hide').val(dzivoklis);
+
+
+
+
+
                 var iela_selected = $( "#iela_abr option:selected" ).text();
 
                 if(ek_nr !=''){
@@ -380,13 +392,6 @@ $(function() {
                     addaddressbtn_a.show();
                 }
 
-
-                $("#address-edit").click(function(){
-                    wrapperUp.removeClass('hidden');
-                    showitem.removeClass('hidden');   
-                    a_regadd.addClass('hidden');      
-                });
-                // alert(adrese);
             });
         });
         //izslēgt
@@ -444,6 +449,22 @@ $(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $("form#registerform").submit(function(ev) {
             ev.preventDefault();
   
@@ -488,7 +509,7 @@ $(function() {
                                 +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
                                 +"& dzivoklis_hide="+ dzivoklis,
                                 success: function(){
-                                    window.location.replace("http://localhost/MekletAtlaides/home.php");
+                                    window.location.replace("http://localhost/MekletAtlaides/index.php");
                                 }
                             }); 
                         }else if(reg_nr!=null && ent_password!=null){
@@ -501,7 +522,7 @@ $(function() {
                                 +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
                                 +"& dzivoklis_hide="+ dzivoklis,
                                 success: function(){
-                                    window.location.replace("http://localhost/MekletAtlaides/home.php");
+                                    window.location.replace("http://localhost/MekletAtlaides/index.php");
                                 }
                             });          
                         }        
@@ -661,15 +682,26 @@ $(function() {
 
 
 
+
+
         $("form#admin-form").submit(function(ev) {
             ev.preventDefault();
+
   
             // if($('#reg_nr').val() != null && $('#ent_password').val() != null){
             //     var reg_nr = myTrim($('#reg_nr').val());
             //     var ent_password = myTrim($('#ent_password').val());       
             //     alert(ent_password);           
             // }
-
+            var uzn_edit = myTrim($('#uzn_edit_hide').val());
+            if(uzn_edit=='jā'){
+                var reg_nr_prev = myTrim($('#reg_nr_hide').val());
+                var nosaukums_prev = myTrim(F_L_Capital($('#nosaukums_hide').val()));
+            }
+            // else{
+            //     var reg_nr_prev = '';
+            //     var nosaukums_prev = '';           
+            // }
             var reg_nr = myTrim($('#reg_nr').val());
             var nosaukums = myTrim(F_L_Capital($('#nosaukums').val()));
             var ties_forma = myTrim($('#ties_forma').val());
@@ -679,8 +711,9 @@ $(function() {
             var epasts = myTrim($('#epasts').val());
             var mates_uzn = myTrim($('#mates_uzn').val());
             var uzn_parole = myTrim($('#uzn_parole').val());
-
-
+            var uzn_parole_hide = myTrim($('#uzn_parole_hide').val());             
+            
+            
             var pasta_indekss = myTrim($('#pasta_indekss_hide').val());
             var novads = myTrim($('#novads_hide').val());
             var pilseta = myTrim($('#pilseta_hide').val());
@@ -690,19 +723,39 @@ $(function() {
             var ek_nr = myTrim($('#ek_nr_hide').val());
             var dzivoklis = myTrim($('#dzivoklis_hide').val());
             //This condition will only be true if each value is not an empty string
-            if(reg_nr && nosaukums && ties_forma && jurid_adrese && darb_veids && tel_nr && epasts && uzn_parole){
-                $.ajax({
-                    type: "POST",
-                    url: "a_company_r.php",
-                    data: "reg_nr="+ reg_nr +"& nosaukums="+ nosaukums +"& ties_forma="+ ties_forma +"& jurid_adrese="+ jurid_adrese 
-                    +"& darb_veids="+ darb_veids  +"& tel_nr="+ tel_nr  +"& epasts="+ epasts+"& mates_uzn="+ mates_uzn+"& uzn_parole="+ uzn_parole
-                    +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
-                    +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
-                    +"& dzivoklis_hide="+ dzivoklis,
-                    success: function(){
-                        window.location.replace("http://localhost/MekletAtlaides/a_home.php");
-                    }
-                });       
+            if(reg_nr && nosaukums && ties_forma && jurid_adrese && darb_veids && tel_nr && epasts){
+                // alert(reg_nr+', '+nosaukums);
+                // alert(uzn_edit);
+                // if(uzn_edit=="nē"){
+                    $.ajax({
+                        type: "POST",
+                        url: "a_company_r.php",
+                        data: "reg_nr="+reg_nr+"& nosaukums="+nosaukums+"& reg_nr_hide="+reg_nr_prev+"& nosaukums_hide="+nosaukums_prev+"& ties_forma="+ties_forma+"& jurid_adrese="+ jurid_adrese
+                        +"& darb_veids="+darb_veids+"& tel_nr="+tel_nr+"& epasts="+epasts+"& mates_uzn="+mates_uzn+"& uzn_parole="+uzn_parole+"& uzn_parole_hide="+uzn_parole_hide
+                        +"& pasta_indekss_hide="+pasta_indekss+"& pagasts_hide="+pagasts+"& novads_hide="+novads+"& pilseta_hide="+pilseta
+                        +"& ciems_hide="+ciems+"& iela_hide="+iela+"& ek_nr_hide="+ek_nr+"& dzivoklis_hide="+dzivoklis+"& uzn_edit_hide="+uzn_edit,
+                        success: function(){
+                            window.location.replace("http://localhost/MekletAtlaides/a_company_info.php?comp_name="+nosaukums);
+                            // window.location.replace("http://localhost/MekletAtlaides/a_company_r.php");
+                        }
+                    });                     
+                // }else if(uzn_edit=="jā"){
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "a_company_r.php",
+                    //     data: "edit_reg_nr="+ reg_nr +"& edit_nosaukums="+ nosaukums +"& edit_ties_forma="+ ties_forma +"& edit_jurid_adrese="+ jurid_adrese 
+                    //     +"& edit_darb_veids="+ darb_veids  +"& edit_tel_nr="+ tel_nr  +"& edit_epasts="+ epasts+"& edit_mates_uzn="+ mates_uzn+"& edit_uzn_parole="+ uzn_parole
+                    //     +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
+                    //     +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
+                    //     +"& dzivoklis_hide="+ dzivoklis+"& uzn_edit="+ uzn_edit,
+                    //     success: function(){
+                    //         // window.location.replace("http://localhost/MekletAtlaides/a_home.php");
+                    //         window.location.replace("http://localhost/MekletAtlaides/a_company_r.php");
+                    //         // alert('Hi');
+                    //     }
+                    // });  
+                // }   
+     
             }else{
                 if(reg_nr!=''){
                     $('#reg_nr_e').addClass('hidden');

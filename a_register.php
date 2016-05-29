@@ -4,8 +4,8 @@
 
 
 <?php
-if(!empty($_POST['email']) && !empty($_POST['password'])){
-    // echo "Preparing to log in";
+if(isset($_POST['email']) && isset($_POST['password']) 
+&& !empty($_POST['email']) && !empty($_POST['password'])){
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
     $checregister = mysqli_query($con ,"SELECT Epasts, Parole FROM lietotajs 
@@ -24,7 +24,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
             VALUES('".$name."', '".$surname."', '".$email_address."', '".$password."', '".$u_level."');");
         if($registeruser)
         {
-            echo "<p style='color:red'>Lietotājs veiksmīgi saglabāts!</p>"; 
+            header("location: a_user_list.php"); 
         }
         else
         {
@@ -38,9 +38,9 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 ?>
 
         <div id="register-wrapper-div" class="register-div">
-            <div class="register-div-center">
+            <div id="comp_user_reg" class="register-div-center">
                 <h3><?php echo $greeting_text; ?></h3>
-                <form method="post" action="a_register.php" name="admin-form" id="admin-form" class="address-form">
+                <form method="post" action="a_register.php" name="userreg-form" id="userreg-form" class="address-form">
                     <fieldset>
                         <label for="name">Vārds:</label>
                         <input type="text" id="name" class="register-input" 
@@ -52,19 +52,29 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
                         name="surname" placeholder="Uzvārds">
                     </fieldset>
                     <fieldset>
-                        <label for="email">Epasts:</label>
+                        <label for="email">E-pasts:</label>
                         <input type="text" id="email" class="register-input" 
                         name="email" placeholder="E - pasts">
                     </fieldset>
+<!--                     <fieldset>
+                        <label for="email">Atkārtot e-pastu:</label>
+                        <input type="text" id="email" class="register-input" 
+                        name="email" placeholder="Atkārtot e-pastu">
+                    </fieldset> -->
                     <fieldset>
                         <label for="password">Parole:</label>
                         <input type="password" id="password" class="register-input" 
                         name="password" placeholder="Parole">
                     </fieldset>
+<!--                     <fieldset>
+                        <label for="password">Atkārtot paroli:</label>
+                        <input type="password" id="password" class="register-input" 
+                        name="password" placeholder="Atkārtot paroli">
+                    </fieldset> -->
                     <button type="submit" name="a-submit-register" id="a-submit-register" 
-                    class="a_buttons">Reģistrēt</button>
+                    class="a_buttons">Reģistrēt vadītāju</button>
                 </form>
-                <a href="a_home.php"><button class="a_back">Atpakaļ</button></a>
+                <button class="a_back" onclick="goBack()">Atpakaļ</button>
 
             </div>
         </div>

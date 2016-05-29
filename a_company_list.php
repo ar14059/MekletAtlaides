@@ -4,7 +4,7 @@
 
 
     <div id="register-wrapper-div" class="register-div">
-        <div class="register-div-center">
+        <div id="a_comp_list_center" class="register-div-center">
         <h3><?php echo $greeting_text; ?></h3>
 
 
@@ -15,7 +15,7 @@
 <?php
 if($_SESSION['Lietotaja_limenis']==3){
 ?>
-    <tr><th>Reģistrācijas numurs</th><th>Uzņēmuma nosaukums</th><th>Statuss</th></tr>
+    <tr><th>Reģ. numurs</th><th>Uzņēmuma nosaukums</th><th>Statuss</th></tr>
 <?php
     $list_query = mysqli_query($con, "SELECT * FROM uznemums
         ORDER BY Nosaukums");
@@ -38,7 +38,7 @@ if($_SESSION['Lietotaja_limenis']==3){
     }
 }else if($_SESSION['Lietotaja_limenis']==2){
 ?>
-    <tr><th>Reģistrācijas numurs</th><th>Uzņēmuma nosaukums</th><th>Statuss</th></tr>
+    <tr><th>Reģ. numurs</th><th>Uzņēmuma nosaukums</th><th>Statuss</th></tr>
 <?php
     
     $user_id = $_SESSION['ID'];
@@ -53,9 +53,7 @@ if($_SESSION['Lietotaja_limenis']==3){
                 $nosaukums = $run_list['Nosaukums'];
                 $reg_nr = $run_list['Reģ_nr'];
                 $pieslegts = $run_list['Pieslegts'];
-?>
-                <tr><td><?php echo $reg_nr; ?></td><td><?php echo $nosaukums; ?></td><td>
-<?php
+                echo "<tr><td>$reg_nr</td><td><a href = 'a_company_info.php?comp_name=$nosaukums'>$nosaukums</a></td><td>";
                 if($pieslegts == 1){
                     echo "<a href='profile_active.php?c_id=$c_id&pieslegts=$pieslegts&activation=$activation'>Deactivate</a>";
                 }else{
@@ -95,13 +93,9 @@ if($_SESSION['Lietotaja_limenis']==3){
 
 }
 ?>
-	</table>
+    </table>
 
 
-<!--         <h3>The Cruff Bucket</h3>
-        Enter the food you would like to order!
-        <input type="text" id="userInput">
-        <div id="underInput"></div> -->
 
     <div class="btn_div"><div class="btn_div_center"><a href="a_home.php">
         <button class="a_buttons">Atpakaļ</button></a></div></div>

@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }*/
 
+/*div#scroll{
+    margin: 0 auto;
+}*/
+
 i{
     font-size: 30px;
 }
@@ -51,7 +55,8 @@ p{
     background-attachment: fixed;
     background-size: cover;
     background-color: #FFF5F5;
-    width: 56%;
+    /*width: 56%;*/
+    width: 800px;
     min-width: 530px;
     margin: 0 auto;
     font-weight: bold;
@@ -247,7 +252,8 @@ button.home-search:hover{
     background-color: #FFF5F5;
 }
 .main-content-center{
-    width: 56%;
+    /*width: 56%;*/
+    width: 800px;
     text-align: center;
 /*    position: relative;*/
     margin: 0 auto;
@@ -857,6 +863,10 @@ div.product-list{
     .home-search-wrapper{
         width: 100%;
     }
+    div#scroll{
+        margin: 0 auto;
+        width: 800px;
+    }
 
 /* pilsētu-parskats */
     .pilsetas-karte{
@@ -1158,8 +1168,8 @@ div.product-list{
         height: 140px;
     }
     .AppDownloadButtons div{
-        display: block;
-        width: 100%;
+/*        display: block;
+        width: 100%;*/
         margin: 15px 0;
         height: 40px;
     }

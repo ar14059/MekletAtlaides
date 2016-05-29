@@ -54,10 +54,6 @@ function handleServerResponse(){
 }
 
 
-
-
-
-
 $('button#a-append-company').on('click', function(){
 	var name = $('input#reg_nr').val();
 	var surname = $('input#uzn_parole').val();
@@ -77,3 +73,9 @@ function myTrim(x) {
 function FirstLetterCapital(string) {
 return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+
+function goBack() {
+    window.history.back();
+}
+	

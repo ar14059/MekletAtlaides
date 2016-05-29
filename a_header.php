@@ -6,27 +6,22 @@
 
     <link rel="stylesheet" type="text/css" href="css/a_home.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <title>Webpage</title>
 </head>
-
-
 <body>
-
-
-
+    
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 { 
     $s_first_part = "/MekletAtlaides/";
     $url = $_SERVER['SCRIPT_NAME'];
     if($url==$s_first_part."a_company_list.php"){
-        // echo "<script type='text/javascript'>alert('$url');</script>";
         $_SESSION['activation']='company';
     }else if($url==$s_first_part."a_user_list.php"){
-        // echo "<script type='text/javascript'>alert('$url');</script>";
         $_SESSION['activation']='user';
     }
     if(!empty($_SESSION['activation'])){
@@ -34,11 +29,11 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     }
     $u_level = $_SESSION['Lietotaja_limenis'];
     if($u_level>=2){
-        $greeting_text = 'Welcome, '.$_SESSION['Vards'].' '.$_SESSION['Uzvards'].' '.$_SESSION['Lietotaja_limenis']; 
+        $greeting_text = 'Welcome, '.$_SESSION['Vards'].' '.$_SESSION['Uzvards']; 
     }
     else
     {
-        header("location: home.php"); 
+        header("location: index.php"); 
     }
 }else{
     header("location: a_login.php"); 

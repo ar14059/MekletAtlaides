@@ -27,18 +27,14 @@
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 {
     header("location: a_home.php");
-    // echo "You are logged in!";
 }else if(!empty($_POST['email']) && !empty($_POST['password'])){
-    // echo "Preparing to log in";
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));  
     $checklogin = mysqli_query($con ,"SELECT * FROM lietotajs 
         WHERE Epasts = '".$email_address."' AND Parole = '".$password."'");
     if(mysqli_num_rows($checklogin) == 1)
     {
-
         $row = mysqli_fetch_array($checklogin);
-        // $email = $row['EmailAddress'];
         $u_level = $row['Lietotaja_limenis'];
         if($u_level>=2){
             $name = $row['Vards'];
@@ -50,9 +46,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
             $_SESSION['Uzvards'] = $surname;
             $_SESSION['Lietotaja_limenis'] = $u_level;
             $_SESSION['LoggedIn'] = 1; 
-            // header("Refresh:0");
-            header("location: a_home.php"); 
-            
+            header("location: a_home.php");    
         }else{
 
             echo "<p>You can't access admin panel</p>";
@@ -79,7 +73,8 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
                         name="password" placeholder="Parole">
                     </fieldset>
 
-                        <a href="" class="forgot_uname_pword">Aizmirsi lietotājvārdu/paroli?</a>
+                        <a href="#" class="forgot_uname_pword">Aizmirsi lietotājvārdu/paroli?</a>
+                        <a href="index.php" class="forgot_uname_pword">Pāriet uz galveno lapu</a>
 
                     <button type="submit" name="a-submit-login" id="a-submit-login" 
                     class="a_buttons">Ielogoties</button>

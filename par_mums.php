@@ -25,22 +25,32 @@
                 <div id="par-mums_content">
                     <fieldset class="content">
                         <p class="subject-title">Par mums</p>
-                        <hr>
-                        <p class="paragraph">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had. In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had. In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.</p>
-                        <p class="paragraph">​Aizvadītā gada nogalē VAS "​Tiesu namu aģentūra​" izdotajai ​Latvijas Universitātes Juridiskās fakultātes profesoru Valentijas Liholajas un Ulda Karstiņa ​grāmatai "Krimināllikuma komentāri. Pirmā daļa (I–VIII nodaļa)" nu iznācis turpinājums ​- pie lasītājiem dodas "Krimināllikuma komentāri. Otrā daļa (IX–XVII nodaļa)". Šobrīd tiek izstrādāta jau komentāru 3.daļa. Aizvadītā gada nogalē VAS "​Tiesu namu aģentūra​" izdotajai ​Latvijas Universitātes Juridiskās fakultātes profesoru Valentijas Liholajas un Ulda Karstiņa ​grāmatai "Krimināllikuma komentāri. Pirmā daļa (I–VIII nodaļa)" nu iznācis turpinājums ​- pie lasītājiem dodas "Krimināllikuma komentāri. Otrā daļa (IX–XVII nodaļa)". Šobrīd tiek izstrādāta jau komentāru 3.daļa. </p>
-                        <p class="paragraph">​Aizvadītā gada nogalē VAS "​Tiesu namu aģentūra​" izdotajai ​Latvijas Universitātes Juridiskās fakultātes profesoru Valentijas Liholajas un Ulda Karstiņa ​grāmatai "Krimināllikuma komentāri. Pirmā daļa (I–VIII nodaļa)" nu iznācis turpinājums ​- pie lasītājiem dodas "Krimināllikuma komentāri. Otrā daļa (IX–XVII nodaļa)". Šobrīd tiek izstrādāta jau komentāru 3.daļa. Aizvadītā gada nogalē VAS "​Tiesu namu aģentūra​" izdotajai ​Latvijas Universitātes Juridiskās fakultātes profesoru Valentijas Liholajas un Ulda Karstiņa ​grāmatai "Krimināllikuma komentāri. Pirmā daļa (I–VIII nodaļa)" nu iznācis turpinājums ​- pie lasītājiem dodas "Krimināllikuma komentāri. Otrā daļa (IX–XVII nodaļa)". Šobrīd tiek izstrādāta jau komentāru 3.daļa. </p>
+                        <hr> 
+                        <fieldset>
+                            <img class="contact_photo creator" src="css/pictures/programmas_izveidotajs.jpg">                                                               
+                            <p class="paragraph left"><b>Artis Raudive, pasūtījuma pieņēmējs un sistēmas 
+                                administrators.</b></p>
+                            <p class="paragraph">Studēju LU DF 2. kursā "Programminženierija". 
+                                Šo sistēmu izveidoju kvalifikācijas darba ietvaros. Sistēmas mērķis 
+                                ir apvienot visu jomu veikalu precu piedāvājumus vienā sistēmā, kas 
+                                atvieglos lietotājam nepieciešamās preces atrašanu.</p>
+                        </fieldset>
+                        <fieldset>
+                            <img class="contact_photo contractor" src="css/pictures/programmas_pasutitajs.jpg"> 
+                            <p class="paragraph right">​<b>Aivars Kolbeks, sistēmas pasūtītājs, SIA "DMG" 
+                                valdes loceklis.</b></p>
+                            <p class="paragraph right">Mums ir nepieciešama sistēma, kas varētu veismīgi 
+                                apvienot lielāko daļu latvijas uzņēmumus, kas pārdod savu produkciju. 
+                                Sistēmai ir jābūt ērti izmantojamai. Meklēšanas sistēmai ir jābūt izstrādātai 
+                                tā, lai varētu atrast preces pēc iespējas vairākiem meklēšanas nosacījumiem.</p>
+                        </fieldset>
                     </fieldset>
                 </div>
             </section>
         </section>
 
 
-        <div id="footer_include"></div>
-        <script> 
-        $(function(){
-          $("#footer_include").load("footer.html"); 
-        });
-        </script>
+    <?php require "footer.php"; ?>
     </section>
 </body>
 

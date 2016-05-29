@@ -4,7 +4,6 @@
     <div id="register-wrapper-up" class="wrapper-up hidden">
         <div id="register-wrapper-div" class="register-div hidden">
             <div id="register-div-center" class="register-div-center">
-<!--                 <button class="star_fill"></button> -->
                 <button id="wrapper-register-close" class="close"></button>
                 <form name="address-form" id="address-form" >
                     <fieldset>
@@ -62,7 +61,7 @@
                         <p id="ek_nr_e" class="err_m_register hidden"></p>
                     </fieldset>
                     <fieldset>
-                        <label for="dzivoklis">Dzīvoklis/korpuss:</label>
+                        <label for="dzivoklis">Dzīvoklis:</label>
                         <input type="text" id="dzivoklis" class="register-input" 
                         name="dzivoklis" placeholder="Dzīvoklis/korpuss">
                         <p id="dzivoklis_e" class="err_m_register hidden"></p>

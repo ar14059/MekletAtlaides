@@ -6,9 +6,12 @@
 
 
 	<table>
-		<tr><th>Lietotāji</th><th>Līmenis</th><th>Statuss</th></tr>
+		<!-- <tr><th>Vārds</th><th>Uzvārds</th><th>Līmenis</th><th>Statuss</th></tr> -->
 <?php
 if($_SESSION['Lietotaja_limenis']==3){
+?>
+    <tr><th>Vārds</th><th>Uzvārds</th><th>Līmenis</th><th>Statuss</th></tr>
+<?php
 	$list_query = mysqli_query($con, "SELECT ID, Vards, Uzvards, Lietotaja_limenis, Aktivs FROM lietotajs
 		WHERE Lietotaja_limenis<>'3' ORDER BY Lietotaja_limenis DESC");
 	while($run_list = mysqli_fetch_array($list_query)){
@@ -18,7 +21,7 @@ if($_SESSION['Lietotaja_limenis']==3){
 		$u_level = $run_list['Lietotaja_limenis'];
 		$active = $run_list['Aktivs'];
 ?>
-        <tr><td><?php echo $name; ?></td><td><?php echo $u_level; ?></td><td>
+        <tr><td><?php echo $name; ?></td><td><?php echo $surname; ?></td><td><?php echo $u_level; ?></td><td>
 <?php
 	if($active == 1){
 		echo "<a href='profile_active.php?u_id=$u_id&type=$active&activation=$activation'>Deactivate</a>";
@@ -30,6 +33,9 @@ if($_SESSION['Lietotaja_limenis']==3){
 <?php
 	}
 }else if($_SESSION['Lietotaja_limenis']==2){
+?>
+    <tr><th>Vārds</th><th>Uzvārds</th><th>Statuss</th></tr>
+<?php
     $user_id = $_SESSION['ID'];
     $ownerquery = mysqli_query($con, "SELECT * FROM uznemums_lietotajs 
         WHERE Lietotaja_ID=".$user_id);
@@ -49,7 +55,7 @@ if($_SESSION['Lietotaja_limenis']==3){
                 $u_level = $worker_l_one_list['Lietotaja_limenis'];
                 $active = $worker_l_one_list['Aktivs']; 
                 ?>
-                <tr><td><?php echo $name; ?></td><td><?php echo $u_level; ?></td><td>
+                <tr><td><?php echo $name; ?></td><td><?php echo $surname; ?></td><td>
                 <?php
                     if($active == 1){
                         echo "<a href='profile_active.php?u_id=$u_id&type=$active&activation=$activation'>Deactivate</a>";

@@ -1,17 +1,14 @@
 <?php
-session_start();
- 
-$dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
-$dbname = "mekletatlaides_example"; // the name of the database that you are going to use for this project
-$dbuser = "root"; // the username that you created, or were given, to access your database
-$dbpass = ""; // the password that you created, or were given, to access your database
+session_start(); 
+
+
+$dbhost = "localhost";
+$dbname = "mekletatlaides_example"; 
+$dbuser = "root"; 
+$dbpass = ""; 
  
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("MySQL Error: " . mysql_error());
 mysqli_set_charset($con, 'utf8');
-
-// $browser = get_browser(null, true);
-// echo $browser['browser'];
-// mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
 ?>
 
 <?php $curr_location = $_SERVER['SCRIPT_NAME']; ?>

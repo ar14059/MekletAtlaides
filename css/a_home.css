@@ -1,4 +1,3 @@
-
 /*Globālie CSS parametri*/
 /************************************************************************************************************/
 h3{
@@ -18,6 +17,7 @@ body{
     min-width: 320px;
     background-color: #FFF5F5;
 }
+
 button{
     border: none;
 }
@@ -84,14 +84,21 @@ p{
                 display: block;
                 /*text-align: center;*/
                 font-size: 12px;
+                margin: 2px;
+                text-align: center;
             }
 
 
 
-
-        div#register-div-center{
-            width: 500px;
-        }
+        div#comp_user_reg{
+            width: 400px;
+            /*height: 170px;*/
+            height: auto;
+            background-color: #292929;
+            margin: 0 auto;
+            padding: 0 0 20px 0;
+            position: relative;
+        }           
         div.register-div-center{
             width: 500px;
             /*height: 170px;*/
@@ -101,118 +108,126 @@ p{
             padding: 0 0 20px 0;
             position: relative;
         }
+        div#a_comp_list_center{
+            max-width: 800px;
+        }
+
+            .register-div-center button.a_back{
+                width: 60px;
+                height: 26px;
+                position: absolute;
+                top: 48px;
+                left: 5px;
+                color: #3a87ad;
+                background-color: #d9edf7;
+                font-weight: bold;
+            }
+
+            button.a_back:hover{
+                color: #d9edf7;
+                background-color: #3a87ad;
+            }
 
 
+            .address-form{
+                width: auto;
+                padding: 25px 40px 0 40px;
+/*                width: 80%;
+                padding: 40px 0 25px 0;*/
+                margin: 0 auto;
+            }
 
-                .register-div-center button.a_back{
-                    width: auto;
-                    height: 20px;
-                    position: absolute;
-                    top: 48px;
-                    left: 5px;
+                .address-form fieldset{
+                    border: none;
+                    padding: 10px 0;
+                    height: auto;
+                }
+                    .address-form fieldset span{
+                        color: #fff;
+                    }                
+                    .address-form p{
+                        color: #B0AEAE;
+                        text-align: left;
+                        font-size: 11px;
+                        margin-bottom: 25px;
+                    }
+                    .address-form label{
+                        float: left;
+                        color: #B0AEAE;
+                        width: 40%;
+                        line-height: 22px;
+                        font-weight: bold;
+                    }
+
+
+                    input.register-input{
+                        width: 60%; 
+                        height: 22px;
+                        padding: 2px 10px;
+                        font-size: 12px;
+                        font-style: italic;
+                        font-weight: bold;
+                        float: right;
+                    }
+                    #address-form input#iela{
+                        width: 35%;
+                        float: left;
+                    }
+                    #address-form select#iela_abr{
+                        height: 22px;
+                        float: right;
+                        width: 20%;
+                    }
+                    #address-form p.err_m_register, #admin-form p.err_m_register{
+                        color: #FF4D4D;
+                        padding-top: 2px;
+                        margin: 0;
+                        float: right;
+                        text-align: center;
+                        width: 60%;
+                        font-size: 12px;
+                    }
+                    label.add_c_label{
+                        color: #292929;
+                    }
+                button#a-submit-login{
+                    margin: 10px auto 0 auto;                  
+                }
+                button.a_buttons{
+                    width: 200px;
+                    height: 30px;
+                    color: #3a87ad;
+                    background-color: #d9edf7;
+                    margin: 10px auto 10px auto;
+                    display: block;
+                    font-weight: bold;
+
+                }
+
+                button.a_buttons:hover{
+                    color: #d9edf7;
+                    background-color: #3a87ad;
+                }
+
+
+                button.login-submit-address{
+                    width: 200px;
+                    height: 30px;
                     background-color: #FB6B6B;
                     color: #FFF;
+                    /*float: right;*/
+                    margin: 0 auto 20px auto;
+                    display: block;
                 }
 
-                button.a_back:hover{
+                button.login-submit-address:hover{
                     background-color: #FF4D4D;
                 }
-
-
-                .address-form{
-                    width: auto;
-                    padding: 25px 40px 0 40px;
-    /*                width: 80%;
-                    padding: 40px 0 25px 0;*/
-                    margin: 0 auto;
-                }
-                    .address-form fieldset{
-                        border: none;
-                        padding: 10px 0;
-                        height: auto;
-                    }               
-                        .address-form p{
-                            color: #B0AEAE;
-                            text-align: left;
-                            font-size: 11px;
-                            margin-bottom: 25px;
-                        }
-                        .address-form label{
-                            float: left;
-                            color: #B0AEAE;
-                            width: 40%;
-                            line-height: 22px;
-                            font-weight: bold;
-                        }
-
-
-                        input.register-input{
-                            width: 60%; 
-                            height: 22px;
-                            padding: 2px 10px;
-                            font-size: 12px;
-                            font-style: italic;
-                            font-weight: bold;
-                            float: right;
-                        }
-                        #address-form input#iela{
-                            width: 35%;
-                            float: left;
-                        }
-                        #address-form select#iela_abr{
-                            height: 22px;
-                            float: right;
-                            width: 20%;
-                        }
-                        #address-form p.err_m_register, #admin-form p.err_m_register{
-                            color: #FF4D4D;
-                            padding-top: 2px;
-                            margin: 0;
-                            float: right;
-                            text-align: center;
-                            width: 60%;
-                            font-size: 12px;
-                        }
-                        label.add_c_label{
-                            color: #292929;
-                        }
-                    button#a-submit-login{
-                        margin: 10px auto 0 auto;                  
-                    }
-                    button.a_buttons{
-                        width: 200px;
-                        height: 30px;
-                        background-color: #FB6B6B;
-                        color: #FFF;
-                        margin: 10px auto 10px auto;
-                        display: block;
-
-                    }
-
-                    button.a_buttons:hover{
-                        background-color: #FF4D4D;
-                    }
-
-
-                    button.login-submit-address{
-                        width: 200px;
-                        height: 30px;
-                        background-color: #FB6B6B;
-                        color: #FFF;
-                        /*float: right;*/
-                        margin: 0 auto 20px auto;
-                        display: block;
-                    }
-
-                    button.login-submit-address:hover{
-                        background-color: #FF4D4D;
-                    }
 
 /*a_user_list.php*/
 
 table {
     border-collapse: collapse;
-
     width: auto;
     margin: 0 auto;
 }
@@ -220,7 +235,6 @@ table {
     th, td {
         text-align: left;
         padding: 8px;
-        width: auto;
         /*border: 1px solid black;*/
     }
 
@@ -234,14 +248,17 @@ table {
     tr{background-color: #f2f2f2}
 
     th {
-        background-color: #FF4D4D;
-        color: white;
+
+        color: #d9edf7;
+        background-color: #3a87ad;
     }
     .add_btn{
         width: 100%;
         height:35px;
-        background-color: #FF4D4D;
-        color: #FFFFFF;
+/*        background-color: #FF4D4D;
+        color: #FFFFFF;*/
+        color: #d9edf7;
+        background-color: #3a87ad;
         padding: 0;
     }
 
@@ -340,18 +357,24 @@ input#jurid_adrese{
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: #FB6B6B;
-        /*background-color: #FF4D4D;*/
-        color: #FFF;
-        /*display: none;*/
+/*        background-color: #FB6B6B;
+        color: #FFF;*/
+
+background-color: #d9edf7;
     }
     
     div#address_form_btn:hover{
-        background-color: #FF4D4D;
+        /*background-color: #FF4D4D;*/
+background-color: #3a87ad;
+    }
+    div#address_form_btn:hover p.a_f_b_title{
+        /*background-color: #FF4D4D;*/
+color: #d9edf7;
     }
 
         div#address_form_btn p.a_f_b_title{
-            color: #FFF;
+            color: #3a87ad;
+            font-weight: bold;
             display: block;
             text-align: center;
             margin: 3px auto;
@@ -450,16 +473,16 @@ input#jurid_adrese{
                 button.reg-submit-address{
                     width: 200px;
                     height: 30px;
-                    background-color: #FB6B6B;
-                    color: #FFF;
-                    /*float: right;*/
+                    color: #3a87ad;
+                    background-color: #d9edf7;
                     margin: 0 auto 20px auto;
                     display: block;
 
                 }
 
                 button.reg-submit-address:hover{
-                    background-color: #FF4D4D;
+                    color: #d9edf7;
+                    background-color: #3a87ad;
                 }
 
 #regaddr-wrapper-div{
