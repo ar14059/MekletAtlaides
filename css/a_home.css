@@ -91,7 +91,7 @@ p{
 
 
         div#comp_user_reg{
-            width: 400px;
+            width: 430px;
             /*height: 170px;*/
             height: auto;
             background-color: #292929;
@@ -178,7 +178,8 @@ p{
                         float: right;
                         width: 20%;
                     }
-                    #address-form p.err_m_register, #admin-form p.err_m_register{
+                    #address-form p.err_m_register, #admin-form p.err_m_register, 
+                    #userreg-form p.err_m_register{
                         color: #FF4D4D;
                         padding-top: 2px;
                         margin: 0;

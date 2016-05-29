@@ -314,7 +314,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
                         <p id="uzn_parole_e" class="err_m_register hidden"></p>
                     </fieldset>
 
-                    <fieldset class="">
+                    <fieldset class="hidden">
                         <input type="text" name="pasta_indekss_hide" id="pasta_indekss_hide" value="<?php echo $edit_pasta_indekss; ?>">
                         <input type="text" name="novads_hide" id="novads_hide" value="<?php echo $edit_novads; ?>" />
                         <input type="text" name="pilseta_hide" id="pilseta_hide" value="<?php echo $edit_pilseta; ?>">
@@ -328,7 +328,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
 
                         <input type="text" id="uzn_edit_hide" name="uzn_edit_hide" value="<?php echo $uzn_edit; ?>">
                     </fieldset>
-                    <fieldset class="">
+                    <fieldset class="hidden">
                         <input type="text" name="reg_nr_hide" id="reg_nr_hide" value="<?php echo $edit_reg_nr; ?>">
                         <input type="text" name="nosaukums_hide" id="nosaukums_hide" value="<?php echo $edit_nosaukums; ?>" />
                     </fieldset>

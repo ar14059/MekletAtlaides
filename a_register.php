@@ -4,8 +4,8 @@
 
 
 <?php
-if(isset($_POST['email']) && isset($_POST['password']) 
-&& !empty($_POST['email']) && !empty($_POST['password'])){
+if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['password']) 
+&& !empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])){
     $email_address = mysqli_real_escape_string($con, $_POST['email']);
     $password = md5(mysqli_real_escape_string($con, $_POST['password']));
     $checregister = mysqli_query($con ,"SELECT Epasts, Parole FROM lietotajs 
@@ -37,47 +37,56 @@ if(isset($_POST['email']) && isset($_POST['password'])
 }
 ?>
 
-        <div id="register-wrapper-div" class="register-div">
-            <div id="comp_user_reg" class="register-div-center">
-                <h3><?php echo $greeting_text; ?></h3>
-                <form method="post" action="a_register.php" name="userreg-form" id="userreg-form" class="address-form">
-                    <fieldset>
-                        <label for="name">Vārds:</label>
-                        <input type="text" id="name" class="register-input" 
-                        name="name" placeholder="Vārds">
-                    </fieldset>
-                    <fieldset>
-                        <label for="surname">Uzvārds:</label>
-                        <input type="text" id="surname" class="register-input" 
-                        name="surname" placeholder="Uzvārds">
-                    </fieldset>
-                    <fieldset>
-                        <label for="email">E-pasts:</label>
-                        <input type="text" id="email" class="register-input" 
-                        name="email" placeholder="E - pasts">
-                    </fieldset>
-<!--                     <fieldset>
-                        <label for="email">Atkārtot e-pastu:</label>
-                        <input type="text" id="email" class="register-input" 
-                        name="email" placeholder="Atkārtot e-pastu">
-                    </fieldset> -->
-                    <fieldset>
-                        <label for="password">Parole:</label>
-                        <input type="password" id="password" class="register-input" 
-                        name="password" placeholder="Parole">
-                    </fieldset>
-<!--                     <fieldset>
-                        <label for="password">Atkārtot paroli:</label>
-                        <input type="password" id="password" class="register-input" 
-                        name="password" placeholder="Atkārtot paroli">
-                    </fieldset> -->
-                    <button type="submit" name="a-submit-register" id="a-submit-register" 
-                    class="a_buttons">Reģistrēt vadītāju</button>
-                </form>
-                <button class="a_back" onclick="goBack()">Atpakaļ</button>
 
-            </div>
-        </div>
+
+<div id="register-wrapper-div" class="register-div">
+    <div id="comp_user_reg" class="register-div-center">
+        <h3><?php echo $greeting_text; ?></h3>
+        <form method="post" action="a_register.php" name="userreg-form" id="userreg-form" class="address-form">
+            <fieldset>
+                <label for="name">Vārds:</label>
+                <input type="text" id="name" class="register-input" 
+                name="name" placeholder="Vārds">
+                <p id="vards_e" class="err_m_register hidden"></p>
+            </fieldset>
+            <fieldset>
+                <label for="surname">Uzvārds:</label>
+                <input type="text" id="surname" class="register-input" 
+                name="surname" placeholder="Uzvārds">
+                <p id="uzvards_e" class="err_m_register hidden"></p>
+            </fieldset>
+            <fieldset>
+                <label for="email">E-pasts:</label>
+                <input type="text" id="email" class="register-input" 
+                name="email" placeholder="E - pasts">
+                <p id="epasts_e" class="err_m_register hidden"></p>
+            </fieldset>
+                <fieldset>
+                    <label for="email_repeat">Atkārtot e-pastu:</label>
+                    <input type="text" id="email_repeat" class="register-input" 
+                    name="email_repeat" placeholder="Atkārtot e-pastu">
+                    <p id="epasts_atk_e" class="err_m_register hidden"></p>
+                </fieldset>
+            <fieldset>
+                <label for="password">Parole:</label>
+                <input type="password" id="password" class="register-input" 
+                name="password" placeholder="Parole">
+                <p id="parole_e" class="err_m_register hidden"></p>
+            </fieldset>
+                <fieldset>
+                    <label for="password_repeat">Atkārtot paroli:</label>
+                    <input type="password" id="password_repeat" class="register-input" 
+                    name="password_repeat" placeholder="Atkārtot paroli">
+                    <p id="parole_atk_e" class="err_m_register hidden"></p>
+                </fieldset>
+
+            <button type="submit" name="a-submit-register" id="a-submit-register" 
+            class="a_buttons">Reģistrēt vadītāju</button>
+        </form>
+        <a href="a_home.php"><button class="a_back">Atpakaļ</button></a>
+
+    </div>
+</div>
 
 
 </body>

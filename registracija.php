@@ -24,7 +24,7 @@
     <section class="body-welcome">
         <header class="main-nav">
             <div class="header-right">
-                <button id="nav-right-button-back" class="button_nav" onclick="goBack()"></button>
+                <a href="index.php"><button id="nav-right-button-back" class="button_nav"></button></a>
                 <!-- <button id="nav-right-button-back" class="button_nav"></button> -->
             </div>
         </header>
