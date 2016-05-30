@@ -1,3 +1,5 @@
+<!--1 Kods, kas pievieno lietotājam eksistējošo uzņēmumu-->
+
 <?php
 if(isset($_POST['name']) && !empty($_POST['surname'])){
 	require '../base.php';
@@ -26,3 +28,5 @@ if(isset($_POST['name']) && !empty($_POST['surname'])){
 	}
 }
 ?>	
+
+<!--1-->

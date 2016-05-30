@@ -1,4 +1,6 @@
 <?php require "a_header.php"; ?>
+
+<!--1 Tiek saņemts uzņēmuma nosaukums, kas nosaka, kura uzņēmuma dati tiks parādīti -->
 <?php 
     if(isset($_GET['comp_name'])){
         $c_name = $_GET['comp_name'];
@@ -6,12 +8,12 @@
         header("location: a_home.php"); 
     }
 ?>
-
+<!--1-->
 
 <div id="register-wrapper-div" class="register-div">
     <div id="a_comp_list_center" class="register-div-center">
         <h3><?php echo $greeting_text; ?></h3>
-
+        <!--2 Kods, kas atrod datubāzē informāciju uzņēmumam, kura nosaukums glabājas mainīgajā "$c_name"  -->
         <?php
         if($c_name !== 'null' && $c_name != ''){
             $find_company = mysqli_query($con, "SELECT * FROM uznemums WHERE Nosaukums='".$c_name."'");
@@ -70,6 +72,8 @@
             }
         }
         ?>
+        <!--2-->
+        <!--3 Forma, kura attēlo uzņēmuma datus un nosūta tos uz failu "a_company_r.php" -->
         <form method="post" action="a_company_r.php" id="a-c-edit-form" class="address-form">
             <fieldset>
                 <label for="reg_nr">Reģ. numurs:</label>
@@ -128,6 +132,7 @@
             <a href="a_company_r.php"><button type="submit" name="a-company-info" id="a-company-info" 
             class="a_buttons">Rediģēt</button></a>
         </form>
+        <!--3-->
         <a href="a_company_list.php"><button class="a_back">Atpakaļ</button></a>
     </div>
 </div>

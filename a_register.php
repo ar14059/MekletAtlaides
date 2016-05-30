@@ -2,7 +2,7 @@
 
 
 
-
+<!--1 Kods, kas dod iespēju Administratoram reģistrēt jaunu lietotāju - Vadītāju-->
 <?php
 if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['password']) 
 && !empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])){
@@ -37,8 +37,8 @@ if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) &
 }
 ?>
 
-
-
+<!--1-->
+<!--2 Reģistrācijas forma-->
 <div id="register-wrapper-div" class="register-div">
     <div id="comp_user_reg" class="register-div-center">
         <h3><?php echo $greeting_text; ?></h3>
@@ -87,7 +87,7 @@ if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) &
 
     </div>
 </div>
-
+<!--2-->
 
 </body>
 

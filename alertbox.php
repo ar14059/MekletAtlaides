@@ -1,3 +1,4 @@
+<!--NEIZMANTOTA LAPA! Glabājas paziņojumu piemērs-->
 <link rel="stylesheet" type="text/css" href="css/alertboxes.css">
 
 <div id="message-wrapper-up hidden">
@@ -18,3 +19,4 @@
 
     </div>
 </div>
+<!---->

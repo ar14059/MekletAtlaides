@@ -1,3 +1,4 @@
+<!--1 Lietotāju ar grupu "Vadītājs" un "Administrators" galvenā lapa-->
 <?php require "a_header.php"; ?>
 
 
@@ -35,3 +36,4 @@
 </body>
 
 <?php require "a_footer.php"; ?>
+<!--1-->

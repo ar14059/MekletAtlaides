@@ -1,6 +1,6 @@
 
-<!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
-<!--___________________________________________________________-->
+<!--1 Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
+
     <div id="register-wrapper-up" class="wrapper-up hidden">
         <div id="register-wrapper-div" class="register-div hidden">
             <div id="register-div-center" class="register-div-center">
@@ -72,3 +72,5 @@
             </div>
         </div>
     </div>
+
+<!---->

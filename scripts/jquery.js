@@ -437,6 +437,59 @@ $(function() {
 
 
 
+
+
+        // $("form#a-login-form").submit(function(ev) {
+        //     ev.preventDefault();
+        //     var epasts = myTrim($('#email').val());
+        //     var parole = myTrim($('#password').val());
+        //     var error = "";
+        //     //This condition will only be true if each value is not an empty string
+        //     if(epasts && parole){
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "a_login.php",
+        //             data: "email="+ epasts +"& password="+ parole,
+        //             success: function(){
+        //                 window.location.replace("http://localhost/MekletAtlaides/a_home.php");
+        //             }
+        //         });       
+        //     }else{
+
+        //         $('#f_alert').removeClass('hidden');
+        //     }        
+        //     return false; //IE
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $("form#registerform").submit(function(ev) {
             ev.preventDefault();
   
@@ -470,54 +523,74 @@ $(function() {
             var dzivoklis = myTrim($('#dzivoklis_hide').val());
             //This condition will only be true if each value is not an empty string
             if(vards && uzvards && epasts && epasts_atk && parole && parole_atk){
-                    if(epasts_atk==epasts && parole_atk==parole){ 
-                        if(adrese!=null && adrese!=''){
-                            $.ajax({
-                                type: "POST",
-                                url: "registracija.php",
-                                data: "name="+ vards +"& surname="+ uzvards +"& email="+ epasts +"& email_repeat="+ epasts_atk 
-                                +"& address="+ adrese  +"& password="+ parole  +"& password_repeat="+ parole_atk
-                                +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
-                                +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
-                                +"& dzivoklis_hide="+ dzivoklis,
-                                success: function(){
-                                    window.location.replace("http://localhost/MekletAtlaides/index.php");
-                                }
-                            }); 
-                        }else if(reg_nr!=null && ent_password!=null){
-                            $.ajax({
-                                type: "POST",
-                                url: "registracija.php",
-                                data: "name="+ vards +"& surname="+ uzvards +"& email="+ epasts +"& email_repeat="+ epasts_atk 
-                                +"& password="+ parole +"& password_repeat="+ parole_atk+"& reg_nr="+ reg_nr+"& ent_password="+ ent_password
-                                +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
-                                +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
-                                +"& dzivoklis_hide="+ dzivoklis,
-                                success: function(){
-                                    window.location.replace("http://localhost/MekletAtlaides/index.php");
-                                }
-                            });          
-                        }        
-                    }else{
-                        if(epasts_atk==epasts){
-                            $('#epasts_atk_e').addClass('hidden');
-                            $('#epasts_atk_e').text('');
-                            $('#email_repeat').css('border-color', '#545454');                
-                        }else{
-                            $('#epasts_atk_e').removeClass('hidden');
-                            $('#epasts_atk_e').text('Epasts nesakrīt, mēginiet vēlreiz!');
-                            $('#email_repeat').css('border-color', '#FC6B6B');
-                        }
-                        if(parole_atk==parole){
-                            $('#parole_atk_e').addClass('hidden');
-                            $('#parole_atk_e').text('');
-                            $('#password_repeat').css('border-color', '#545454');
-                        }else{
-                            $('#parole_atk_e').removeClass('hidden');
-                            $('#parole_atk_e').text('Parole nesakrīt, mēginiet vēlreiz!');
-                            $('#password_repeat').css('border-color', '#FC6B6B');             
-                        }
+                $('#vards_e').addClass('hidden');
+                $('#vards_e').text('');
+                $('#name').css('border-color', '#545454'); 
+                $('#uzvards_e').addClass('hidden');
+                $('#uzvards_e').text('');
+                $('#surname').css('border-color', '#545454');   
+                $('#epasts_e').addClass('hidden');
+                $('#epasts_e').text('');
+                $('#email').css('border-color', '#545454');
+                $('#epasts_atk_e').addClass('hidden');
+                $('#epasts_atk_e').text('');
+                $('#email_repeat').css('border-color', '#545454');  
+                $('#parole_e').addClass('hidden');
+                $('#parole_e').text('');
+                $('#password').css('border-color', '#545454'); 
+                $('#parole_atk_e').addClass('hidden');
+                $('#parole_atk_e').text('');
+                $('#password_repeat').css('border-color', '#545454');
+                if(epasts_atk==epasts && parole_atk==parole){ 
+                    if(adrese!=null && adrese!=''){
+                        $.ajax({
+                            type: "POST",
+                            url: "registracija.php",
+                            data: "name="+ vards +"& surname="+ uzvards +"& email="+ epasts +"& email_repeat="+ epasts_atk 
+                            +"& address="+ adrese  +"& password="+ parole  +"& password_repeat="+ parole_atk
+                            +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
+                            +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
+                            +"& dzivoklis_hide="+ dzivoklis,
+                            success: function(){
+                                window.location.replace("http://localhost/MekletAtlaides/index.php");
+                            }
+                        }); 
+                    }else if(reg_nr!=null && ent_password!='' && ent_password!='' && ent_password!=''){
+                        $.ajax({
+                            type: "POST",
+                            url: "registracija.php",
+                            data: "name="+ vards +"& surname="+ uzvards +"& email="+ epasts +"& email_repeat="+ epasts_atk 
+                            +"& password="+ parole +"& password_repeat="+ parole_atk+"& reg_nr="+ reg_nr+"& ent_password="+ ent_password
+                            +"& pasta_indekss_hide="+ pasta_indekss  +"& pagasts_hide="+ pagasts  +"& novads_hide="+ novads  +"& pilseta_hide="+ pilseta
+                            +"& ciems_hide="+ ciems  +"& iela_hide="+ iela  +"& ek_nr_hide="+ ek_nr
+                            +"& dzivoklis_hide="+ dzivoklis,
+                            success: function(){
+                                window.location.replace("http://localhost/MekletAtlaides/index.php");
+                            }
+                        });          
                     }        
+                }else{
+                    if(epasts_atk==epasts){
+                        $('#epasts_atk_e').addClass('hidden');
+                        $('#epasts_atk_e').text('');
+                        $('#email_repeat').css('border-color', '#545454');                
+                    }else{
+                        $('#epasts_atk_e').removeClass('hidden');
+                        $('#epasts_atk_e').text('Epasts nesakrīt, mēginiet vēlreiz!');
+                        $('#email_repeat').css('border-color', '#FC6B6B');
+                    }
+                    if(parole_atk==parole){
+                        $('#parole_atk_e').addClass('hidden');
+                        $('#parole_atk_e').text('');
+                        $('#password_repeat').css('border-color', '#545454');
+                    }else{
+                        $('#parole_atk_e').removeClass('hidden');
+                        $('#parole_atk_e').text('Parole nesakrīt, mēginiet vēlreiz!');
+                        $('#password_repeat').css('border-color', '#FC6B6B');             
+                    }
+                }   
+
+
             }else{
                 if(vards!=''){
                     $('#vards_e').addClass('hidden');

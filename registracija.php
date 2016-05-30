@@ -25,15 +25,13 @@
         <header class="main-nav">
             <div class="header-right">
                 <a href="index.php"><button id="nav-right-button-back" class="button_nav"></button></a>
-                <!-- <button id="nav-right-button-back" class="button_nav"></button> -->
             </div>
         </header>
         <section id="body-content">
 
-
+<!--1 Kods, ar kura palīdzību tiek reģistrēts lietotājs, 
+pēc veiksmīgas sistēmas reģistrācijas lietotājs tiek automātiski autorizēts sistēmā-->
 <?php
-
-
 if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['surname']) 
     && !empty($_POST['email_repeat']) && !empty($_POST['password_repeat']))
 {
@@ -223,13 +221,10 @@ else
 }
 
 ?>
-
         </section>
-
-
     </section>
 
-
+<!--1-->
 
 
 

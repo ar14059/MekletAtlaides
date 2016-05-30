@@ -1,5 +1,7 @@
 <?php include 'base.php'; ?>
-<?php include 'functions.php'; ?>
+
+
+<!--1 Sistēmas kods, kas nobloē/atbloķē uzņēmumu vai lietotāju-->
 
 <?php
 	if($_GET['activation'] == 'user'){
@@ -31,3 +33,5 @@
 		}
 	}
 ?>
+
+<!--1-->

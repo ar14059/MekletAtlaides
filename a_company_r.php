@@ -1,8 +1,7 @@
 <?php require "a_header.php"; ?>
 
-
+<!--1 Glabājas POST dati, kas tika nosūtīti no faila "a_company_info.php"-->
 <?php
-
 if(isset($_POST['edit_reg_nr']) && isset($_POST['edit_nosaukums']) && isset($_POST['edit_ties_forma']) 
 && isset($_POST['edit_darb_veids']) && isset($_POST['edit_tel_nr']) && 
 isset($_POST['edit_epasts']) && isset($_POST['uzn_edit'])){
@@ -49,9 +48,11 @@ isset($_POST['edit_epasts']) && isset($_POST['uzn_edit'])){
     $edit_ek_nr = '';
     $edit_dzivoklis = '';   
 }
+?>
+<!--1-->
 
-
-// $uzn_edit = 'jā';
+<!--2 Šeit glabājas kods, kas ir domāts jauna uzņēmuma reģistrēšanai/esoša uzņēmuma datu rediģēšanai-->
+<?php
 if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['ties_forma']) 
 && !empty($_POST['jurid_adrese']) && !empty($_POST['darb_veids']) && !empty($_POST['tel_nr']) 
 && !empty($_POST['epasts'])){
@@ -60,6 +61,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
     $reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr']);
     $nosaukums = mysqli_real_escape_string($con, $_POST['nosaukums']);
 
+    //3 Šī koda daļa saglabā jaunu uzņēmumu datubāzē
     if($uzn_edit=="nē"){
         $checkregister = mysqli_query($con ,"SELECT Reģ_nr, Nosaukums FROM uznemums 
             WHERE Reģ_nr = '".$reg_nr."' AND Nosaukums = '".$nosaukums."'");
@@ -132,7 +134,9 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
             {
                 
             }            
-        }      
+        } 
+    //3
+    //4 Šī koda daļa rediģē esošā uzņēmuma datus un saglabā izmaiņas datubāzē    
     }else if($uzn_edit=="jā"){
         $edit_reg_nr = mysqli_real_escape_string($con, $_POST['reg_nr_hide']);
         $edit_nosaukums = mysqli_real_escape_string($con, $_POST['nosaukums_hide']);
@@ -202,20 +206,20 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
                     }
                     else
                     {
-                        echo "<p style='color:red'>Problēma1</p><br>";
+                        // echo "<p style='color:red'>Problēma1</p><br>";
                     }                     
                 }else{
-                    echo "<p style='color:red'>Problēma2</p><br>";
+                    // echo "<p style='color:red'>Problēma2</p><br>";
                 }
             }else{
-                echo "<p style='color:red'>Problēma3</p><br>";
+                // echo "<p style='color:red'>Problēma3</p><br>";
             }
         }
         else{
-            echo "<p>Nevar atrast šī uzņēmuma datus</p>";           
+            // echo "<p>Nevar atrast šī uzņēmuma datus</p>";           
         }      
     }
-
+    //4
 
 
 
@@ -223,6 +227,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
 
 }
 ?>
+<!--5 Reģistrācijas/datu rediģēšanas forma -->
         <?php require "address_form.php"; ?>
         <div id="regaddr-wrapper-div" class="register-div">
             <div class="register-div-center">
@@ -346,7 +351,7 @@ if(!empty($_POST['reg_nr']) && !empty($_POST['nosaukums']) && !empty($_POST['tie
 
             </div>
         </div>
-
+<!--5-->
 </body>
 
 

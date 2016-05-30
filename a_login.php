@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/a_home.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/alertboxes.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="scripts/jquery.js"></script>
@@ -23,6 +23,7 @@
 <!-- Papildus reģistrācijas forma, kurā jāievada adreses dati  -->
 <!--___________________________________________________________-->
 
+<!--1 Kods, kas nodrošina lietotāju autorizēšanos sistēmā-->
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 {
@@ -54,14 +55,21 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     }
     else
     {
-        echo "<p>Can't find user with that username and/or password</p>";
+
     }
 }
 ?>
 
+<!--1-->
+<!--2 Autorizācijas forma -->
         <div id="register-wrapper-div" class="register-div">
             <div id="login-div-center" class="register-div-center">
-                <form method="post" action="a_login.php" name="address-form" id="address-form" class="address-form">
+            <fieldset id="f_alert" class="f_alert hidden">
+                <div class="alert alert-danger">
+                    <strong>Uzmanību!</strong>  Aizpildiet laukus!.
+                </div>
+            </fieldset>
+                <form method="post" action="a_login.php" name="a-login-form" id="a-login-form" class="address-form">
                     <fieldset>
                         <label for="novads" class="login-label">Epasts:</label>
                         <input type="text" id="email" class="login-input" 
@@ -83,7 +91,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 
             </div>
         </div>
-
+<!--2-->
 
 </body>
 

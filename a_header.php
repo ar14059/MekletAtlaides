@@ -1,19 +1,22 @@
-<?php include "base.php"; ?>
+<!--1 Glabājas stilu lapas, meta, viewpoint dati, -->
+<?php include "base.php"; ?> 
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="css/a_home.css">
+    <link rel="stylesheet" type="text/css" href="css/alertboxes.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <title>Webpage</title>
 </head>
+<!--1-->
 <body>
-    
+<!--2 Funkcija, kas kas nosaka lietotāja grupu, kas ir iegājis konkrētajā tīmekļa lapā. 
+    Lietotājam neļauj tikt pie lapām, pie kurām viņam nav tiesību piekļūt-->
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
 { 
@@ -39,5 +42,5 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Epasts']))
     header("location: a_login.php"); 
 }
 ?>
-
+<!--2-->
 

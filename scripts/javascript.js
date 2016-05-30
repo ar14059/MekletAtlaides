@@ -1,3 +1,5 @@
+//1 NEIZMANTOTĀS FUNKCIJAS Servera puses uzstādījumi
+
 var xmlHttp = createXmlHttpRequestObject();
 
 function createXmlHttpRequestObject(){
@@ -46,14 +48,15 @@ function handleServerResponse(){
 			message = xmlDocumentElement.firstChild.data;
 			document.getElementById("underInput").innerHTML = 
 			'<span style="color:blue">' + message + '</span>';
-			// setTimeout('process()', 500);
 		}else{
 			alert('Something went wrong!');	
 		}
 	}
 }
 
+//1 
 
+//2 Funkcija, kas saņem informāciju no faila "ajax/append.php", kas ģenerē tabulu ar lietotāja datiem
 $('button#a-append-company').on('click', function(){
 	var name = $('input#reg_nr').val();
 	var surname = $('input#uzn_parole').val();
@@ -63,7 +66,7 @@ $('button#a-append-company').on('click', function(){
 		})
 	}
 })
-
+//2
 
 
 function myTrim(x) {

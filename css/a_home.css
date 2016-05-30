@@ -34,9 +34,15 @@ p{
     color: #545454;
 }
 
+fieldset{
+    border: none;
+}
+
+
 .hidden{
     display: none;
 }
+
 
 /*CSS parametri specifiski katram elementam*/
 /************************************************************************************************************/
@@ -311,19 +317,7 @@ input#jurid_adrese{
 }
 
 
-/*input.register-input{
-    
-    height: 22px;
-    padding: 2px 10px;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: bold;
-    float: right;
-}*/
 
-
-
-    /*Ir jāpamaina id*/
     input#address{
         width:100%;
         overflow: hidden;
@@ -358,21 +352,14 @@ input#jurid_adrese{
         width: 100%;
         height: 100%;
         z-index: 1;
-/*        background-color: #FB6B6B;
-        color: #FFF;*/
-
-background-color: #d9edf7;
+        background-color: #d9edf7;
     }
-    
     div#address_form_btn:hover{
-        /*background-color: #FF4D4D;*/
-background-color: #3a87ad;
+        background-color: #3a87ad;
     }
     div#address_form_btn:hover p.a_f_b_title{
-        /*background-color: #FF4D4D;*/
-color: #d9edf7;
+        color: #d9edf7;
     }
-
         div#address_form_btn p.a_f_b_title{
             color: #3a87ad;
             font-weight: bold;
@@ -382,11 +369,6 @@ color: #d9edf7;
             font-size: 12px;
             cursor: default;
         }
-
-
-
-
-
 
 
 .wrapper-up{
@@ -438,8 +420,6 @@ color: #d9edf7;
             form#address-form{
                 width: auto;
                 padding: 40px 40px 25px 40px;
-/*                width: 80%;
-                padding: 40px 0 25px 0;*/
                 margin: 0 auto;
             }
                 #address-form fieldset{
@@ -485,6 +465,31 @@ color: #d9edf7;
                     color: #d9edf7;
                     background-color: #3a87ad;
                 }
+
+
+            form#a-login-form{
+                width: auto;
+                padding: 20px 40px 25px 40px;
+                margin: 0 auto;
+            }
+                #a-login-form fieldset{
+                    border: none;
+                    padding: 10px 0;
+                    height: auto;
+                }               
+                    #a-login-form p{
+                        color: #B0AEAE;
+                        text-align: left;
+                        font-size: 11px;
+                        margin-bottom: 25px;
+                    }
+                    #a-login-form label{
+                        float: left;
+                        color: #B0AEAE;
+                        width: 40%;
+                        line-height: 22px;
+                        font-weight: bold;
+                    }
 
 #regaddr-wrapper-div{
     z-index: 0;

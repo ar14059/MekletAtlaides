@@ -569,6 +569,82 @@ footer button#en{
 /**************************************************************/
 
 
+/* user_info.php */
+/**************************************************************/
+section#userinfo{
+    width: 500px;
+    min-width: 394px;
+    margin: 40px auto;
+    clear: both;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+
+#userinfo_content{
+    background-color: #FFFFFF;
+    width: 100%;
+    float: none;
+    box-shadow: 2px 2px 8px 2px #545454;
+    margin: 0 auto;
+    z-index: 32;
+    display: 
+}
+#userinfo_content fieldset{
+    border: none;
+}
+
+#userinfo_content form.content{
+    margin: 15px;
+    float: left;
+    padding: 0;
+    border: none;
+    text-align: justify;
+    width: 92%;
+}
+
+
+
+
+        #userinfo_content p.subject-title{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            margin-left: 15px;
+        }
+
+
+        #userinfo_content fieldset label {
+            display:inline-block;
+            float:none;
+            margin:0;
+            width: 30%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #userinfo_content fieldset span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #545454;
+        }
+
+        #userinfo_content input {
+            width:60%;
+           /* border:1px solid #FC6B6B;*/
+            border:1px solid #545454;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            color:#3a454d;
+            padding:2px 8px;
+            font-size:12px;
+            float: right;
+        }
+/**************************************************************/
+
+
+
+
+
 /************************************************************************************************************/
 
 

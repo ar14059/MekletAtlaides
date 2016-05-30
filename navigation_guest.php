@@ -1,4 +1,4 @@
-
+<!--1 Navigācijas josla galvenajām sistēmas lapām VIESIM-->
         <?php
             if($curr_location!="/MekletAtlaides/index.php"){
         ?>

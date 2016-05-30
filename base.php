@@ -1,3 +1,4 @@
+<!--1 Glabājas datubāzes dati -->
 <?php
 session_start(); 
 
@@ -11,8 +12,11 @@ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("MySQL Error: "
 mysqli_set_charset($con, 'utf8');
 ?>
 
+<!--1-->
+
 <?php $curr_location = $_SERVER['SCRIPT_NAME']; ?>
 
+<!--2 Glabājas informācija par interneta pārlūkprogrammu, kurā lietotājs pašlaik lieto-->
 <?php
 function get_browsername() {
 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE){
@@ -32,6 +36,6 @@ function get_browsername() {
 }
 $browser = get_browsername();
 ?>
-
+<!--2-->
 
 
